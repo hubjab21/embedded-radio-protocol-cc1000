@@ -1,0 +1,78 @@
+NAME := HALFRED
+VERSION := 0.3.0
+
+SRC := ./hal.c
+INC_DIR := ./inc
+
+ifeq ($(__MAKAO_MCU_FAMILY__),atmega)
+    SRC := $(SRC) ../hal_ports/avr/hal_port.c ../hal_ports/cli/vt100/hal_port_cli.c
+    INC_DIR := $(INC_DIR) ../hal_ports/avr/inc
+endif
+
+ifeq ($(__MAKAO_MCU_FAMILY__),stm32)
+
+	ifneq (, $(findstring stm32f4,$(__MAKAO_DEVICE__)))
+	    SRC := $(SRC) ../hal_ports/stm32/stm32f4/hal_port.c
+	    INC_DIR := $(INC_DIR) ../hal_ports/stm32/stm32f4/inc ../hal_ports/stm32/CMSIS
+		DEF := STM32_RC_FREQ=16000000 \
+			   STM32_RC32_FREQ=32000 \
+			   STM32_MAX_HCLK_FREQ=168000000 \
+			   STM32_MAX_PCLK1_FREQ=42000000 \
+		 	   STM32_MAX_PCLK2_FREQ=84000000
+	endif
+	
+	ifneq (, $(findstring stm32f0,$(__MAKAO_DEVICE__)))
+	    SRC := $(SRC) ../hal_ports/stm32/stm32f0/hal_port.c
+	    INC_DIR := $(INC_DIR) ../hal_ports/stm32/stm32f0/inc ../hal_ports/stm32/CMSIS
+		DEF := STM32_RC_FREQ=8000000 \
+			   STM32_RC32_FREQ=40000 \
+			   STM32_RC14_FREQ=14000000 \
+			   STM32_MAX_HCLK_FREQ=48000000 \
+			   STM32_MAX_PCLK_FREQ=48000000
+	endif
+endif
+
+ifeq ($(__MAKAO_MCU_FAMILY__),efm32gg)
+    SRC := $(SRC) ../hal_ports/efm32/efm32gg/hal_port.c
+    INC_DIR := $(INC_DIR) ../hal_ports/efm32/efm32gg/inc  ../hal_ports/efm32/efm32gg/inc/common_registers ../hal_ports/efm32/CMSIS
+
+	ifneq (, $(findstring  efm32gg990f1024,$(__MAKAO_DEVICE__)))
+		DEF := $(DEF) EFM32GG990F1024
+	endif
+endif
+
+ifeq ($(__MAKAO_MCU_FAMILY__),efm32lg)
+    SRC := $(SRC) ../hal_ports/efm32/efm32lg/hal_port.c
+    INC_DIR := $(INC_DIR) ../hal_ports/efm32/efm32lg/inc  ../hal_ports/efm32/efm32lg/inc/common_registers ../hal_ports/efm32/CMSIS
+
+	ifneq (, $(findstring  efm32lg230f256,$(__MAKAO_DEVICE__)))
+		DEF := $(DEF) EFM32LG230F256
+	endif
+endif
+
+ifeq ($(__MAKAO_MCU_FAMILY__),at91sam3s)
+    SRC := $(SRC) ../hal_ports/sam3s/hal_port.c 
+    INC_DIR := $(INC_DIR) ../hal_ports/sam3s/inc
+endif
+
+ifeq ($(__MAKAO_MCU_FAMILY__),at91sam9)
+    SRC := $(SRC) ../hal_ports/linux/hal_port.c ../hal_ports/os/linux/hal_port_os.c
+    INC_DIR := $(INC_DIR) ../hal_ports/linux/inc ../hal_ports/os/linux/
+endif
+
+
+ifeq ($(__MAKAO_MCU_FAMILY__),pc)
+	ifeq ($(__MAKAO_HOST_OS__),Windows)
+    	SRC := $(SRC) ../hal_ports/windows/hal_port.c ../hal_ports/os/windows/hal_port_os.c
+    	INC_DIR := $(INC_DIR) ../hal_ports/windows/inc ../hal_ports/os/windows/
+    endif
+	ifeq ($(__MAKAO_HOST_OS__),Linux)
+    	SRC := $(SRC) ../hal_ports/linux/hal_port.c ../hal_ports/os/linux/hal_port_os.c
+    	INC_DIR := $(INC_DIR) ../hal_ports/linux/inc ../hal_ports/os/linux/
+    endif
+endif
+
+ifeq ($(HAL_RTOS),freertos)
+    SRC := $(SRC) ../hal_ports/os/freertos/hal_port_os.c
+    INC_DIR := $(INC_DIR) ../hal_ports/os/freertos
+endif

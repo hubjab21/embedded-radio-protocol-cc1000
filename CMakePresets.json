@@ -1,0 +1,42 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 21,
+        "patch": 0
+    },
+    "include": [],
+    "configurePresets": [
+        {
+            "name": "default",
+            "hidden": true,
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "installDir": "${sourceDir}/release/${presetName}"
+        },
+        {
+            "name": "AVR_ATmega128",
+            "displayName": "Debug for ATmega128",
+            "description": "Debug build for ATmega128",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            },
+            "inherits": [
+                "default"
+            ],
+            "toolchainFile": "${sourceDir}/bsp/ATmega128_toolchain.cmake"
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "cc1000_bsks",
+            "configurePreset": "AVR_ATmega128",
+            "targets": [
+                "cc1000_bsks"
+            ]
+        }
+    ],
+    "testPresets": [],
+    "packagePresets": [],
+    "workflowPresets": []
+}

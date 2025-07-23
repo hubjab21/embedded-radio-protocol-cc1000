@@ -1,0 +1,45 @@
+/*
+================================================================================
+ File: hal_config.h
+--------------------------------------------------------------------------------
+ Author:        
+ Purpose:       
+ Compiler:      
+ Hardware:      
+ Doc:           doxygen
+--------------------------------------------------------------------------------
+ Content:       Additional configuration definitions for HAL configuration file
+                for AVR MCUs
+--------------------------------------------------------------------------------
+ Comments:       
+================================================================================
+*/
+
+#ifndef HAL_CONFIG_H
+#define HAL_CONFIG_H
+
+
+/** \addtogroup hal_config
+ *
+ */
+/*@{*/
+
+/** @name Definitions specific to AVR port
+ *  
+ *  These definitions configure the AVR port. 
+ */
+/*@{*/
+
+
+/** If defined as 1, the USART0 will be provided as an IODevice. */
+#define HALPORT_USE_USART0			1
+
+
+/*@}*/
+
+/*@{*/
+
+
+/*@}*/
+
+#endif /* HAL_CONFIG_H */

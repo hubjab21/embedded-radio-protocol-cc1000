@@ -1,0 +1,3079 @@
+
+output.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000d45  00000000  00000000  00008000  2**8
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000010c  20000000  00000d45  00010000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000088  2000010c  00000e54  0001010c  2**2
+                  ALLOC
+  3 .heap         00000c00  20000198  20000198  00010110  2**3
+                  CONTENTS, READONLY
+  4 .stack_dummy  00000400  20000198  20000198  00010d10  2**3
+                  CONTENTS, READONLY
+  5 .ARM.attributes 0000002b  00000000  00000000  00011110  2**0
+                  CONTENTS, READONLY
+  6 .comment      00000030  00000000  00000000  0001113b  2**0
+                  CONTENTS, READONLY
+  7 .debug_line   0000179c  00000000  00000000  0001116b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_info   00003305  00000000  00000000  00012907  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_abbrev 00000729  00000000  00000000  00015c0c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_aranges 00000378  00000000  00000000  00016338  2**3
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00002579  00000000  00000000  000166b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000378  00000000  00000000  00018c29  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_str    00001348  00000000  00000000  00018fa1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_frame  00000ab8  00000000  00000000  0001a2ec  2**2
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__isr_vector>:
+   0:	20020000 	.word	0x20020000
+   4:	00000101 	.word	0x00000101
+   8:	0000012f 	.word	0x0000012f
+   c:	00000131 	.word	0x00000131
+  10:	00000133 	.word	0x00000133
+  14:	00000135 	.word	0x00000135
+  18:	00000137 	.word	0x00000137
+  1c:	0000012d 	.word	0x0000012d
+  20:	0000012d 	.word	0x0000012d
+  24:	0000012d 	.word	0x0000012d
+  28:	0000012d 	.word	0x0000012d
+  2c:	00000139 	.word	0x00000139
+  30:	0000013b 	.word	0x0000013b
+  34:	0000012d 	.word	0x0000012d
+  38:	0000013d 	.word	0x0000013d
+  3c:	0000013f 	.word	0x0000013f
+  40:	00000141 	.word	0x00000141
+  44:	000007b5 	.word	0x000007b5
+  48:	00000145 	.word	0x00000145
+  4c:	00000147 	.word	0x00000147
+  50:	00000149 	.word	0x00000149
+  54:	0000014b 	.word	0x0000014b
+  58:	0000014d 	.word	0x0000014d
+  5c:	0000014f 	.word	0x0000014f
+  60:	00000151 	.word	0x00000151
+  64:	00000153 	.word	0x00000153
+  68:	00000155 	.word	0x00000155
+  6c:	000008c9 	.word	0x000008c9
+  70:	00000159 	.word	0x00000159
+  74:	0000015b 	.word	0x0000015b
+  78:	0000015d 	.word	0x0000015d
+  7c:	0000015f 	.word	0x0000015f
+  80:	00000161 	.word	0x00000161
+  84:	00000163 	.word	0x00000163
+  88:	00000165 	.word	0x00000165
+  8c:	00000167 	.word	0x00000167
+  90:	00000169 	.word	0x00000169
+  94:	0000016b 	.word	0x0000016b
+  98:	0000016d 	.word	0x0000016d
+  9c:	0000016f 	.word	0x0000016f
+  a0:	00000171 	.word	0x00000171
+  a4:	00000173 	.word	0x00000173
+  a8:	00000175 	.word	0x00000175
+  ac:	00000177 	.word	0x00000177
+  b0:	00000179 	.word	0x00000179
+  b4:	0000017b 	.word	0x0000017b
+  b8:	0000017d 	.word	0x0000017d
+  bc:	0000017f 	.word	0x0000017f
+  c0:	00000181 	.word	0x00000181
+  c4:	00000183 	.word	0x00000183
+  c8:	00000185 	.word	0x00000185
+  cc:	00000187 	.word	0x00000187
+  d0:	00000189 	.word	0x00000189
+  d4:	0000018b 	.word	0x0000018b
+  d8:	0000018d 	.word	0x0000018d
+	...
+
+00000100 <Reset_Handler>:
+ *      of copy from/to are specified by following symbols evaluated in
+ *      linker script.
+ *      __etext: End of code section, i.e., begin of data sections to copy from.
+ *      __data_start__/__data_end__: RAM address range that data should be
+ *      copied to. Both must be aligned to 4 bytes boundary.  */
+    ldr    r1, =__etext
+ 100:	4906      	ldr	r1, [pc, #24]	; (11c <.flash_to_ram_loop+0x16>)
+    ldr    r2, =__data_start__
+ 102:	4a07      	ldr	r2, [pc, #28]	; (120 <.flash_to_ram_loop+0x1a>)
+    ldr    r3, =__data_end__
+ 104:	4b07      	ldr	r3, [pc, #28]	; (124 <.flash_to_ram_loop+0x1e>)
+
+00000106 <.flash_to_ram_loop>:
+#if 1
+/* Here are two copies of loop implemenations. First one favors code size
+ * and the second one favors performance. Default uses the first one.
+ * Change to "#if 0" to use the second one */
+.flash_to_ram_loop:
+    cmp     r2, r3
+ 106:	429a      	cmp	r2, r3
+    ittt    lt
+ 108:	bfbe      	ittt	lt
+    ldrlt   r0, [r1], #4
+ 10a:	f851 0b04 	ldrlt.w	r0, [r1], #4
+    strlt   r0, [r2], #4
+ 10e:	f842 0b04 	strlt.w	r0, [r2], #4
+    blt    .flash_to_ram_loop
+ 112:	f7ff bff8 	blt.w	106 <.flash_to_ram_loop>
+    str    r0, [r2, r3]
+    bgt    .flash_to_ram_loop
+.flash_to_ram_loop_end:
+#endif
+
+    ldr    r0, = main
+ 116:	4804      	ldr	r0, [pc, #16]	; (128 <.flash_to_ram_loop+0x22>)
+    bx    r0
+ 118:	4700      	bx	r0
+ 11a:	0000      	.short	0x0000
+ *      of copy from/to are specified by following symbols evaluated in
+ *      linker script.
+ *      __etext: End of code section, i.e., begin of data sections to copy from.
+ *      __data_start__/__data_end__: RAM address range that data should be
+ *      copied to. Both must be aligned to 4 bytes boundary.  */
+    ldr    r1, =__etext
+ 11c:	00000d45 	.word	0x00000d45
+    ldr    r2, =__data_start__
+ 120:	20000000 	.word	0x20000000
+    ldr    r3, =__data_end__
+ 124:	2000010c 	.word	0x2000010c
+    str    r0, [r2, r3]
+    bgt    .flash_to_ram_loop
+.flash_to_ram_loop_end:
+#endif
+
+    ldr    r0, = main
+ 128:	00000191 	.word	0x00000191
+
+0000012c <Default_Handler>:
+\handler_name:
+    b    .
+    .size    \handler_name, . - \handler_name
+    .endm
+
+    def_irq_handler    Default_Handler
+ 12c:	e7fe      	b.n	12c <Default_Handler>
+
+0000012e <NMI_Handler>:
+
+    def_irq_handler    NMI_Handler
+ 12e:	e7fe      	b.n	12e <NMI_Handler>
+
+00000130 <HardFault_Handler>:
+    def_irq_handler    HardFault_Handler
+ 130:	e7fe      	b.n	130 <HardFault_Handler>
+
+00000132 <MemManage_Handler>:
+    def_irq_handler    MemManage_Handler
+ 132:	e7fe      	b.n	132 <MemManage_Handler>
+
+00000134 <BusFault_Handler>:
+    def_irq_handler    BusFault_Handler
+ 134:	e7fe      	b.n	134 <BusFault_Handler>
+
+00000136 <UsageFault_Handler>:
+    def_irq_handler    UsageFault_Handler
+ 136:	e7fe      	b.n	136 <UsageFault_Handler>
+
+00000138 <SVC_Handler>:
+    def_irq_handler    SVC_Handler
+ 138:	e7fe      	b.n	138 <SVC_Handler>
+
+0000013a <DebugMon_Handler>:
+    def_irq_handler    DebugMon_Handler
+ 13a:	e7fe      	b.n	13a <DebugMon_Handler>
+
+0000013c <PendSV_Handler>:
+    def_irq_handler    PendSV_Handler
+ 13c:	e7fe      	b.n	13c <PendSV_Handler>
+
+0000013e <SysTick_Handler>:
+    def_irq_handler    SysTick_Handler
+ 13e:	e7fe      	b.n	13e <SysTick_Handler>
+
+00000140 <DMA_IRQHandler>:
+
+    def_irq_handler    DMA_IRQHandler
+ 140:	e7fe      	b.n	140 <DMA_IRQHandler>
+    def_irq_handler    GPIO_EVEN_IRQHandler
+ 142:	e7fe      	b.n	142 <DMA_IRQHandler+0x2>
+
+00000144 <TIMER0_IRQHandler>:
+    def_irq_handler    TIMER0_IRQHandler
+ 144:	e7fe      	b.n	144 <TIMER0_IRQHandler>
+
+00000146 <USART0_RX_IRQHandler>:
+    def_irq_handler    USART0_RX_IRQHandler
+ 146:	e7fe      	b.n	146 <USART0_RX_IRQHandler>
+
+00000148 <USART0_TX_IRQHandler>:
+    def_irq_handler    USART0_TX_IRQHandler
+ 148:	e7fe      	b.n	148 <USART0_TX_IRQHandler>
+
+0000014a <USB_IRQHandler>:
+    def_irq_handler    USB_IRQHandler
+ 14a:	e7fe      	b.n	14a <USB_IRQHandler>
+
+0000014c <ACMP0_IRQHandler>:
+    def_irq_handler    ACMP0_IRQHandler
+ 14c:	e7fe      	b.n	14c <ACMP0_IRQHandler>
+
+0000014e <ADC0_IRQHandler>:
+    def_irq_handler    ADC0_IRQHandler
+ 14e:	e7fe      	b.n	14e <ADC0_IRQHandler>
+
+00000150 <DAC0_IRQHandler>:
+    def_irq_handler    DAC0_IRQHandler
+ 150:	e7fe      	b.n	150 <DAC0_IRQHandler>
+
+00000152 <I2C0_IRQHandler>:
+    def_irq_handler    I2C0_IRQHandler
+ 152:	e7fe      	b.n	152 <I2C0_IRQHandler>
+
+00000154 <I2C1_IRQHandler>:
+    def_irq_handler    I2C1_IRQHandler
+ 154:	e7fe      	b.n	154 <I2C1_IRQHandler>
+    def_irq_handler    GPIO_ODD_IRQHandler
+ 156:	e7fe      	b.n	156 <I2C1_IRQHandler+0x2>
+
+00000158 <TIMER1_IRQHandler>:
+    def_irq_handler    TIMER1_IRQHandler
+ 158:	e7fe      	b.n	158 <TIMER1_IRQHandler>
+
+0000015a <TIMER2_IRQHandler>:
+    def_irq_handler    TIMER2_IRQHandler
+ 15a:	e7fe      	b.n	15a <TIMER2_IRQHandler>
+
+0000015c <TIMER3_IRQHandler>:
+    def_irq_handler    TIMER3_IRQHandler
+ 15c:	e7fe      	b.n	15c <TIMER3_IRQHandler>
+
+0000015e <USART1_RX_IRQHandler>:
+    def_irq_handler    USART1_RX_IRQHandler
+ 15e:	e7fe      	b.n	15e <USART1_RX_IRQHandler>
+
+00000160 <USART1_TX_IRQHandler>:
+    def_irq_handler    USART1_TX_IRQHandler
+ 160:	e7fe      	b.n	160 <USART1_TX_IRQHandler>
+
+00000162 <LESENSE_IRQHandler>:
+    def_irq_handler    LESENSE_IRQHandler
+ 162:	e7fe      	b.n	162 <LESENSE_IRQHandler>
+
+00000164 <USART2_RX_IRQHandler>:
+    def_irq_handler    USART2_RX_IRQHandler
+ 164:	e7fe      	b.n	164 <USART2_RX_IRQHandler>
+
+00000166 <USART2_TX_IRQHandler>:
+    def_irq_handler    USART2_TX_IRQHandler
+ 166:	e7fe      	b.n	166 <USART2_TX_IRQHandler>
+
+00000168 <UART0_RX_IRQHandler>:
+    def_irq_handler    UART0_RX_IRQHandler
+ 168:	e7fe      	b.n	168 <UART0_RX_IRQHandler>
+
+0000016a <UART0_TX_IRQHandler>:
+    def_irq_handler    UART0_TX_IRQHandler
+ 16a:	e7fe      	b.n	16a <UART0_TX_IRQHandler>
+
+0000016c <UART1_RX_IRQHandler>:
+    def_irq_handler    UART1_RX_IRQHandler
+ 16c:	e7fe      	b.n	16c <UART1_RX_IRQHandler>
+
+0000016e <UART1_TX_IRQHandler>:
+    def_irq_handler    UART1_TX_IRQHandler
+ 16e:	e7fe      	b.n	16e <UART1_TX_IRQHandler>
+
+00000170 <LEUART0_IRQHandler>:
+    def_irq_handler    LEUART0_IRQHandler
+ 170:	e7fe      	b.n	170 <LEUART0_IRQHandler>
+
+00000172 <LEUART1_IRQHandler>:
+    def_irq_handler    LEUART1_IRQHandler
+ 172:	e7fe      	b.n	172 <LEUART1_IRQHandler>
+
+00000174 <LETIMER0_IRQHandler>:
+    def_irq_handler    LETIMER0_IRQHandler
+ 174:	e7fe      	b.n	174 <LETIMER0_IRQHandler>
+
+00000176 <PCNT0_IRQHandler>:
+    def_irq_handler    PCNT0_IRQHandler
+ 176:	e7fe      	b.n	176 <PCNT0_IRQHandler>
+
+00000178 <PCNT1_IRQHandler>:
+    def_irq_handler    PCNT1_IRQHandler
+ 178:	e7fe      	b.n	178 <PCNT1_IRQHandler>
+
+0000017a <PCNT2_IRQHandler>:
+    def_irq_handler    PCNT2_IRQHandler
+ 17a:	e7fe      	b.n	17a <PCNT2_IRQHandler>
+
+0000017c <RTC_IRQHandler>:
+    def_irq_handler    RTC_IRQHandler
+ 17c:	e7fe      	b.n	17c <RTC_IRQHandler>
+
+0000017e <BURTC_IRQHandler>:
+    def_irq_handler    BURTC_IRQHandler
+ 17e:	e7fe      	b.n	17e <BURTC_IRQHandler>
+
+00000180 <CMU_IRQHandler>:
+    def_irq_handler    CMU_IRQHandler
+ 180:	e7fe      	b.n	180 <CMU_IRQHandler>
+
+00000182 <VCMP_IRQHandler>:
+    def_irq_handler    VCMP_IRQHandler
+ 182:	e7fe      	b.n	182 <VCMP_IRQHandler>
+
+00000184 <LCD_IRQHandler>:
+    def_irq_handler    LCD_IRQHandler
+ 184:	e7fe      	b.n	184 <LCD_IRQHandler>
+
+00000186 <MSC_IRQHandler>:
+    def_irq_handler    MSC_IRQHandler
+ 186:	e7fe      	b.n	186 <MSC_IRQHandler>
+
+00000188 <AES_IRQHandler>:
+    def_irq_handler    AES_IRQHandler
+ 188:	e7fe      	b.n	188 <AES_IRQHandler>
+
+0000018a <EBI_IRQHandler>:
+    def_irq_handler    EBI_IRQHandler
+ 18a:	e7fe      	b.n	18a <EBI_IRQHandler>
+
+0000018c <EMU_IRQHandler>:
+    def_irq_handler    EMU_IRQHandler
+ 18c:	e7fe      	b.n	18c <EMU_IRQHandler>
+ 18e:	bf00      	nop
+
+00000190 <main>:
+// -----------------------------------------------------------------------------
+//  main
+// -----------------------------------------------------------------------------
+
+int main(void)
+{
+ 190:	b538      	push	{r3, r4, r5, lr}
+	// initialize HAL core
+	CORE_Init();
+ 192:	f000 f9a3 	bl	4dc <CORE_PORT_Init>
+	CORE_EnableInterrupts();
+ 196:	b662      	cpsie	i
+	HAL_GPIO_Init();
+	// initialize IODevices used by the DIAG module
+	IODEV_Init(IO_DEV1);
+ 198:	4d20      	ldr	r5, [pc, #128]	; (21c <main+0x8c>)
+int main(void)
+{
+	// initialize HAL core
+	CORE_Init();
+	CORE_EnableInterrupts();
+	HAL_GPIO_Init();
+ 19a:	f000 f9a3 	bl	4e4 <HAL_GPIO_PORT_Init>
+	// initialize IODevices used by the DIAG module
+	IODEV_Init(IO_DEV1);
+ 19e:	6828      	ldr	r0, [r5, #0]
+ 1a0:	f000 f844 	bl	22c <IODEV_Init>
+	IODEV_EnableWrite(IO_DEV1);
+ 1a4:	6828      	ldr	r0, [r5, #0]
+ 1a6:	6884      	ldr	r4, [r0, #8]
+ 1a8:	47a0      	blx	r4
+	IODEV_EnableRead(IO_DEV1);
+ 1aa:	6828      	ldr	r0, [r5, #0]
+
+	IODEV_Init(IO_DEV2);
+ 1ac:	4c1c      	ldr	r4, [pc, #112]	; (220 <main+0x90>)
+	CORE_EnableInterrupts();
+	HAL_GPIO_Init();
+	// initialize IODevices used by the DIAG module
+	IODEV_Init(IO_DEV1);
+	IODEV_EnableWrite(IO_DEV1);
+	IODEV_EnableRead(IO_DEV1);
+ 1ae:	6902      	ldr	r2, [r0, #16]
+ 1b0:	4790      	blx	r2
+
+	IODEV_Init(IO_DEV2);
+ 1b2:	6820      	ldr	r0, [r4, #0]
+ 1b4:	f000 f83a 	bl	22c <IODEV_Init>
+	IODEV_EnableWrite(IO_DEV2);
+ 1b8:	6820      	ldr	r0, [r4, #0]
+ 1ba:	6881      	ldr	r1, [r0, #8]
+ 1bc:	4788      	blx	r1
+	IODEV_EnableRead(IO_DEV2);
+ 1be:	6820      	ldr	r0, [r4, #0]
+ 1c0:	6903      	ldr	r3, [r0, #16]
+ 1c2:	4798      	blx	r3
+
+	// initialize DIAG module
+	DIAG_Init();
+ 1c4:	f000 f846 	bl	254 <DIAG_Init>
+	DIAG_SetOutputDevice(0, IO_DEV1);
+ 1c8:	6829      	ldr	r1, [r5, #0]
+ 1ca:	2000      	movs	r0, #0
+ 1cc:	f000 f856 	bl	27c <DIAG_SetOutputDevice>
+	DIAG_SetOutputDevice(1, IO_DEV2);
+ 1d0:	6821      	ldr	r1, [r4, #0]
+ 1d2:	2001      	movs	r0, #1
+ 1d4:	f000 f852 	bl	27c <DIAG_SetOutputDevice>
+	DIAG_ActivateChannel(0);
+ 1d8:	2000      	movs	r0, #0
+ 1da:	f000 f85b 	bl	294 <DIAG_ActivateChannel>
+	DIAG_ActivateChannel(1);
+ 1de:	2001      	movs	r0, #1
+ 1e0:	f000 f858 	bl	294 <DIAG_ActivateChannel>
+	DIAG0_LogNL(0);
+ 1e4:	2000      	movs	r0, #0
+ 1e6:	f000 f879 	bl	2dc <DIAG_LogNL>
+	DIAG0_LogMsg(0, "Level 0 diagnostic message on channel 0");
+ 1ea:	490e      	ldr	r1, [pc, #56]	; (224 <main+0x94>)
+ 1ec:	2000      	movs	r0, #0
+ 1ee:	f000 f85d 	bl	2ac <DIAG_LogMsg>
+	DIAG0_LogNL(0);
+ 1f2:	2000      	movs	r0, #0
+ 1f4:	f000 f872 	bl	2dc <DIAG_LogNL>
+	DIAG1_LogMsg(0, "Level 1 diagnostic message on channel 0");
+	DIAG1_LogNL(0);
+	DIAG2_LogMsg(0, "Level 2 diagnostic message on channel 0");
+	DIAG2_LogNL(0);
+	DIAG0_LogMsg(1, "Level 0 diagnostic message on channel 1");
+ 1f8:	490b      	ldr	r1, [pc, #44]	; (228 <main+0x98>)
+ 1fa:	2001      	movs	r0, #1
+ 1fc:	f000 f856 	bl	2ac <DIAG_LogMsg>
+	DIAG0_LogNL(1);
+ 200:	2001      	movs	r0, #1
+ 202:	f000 f86b 	bl	2dc <DIAG_LogNL>
+	DIAG2_LogMsg(1, "Level 2 diagnostic message on channel 1");
+	DIAG2_LogNL(1);
+
+
+	// deinitialize DIAG module
+	DIAG_Deinit();
+ 206:	f000 f837 	bl	278 <DIAG_Deinit>
+	HAL_GPIO_Deinit();
+ 20a:	f000 f987 	bl	51c <HAL_GPIO_PORT_Deinit>
+	// deinitialize IODevices
+	IODEV_Deinit(IO_DEV1);
+ 20e:	6828      	ldr	r0, [r5, #0]
+ 210:	f000 f816 	bl	240 <IODEV_Deinit>
+	IODEV_Deinit(IO_DEV2);
+ 214:	6820      	ldr	r0, [r4, #0]
+ 216:	f000 f813 	bl	240 <IODEV_Deinit>
+ 21a:	e7fe      	b.n	21a <main+0x8a>
+ 21c:	20000068 	.word	0x20000068
+ 220:	200000a0 	.word	0x200000a0
+ 224:	00000c64 	.word	0x00000c64
+ 228:	00000c8c 	.word	0x00000c8c
+
+0000022c <IODEV_Init>:
+
+// -----------------------------------------------------------------------------
+//  IODEV_Init
+// -----------------------------------------------------------------------------
+HALRESULT IODEV_Init(IODevice iodevice)
+{
+ 22c:	b508      	push	{r3, lr}
+    HALRESULT result = HALRESULT_ERROR;
+
+    if (iodevice) {
+ 22e:	b118      	cbz	r0, 238 <IODEV_Init+0xc>
+        if (iodevice->Init) {
+ 230:	6803      	ldr	r3, [r0, #0]
+ 232:	b11b      	cbz	r3, 23c <IODEV_Init+0x10>
+            result = iodevice->Init(iodevice);
+ 234:	4798      	blx	r3
+ 236:	bd08      	pop	{r3, pc}
+// -----------------------------------------------------------------------------
+//  IODEV_Init
+// -----------------------------------------------------------------------------
+HALRESULT IODEV_Init(IODevice iodevice)
+{
+    HALRESULT result = HALRESULT_ERROR;
+ 238:	2001      	movs	r0, #1
+ 23a:	bd08      	pop	{r3, pc}
+ 23c:	2001      	movs	r0, #1
+
+    }
+
+    return result;
+
+} /* IODEV_Init */
+ 23e:	bd08      	pop	{r3, pc}
+
+00000240 <IODEV_Deinit>:
+
+// -----------------------------------------------------------------------------
+//  IODEV_Deinit
+// -----------------------------------------------------------------------------
+HALRESULT IODEV_Deinit(IODevice iodevice)
+{
+ 240:	b508      	push	{r3, lr}
+    HALRESULT result = HALRESULT_ERROR;
+
+    if (iodevice) {
+ 242:	b118      	cbz	r0, 24c <IODEV_Deinit+0xc>
+        if (iodevice->Deinit) {
+ 244:	6843      	ldr	r3, [r0, #4]
+ 246:	b11b      	cbz	r3, 250 <IODEV_Deinit+0x10>
+            result = iodevice->Deinit(iodevice);
+ 248:	4798      	blx	r3
+ 24a:	bd08      	pop	{r3, pc}
+// -----------------------------------------------------------------------------
+//  IODEV_Deinit
+// -----------------------------------------------------------------------------
+HALRESULT IODEV_Deinit(IODevice iodevice)
+{
+    HALRESULT result = HALRESULT_ERROR;
+ 24c:	2001      	movs	r0, #1
+ 24e:	bd08      	pop	{r3, pc}
+ 250:	2001      	movs	r0, #1
+#endif
+    }
+
+    return result;
+
+} /* IODEV_Deinit */
+ 252:	bd08      	pop	{r3, pc}
+
+00000254 <DIAG_Init>:
+void DIAG_Init(void)
+{
+	int i;
+
+	// initialize all local variables to default state
+	DIAG_error_handler = NULL;
+ 254:	4b06      	ldr	r3, [pc, #24]	; (270 <DIAG_Init+0x1c>)
+ 256:	2200      	movs	r2, #0
+ 258:	601a      	str	r2, [r3, #0]
+ 25a:	4b06      	ldr	r3, [pc, #24]	; (274 <DIAG_Init+0x20>)
+#define DIAG_IS_CHANNEL_ACTIVE(channel)			(((channel) >= 0) && ((channel) < HAL_DIAG_MAX_CHANNELS) && (DIAG_channel[channel].active))
+
+// -----------------------------------------------------------------------------
+//  DIAG_Init
+// -----------------------------------------------------------------------------
+void DIAG_Init(void)
+ 25c:	f103 0140 	add.w	r1, r3, #64	; 0x40
+
+	// initialize all local variables to default state
+	DIAG_error_handler = NULL;
+
+	for (i = 0; i < HAL_DIAG_MAX_CHANNELS; i++) {
+		DIAG_channel[i].active = 0;
+ 260:	2000      	movs	r0, #0
+ 262:	6018      	str	r0, [r3, #0]
+		DIAG_channel[i].iodev = NULL;
+ 264:	6098      	str	r0, [r3, #8]
+		DIAG_channel[i].time = NULL;
+ 266:	60d8      	str	r0, [r3, #12]
+ 268:	3310      	adds	r3, #16
+	int i;
+
+	// initialize all local variables to default state
+	DIAG_error_handler = NULL;
+
+	for (i = 0; i < HAL_DIAG_MAX_CHANNELS; i++) {
+ 26a:	428b      	cmp	r3, r1
+ 26c:	d1f8      	bne.n	260 <DIAG_Init+0xc>
+
+#if defined HAL_DIAG_USE_ERROR_BUFFERING && (HAL_DIAG_USE_ERROR_BUFFERING == 1)
+	// clear error buffer
+	IOBUF_Clear(&DIAG_error_buf);
+#endif
+} /* DIAG_Init */
+ 26e:	4770      	bx	lr
+ 270:	2000010c 	.word	0x2000010c
+ 274:	20000110 	.word	0x20000110
+
+00000278 <DIAG_Deinit>:
+//  DIAG_Deinit
+// -----------------------------------------------------------------------------
+void DIAG_Deinit(void)
+{
+	// actually do the same job as with init
+	DIAG_Init();
+ 278:	f7ff bfec 	b.w	254 <DIAG_Init>
+
+0000027c <DIAG_SetOutputDevice>:
+// -----------------------------------------------------------------------------
+//  DIAG_SetOutputDevice
+// -----------------------------------------------------------------------------
+HALRESULT DIAG_SetOutputDevice(int channel, IODevice iodevice)
+{
+	if ((channel >= 0) && (channel < HAL_DIAG_MAX_CHANNELS)) {
+ 27c:	2803      	cmp	r0, #3
+ 27e:	d805      	bhi.n	28c <DIAG_SetOutputDevice+0x10>
+		// channel number within bounds
+		DIAG_channel[channel].iodev = iodevice;
+ 280:	4b03      	ldr	r3, [pc, #12]	; (290 <DIAG_SetOutputDevice+0x14>)
+ 282:	eb03 1000 	add.w	r0, r3, r0, lsl #4
+ 286:	6081      	str	r1, [r0, #8]
+		// all OK
+		return HALRESULT_OK;
+ 288:	2000      	movs	r0, #0
+ 28a:	4770      	bx	lr
+	}
+
+	return HALRESULT_INVALID_DIAG_CHANNEL_NUMBER;
+ 28c:	2007      	movs	r0, #7
+
+} /* DIAG_SetOutputDevice */ 
+ 28e:	4770      	bx	lr
+ 290:	20000110 	.word	0x20000110
+
+00000294 <DIAG_ActivateChannel>:
+// -----------------------------------------------------------------------------
+//  DIAG_ActivateChannel
+// -----------------------------------------------------------------------------
+HALRESULT DIAG_ActivateChannel(int channel)
+{
+	if ((channel >= 0) && (channel < HAL_DIAG_MAX_CHANNELS)) {
+ 294:	2803      	cmp	r0, #3
+ 296:	d805      	bhi.n	2a4 <DIAG_ActivateChannel+0x10>
+		// channel number within bounds
+		DIAG_channel[channel].active = 1;
+ 298:	4b03      	ldr	r3, [pc, #12]	; (2a8 <DIAG_ActivateChannel+0x14>)
+ 29a:	0100      	lsls	r0, r0, #4
+ 29c:	2201      	movs	r2, #1
+ 29e:	501a      	str	r2, [r3, r0]
+		// all OK
+		return HALRESULT_OK;
+ 2a0:	2000      	movs	r0, #0
+ 2a2:	4770      	bx	lr
+	}
+
+	return HALRESULT_INVALID_DIAG_CHANNEL_NUMBER;
+ 2a4:	2007      	movs	r0, #7
+
+} /* DIAG_ActivateChannel */
+ 2a6:	4770      	bx	lr
+ 2a8:	20000110 	.word	0x20000110
+
+000002ac <DIAG_LogMsg>:
+// -----------------------------------------------------------------------------
+//  DIAG_LogMsg
+// -----------------------------------------------------------------------------
+void DIAG_LogMsg(int channel, const char* msg)
+{
+    if (DIAG_IS_CHANNEL_ACTIVE(channel)) {
+ 2ac:	2803      	cmp	r0, #3
+
+// -----------------------------------------------------------------------------
+//  DIAG_LogMsg
+// -----------------------------------------------------------------------------
+void DIAG_LogMsg(int channel, const char* msg)
+{
+ 2ae:	b570      	push	{r4, r5, r6, lr}
+ 2b0:	460e      	mov	r6, r1
+    if (DIAG_IS_CHANNEL_ACTIVE(channel)) {
+ 2b2:	d80f      	bhi.n	2d4 <DIAG_LogMsg+0x28>
+ 2b4:	4b08      	ldr	r3, [pc, #32]	; (2d8 <DIAG_LogMsg+0x2c>)
+ 2b6:	0100      	lsls	r0, r0, #4
+ 2b8:	181a      	adds	r2, r3, r0
+ 2ba:	581b      	ldr	r3, [r3, r0]
+ 2bc:	b153      	cbz	r3, 2d4 <DIAG_LogMsg+0x28>
+    	// channel is active
+    	if (DIAG_channel[channel].iodev) {
+ 2be:	6895      	ldr	r5, [r2, #8]
+ 2c0:	b145      	cbz	r5, 2d4 <DIAG_LogMsg+0x28>
+    		// channel has an associated IODevice
+        	IODEV_Write(DIAG_channel[channel].iodev, (void*)msg, strlen(msg), 0);
+ 2c2:	4608      	mov	r0, r1
+ 2c4:	f000 fc9e 	bl	c04 <strlen>
+ 2c8:	6a2c      	ldr	r4, [r5, #32]
+ 2ca:	4602      	mov	r2, r0
+ 2cc:	4631      	mov	r1, r6
+ 2ce:	4628      	mov	r0, r5
+ 2d0:	2300      	movs	r3, #0
+ 2d2:	47a0      	blx	r4
+ 2d4:	bd70      	pop	{r4, r5, r6, pc}
+ 2d6:	bf00      	nop
+ 2d8:	20000110 	.word	0x20000110
+
+000002dc <DIAG_LogNL>:
+// -----------------------------------------------------------------------------
+//  DIAG_LogNL
+// -----------------------------------------------------------------------------
+void DIAG_LogNL(int channel)
+{
+    if (DIAG_IS_CHANNEL_ACTIVE(channel)) {
+ 2dc:	2803      	cmp	r0, #3
+
+// -----------------------------------------------------------------------------
+//  DIAG_LogNL
+// -----------------------------------------------------------------------------
+void DIAG_LogNL(int channel)
+{
+ 2de:	b510      	push	{r4, lr}
+    if (DIAG_IS_CHANNEL_ACTIVE(channel)) {
+ 2e0:	d80b      	bhi.n	2fa <DIAG_LogNL+0x1e>
+ 2e2:	4906      	ldr	r1, [pc, #24]	; (2fc <DIAG_LogNL+0x20>)
+ 2e4:	0100      	lsls	r0, r0, #4
+ 2e6:	580b      	ldr	r3, [r1, r0]
+ 2e8:	180a      	adds	r2, r1, r0
+ 2ea:	b133      	cbz	r3, 2fa <DIAG_LogNL+0x1e>
+    	// channel is active
+    	if (DIAG_channel[channel].iodev) {
+ 2ec:	6890      	ldr	r0, [r2, #8]
+ 2ee:	b120      	cbz	r0, 2fa <DIAG_LogNL+0x1e>
+#if (HAL_DIAG_NL_MODE == 0)
+    		IODEV_Write(DIAG_channel[channel].iodev, "\n", 1, 0);
+ 2f0:	6a04      	ldr	r4, [r0, #32]
+ 2f2:	4903      	ldr	r1, [pc, #12]	; (300 <DIAG_LogNL+0x24>)
+ 2f4:	2201      	movs	r2, #1
+ 2f6:	2300      	movs	r3, #0
+ 2f8:	47a0      	blx	r4
+ 2fa:	bd10      	pop	{r4, pc}
+ 2fc:	20000110 	.word	0x20000110
+ 300:	00000cb9 	.word	0x00000cb9
+
+00000304 <HAL_PORT_USART_POLL_Deinit>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_USART_POLL_Deinit
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_USART_POLL_Deinit(USART_IODevice dev)
+{
+ 304:	b510      	push	{r4, lr}
+	 // Disabled all before resetting other registers
+	  dev->usart->CMD = USART_CMD_RXDIS | USART_CMD_TXDIS | USART_CMD_MASTERDIS | USART_CMD_RXBLOCKDIS |
+ 306:	6a83      	ldr	r3, [r0, #40]	; 0x28
+ 308:	f640 61aa 	movw	r1, #3754	; 0xeaa
+ 30c:	60d9      	str	r1, [r3, #12]
+			       USART_CMD_TXTRIDIS | USART_CMD_CLEARTX | USART_CMD_CLEARRX;
+
+	  // Set to default value
+	  dev->usart->CTRL     = _USART_CTRL_RESETVALUE;
+ 30e:	6a84      	ldr	r4, [r0, #40]	; 0x28
+ 310:	2300      	movs	r3, #0
+ 312:	6023      	str	r3, [r4, #0]
+	  dev->usart->FRAME    = _USART_FRAME_RESETVALUE;
+ 314:	6a82      	ldr	r2, [r0, #40]	; 0x28
+ 316:	f241 0105 	movw	r1, #4101	; 0x1005
+ 31a:	6051      	str	r1, [r2, #4]
+	  dev->usart->TRIGCTRL = _USART_TRIGCTRL_RESETVALUE;
+ 31c:	6a84      	ldr	r4, [r0, #40]	; 0x28
+ 31e:	60a3      	str	r3, [r4, #8]
+	  dev->usart->CLKDIV   = _USART_CLKDIV_RESETVALUE;
+ 320:	6a81      	ldr	r1, [r0, #40]	; 0x28
+ 322:	614b      	str	r3, [r1, #20]
+	  dev->usart->IEN      = _USART_IEN_RESETVALUE;
+ 324:	6a82      	ldr	r2, [r0, #40]	; 0x28
+	  dev->usart->IFC      = _USART_IFC_MASK;
+ 326:	f641 71f9 	movw	r1, #8185	; 0x1ff9
+	  // Set to default value
+	  dev->usart->CTRL     = _USART_CTRL_RESETVALUE;
+	  dev->usart->FRAME    = _USART_FRAME_RESETVALUE;
+	  dev->usart->TRIGCTRL = _USART_TRIGCTRL_RESETVALUE;
+	  dev->usart->CLKDIV   = _USART_CLKDIV_RESETVALUE;
+	  dev->usart->IEN      = _USART_IEN_RESETVALUE;
+ 32a:	64d3      	str	r3, [r2, #76]	; 0x4c
+	  dev->usart->IFC      = _USART_IFC_MASK;
+ 32c:	6a84      	ldr	r4, [r0, #40]	; 0x28
+ 32e:	64a1      	str	r1, [r4, #72]	; 0x48
+	  dev->usart->ROUTE    = _USART_ROUTE_RESETVALUE;
+ 330:	6a82      	ldr	r2, [r0, #40]	; 0x28
+ 332:	6553      	str	r3, [r2, #84]	; 0x54
+
+	  // Disable clock
+	  CORE_EnterCritical();
+ 334:	b672      	cpsid	i
+ 336:	4b10      	ldr	r3, [pc, #64]	; (378 <HAL_PORT_USART_POLL_Deinit+0x74>)
+#if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+	if (dev == &io_usart0_poll) {
+ 338:	4c10      	ldr	r4, [pc, #64]	; (37c <HAL_PORT_USART_POLL_Deinit+0x78>)
+	  dev->usart->IEN      = _USART_IEN_RESETVALUE;
+	  dev->usart->IFC      = _USART_IFC_MASK;
+	  dev->usart->ROUTE    = _USART_ROUTE_RESETVALUE;
+
+	  // Disable clock
+	  CORE_EnterCritical();
+ 33a:	681a      	ldr	r2, [r3, #0]
+ 33c:	1c51      	adds	r1, r2, #1
+#if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+	if (dev == &io_usart0_poll) {
+ 33e:	42a0      	cmp	r0, r4
+	  dev->usart->IEN      = _USART_IEN_RESETVALUE;
+	  dev->usart->IFC      = _USART_IFC_MASK;
+	  dev->usart->ROUTE    = _USART_ROUTE_RESETVALUE;
+
+	  // Disable clock
+	  CORE_EnterCritical();
+ 340:	6019      	str	r1, [r3, #0]
+#if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+	if (dev == &io_usart0_poll) {
+ 342:	d104      	bne.n	34e <HAL_PORT_USART_POLL_Deinit+0x4a>
+	  CMU->HFPERCLKEN0 &= ~(CMU_HFPERCLKEN0_USART0);
+ 344:	480e      	ldr	r0, [pc, #56]	; (380 <HAL_PORT_USART_POLL_Deinit+0x7c>)
+ 346:	6c44      	ldr	r4, [r0, #68]	; 0x44
+ 348:	f024 0401 	bic.w	r4, r4, #1
+ 34c:	e00e      	b.n	36c <HAL_PORT_USART_POLL_Deinit+0x68>
+	}
+#endif
+
+#if defined HALPORT_USE_USART1 && (HALPORT_USE_USART1 != 0)
+	if (dev == &io_usart1_poll) {
+ 34e:	4c0d      	ldr	r4, [pc, #52]	; (384 <HAL_PORT_USART_POLL_Deinit+0x80>)
+ 350:	42a0      	cmp	r0, r4
+ 352:	d104      	bne.n	35e <HAL_PORT_USART_POLL_Deinit+0x5a>
+	  CMU->HFPERCLKEN0 &= ~(CMU_HFPERCLKEN0_USART1);
+ 354:	480a      	ldr	r0, [pc, #40]	; (380 <HAL_PORT_USART_POLL_Deinit+0x7c>)
+ 356:	6c44      	ldr	r4, [r0, #68]	; 0x44
+ 358:	f024 0402 	bic.w	r4, r4, #2
+ 35c:	e006      	b.n	36c <HAL_PORT_USART_POLL_Deinit+0x68>
+	}
+#endif
+
+#if defined HALPORT_USE_USART2 && (HALPORT_USE_USART2 != 0)
+	if (dev == &io_usart2_poll) {
+ 35e:	4c0a      	ldr	r4, [pc, #40]	; (388 <HAL_PORT_USART_POLL_Deinit+0x84>)
+ 360:	42a0      	cmp	r0, r4
+ 362:	d104      	bne.n	36e <HAL_PORT_USART_POLL_Deinit+0x6a>
+	  CMU->HFPERCLKEN0 &= ~(CMU_HFPERCLKEN0_USART2);
+ 364:	4806      	ldr	r0, [pc, #24]	; (380 <HAL_PORT_USART_POLL_Deinit+0x7c>)
+ 366:	6c44      	ldr	r4, [r0, #68]	; 0x44
+ 368:	f024 0404 	bic.w	r4, r4, #4
+ 36c:	6444      	str	r4, [r0, #68]	; 0x44
+	}
+#endif
+	  CORE_ExitCritical();
+ 36e:	b101      	cbz	r1, 372 <HAL_PORT_USART_POLL_Deinit+0x6e>
+ 370:	601a      	str	r2, [r3, #0]
+ 372:	b662      	cpsie	i
+
+	  return  HALRESULT_OK;
+
+} /* HAL_PORT_USART_POLL_Deinit */
+ 374:	2000      	movs	r0, #0
+ 376:	bd10      	pop	{r4, pc}
+ 378:	20000190 	.word	0x20000190
+ 37c:	2000006c 	.word	0x2000006c
+ 380:	400c8000 	.word	0x400c8000
+ 384:	20000034 	.word	0x20000034
+ 388:	20000000 	.word	0x20000000
+
+0000038c <HAL_PORT_USART_POLL_GetReadCount>:
+// -----------------------------------------------------------------------------
+//  HAL_PORT_USART_POLL_GetReadCount
+// -----------------------------------------------------------------------------
+size_t HAL_PORT_USART_POLL_GetReadCount(USART_IODevice dev)
+{
+		if (dev->usart->STATUS & USART_STATUS_RXDATAV) {
+ 38c:	6a83      	ldr	r3, [r0, #40]	; 0x28
+ 38e:	6918      	ldr	r0, [r3, #16]
+			return 1;
+		}
+
+	return 0;
+
+} /* HAL_PORT_USART_POLL_GetReadCount */
+ 390:	f3c0 10c0 	ubfx	r0, r0, #7, #1
+ 394:	4770      	bx	lr
+
+00000396 <HAL_PORT_USART_POLL_GetWriteSpace>:
+// -----------------------------------------------------------------------------
+//  HAL_PORT_USART_POLL_GetWriteSpace
+// -----------------------------------------------------------------------------
+size_t HAL_PORT_USART_POLL_GetWriteSpace(USART_IODevice dev)
+{
+	if (dev->usart->STATUS & USART_STATUS_TXBL){
+ 396:	6a83      	ldr	r3, [r0, #40]	; 0x28
+ 398:	6918      	ldr	r0, [r3, #16]
+	        return 1;
+	}
+
+    return 0;
+
+} /* HAL_PORT_USART_POLL_GetWriteSpace */
+ 39a:	f3c0 1080 	ubfx	r0, r0, #6, #1
+ 39e:	4770      	bx	lr
+
+000003a0 <HAL_PORT_USART_POLL_Read>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_USART_POLL_Read
+// -----------------------------------------------------------------------------
+size_t HAL_PORT_USART_POLL_Read(USART_IODevice dev, void* data, size_t size, IOTime timeout)
+{
+ 3a0:	b530      	push	{r4, r5, lr}
+ 3a2:	4603      	mov	r3, r0
+    size_t i = size;
+
+    if (data) {
+ 3a4:	b949      	cbnz	r1, 3ba <HAL_PORT_USART_POLL_Read+0x1a>
+	        }
+
+			return size;
+    } // if (data)
+
+    return 0;
+ 3a6:	460a      	mov	r2, r1
+ 3a8:	e00c      	b.n	3c4 <HAL_PORT_USART_POLL_Read+0x24>
+{
+    size_t i = size;
+
+    if (data) {
+	        while (i--) {
+	            while (!(dev->usart->STATUS & USART_STATUS_RXDATAV)) {
+ 3aa:	6925      	ldr	r5, [r4, #16]
+ 3ac:	f015 0f80 	tst.w	r5, #128	; 0x80
+ 3b0:	d0fb      	beq.n	3aa <HAL_PORT_USART_POLL_Read+0xa>
+	                ;
+	            }
+
+	            // Get data from receive register
+	            *((uint8_t*)(data)) = (uint8_t)(dev->usart->RXDATA);
+ 3b2:	69e4      	ldr	r4, [r4, #28]
+ 3b4:	540c      	strb	r4, [r1, r0]
+ 3b6:	3001      	adds	r0, #1
+ 3b8:	e000      	b.n	3bc <HAL_PORT_USART_POLL_Read+0x1c>
+// -----------------------------------------------------------------------------
+size_t HAL_PORT_USART_POLL_Read(USART_IODevice dev, void* data, size_t size, IOTime timeout)
+{
+    size_t i = size;
+
+    if (data) {
+ 3ba:	2000      	movs	r0, #0
+	        while (i--) {
+ 3bc:	4290      	cmp	r0, r2
+ 3be:	d001      	beq.n	3c4 <HAL_PORT_USART_POLL_Read+0x24>
+	            while (!(dev->usart->STATUS & USART_STATUS_RXDATAV)) {
+ 3c0:	6a9c      	ldr	r4, [r3, #40]	; 0x28
+ 3c2:	e7f2      	b.n	3aa <HAL_PORT_USART_POLL_Read+0xa>
+			return size;
+    } // if (data)
+
+    return 0;
+
+} /* HAL_PORT_USART_POLL_Read */
+ 3c4:	4610      	mov	r0, r2
+ 3c6:	bd30      	pop	{r4, r5, pc}
+
+000003c8 <HAL_PORT_USART_POLL_Write>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_USART_POLL_Write
+// -----------------------------------------------------------------------------
+size_t HAL_PORT_USART_POLL_Write(USART_IODevice dev, const void* data, size_t size, IOTime timeout)
+{
+ 3c8:	b530      	push	{r4, r5, lr}
+ 3ca:	4603      	mov	r3, r0
+		uint8_t* ptr;
+	    size_t i = size;
+
+	    ptr = (uint8_t*)data;
+
+	    if (data) {
+ 3cc:	b161      	cbz	r1, 3e8 <HAL_PORT_USART_POLL_Write+0x20>
+ 3ce:	4610      	mov	r0, r2
+ 3d0:	e005      	b.n	3de <HAL_PORT_USART_POLL_Write+0x16>
+	        while (i--) {
+	            // Wait until data is ready __TC = Transmission Complete
+	            while (!(dev->usart->STATUS & USART_STATUS_TXBL)) {
+ 3d2:	6925      	ldr	r5, [r4, #16]
+ 3d4:	066d      	lsls	r5, r5, #25
+ 3d6:	d5fc      	bpl.n	3d2 <HAL_PORT_USART_POLL_Write+0xa>
+	                ;
+	            }
+
+	            // Write word to output register
+	            dev->usart->TXDATA = (uint32_t)(*ptr & (uint16_t)0x01FF);
+ 3d8:	f811 5b01 	ldrb.w	r5, [r1], #1
+ 3dc:	6365      	str	r5, [r4, #52]	; 0x34
+	    size_t i = size;
+
+	    ptr = (uint8_t*)data;
+
+	    if (data) {
+	        while (i--) {
+ 3de:	f110 30ff 	adds.w	r0, r0, #4294967295
+ 3e2:	d302      	bcc.n	3ea <HAL_PORT_USART_POLL_Write+0x22>
+	            // Wait until data is ready __TC = Transmission Complete
+	            while (!(dev->usart->STATUS & USART_STATUS_TXBL)) {
+ 3e4:	6a9c      	ldr	r4, [r3, #40]	; 0x28
+ 3e6:	e7f4      	b.n	3d2 <HAL_PORT_USART_POLL_Write+0xa>
+	        }
+
+	        return  size;
+	    }
+
+    return 0;
+ 3e8:	460a      	mov	r2, r1
+
+} /* HAL_PORT_USART_POLL_Write */
+ 3ea:	4610      	mov	r0, r2
+ 3ec:	bd30      	pop	{r4, r5, pc}
+	...
+
+000003f0 <HAL_PORT_UART_POLL_Deinit>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_UART_POLL_Deinit
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_UART_POLL_Deinit(UART_IODevice dev)
+{
+ 3f0:	b510      	push	{r4, lr}
+	 // Disabled all before resetting other registers
+	  dev->uart->CMD = UART_CMD_RXDIS | UART_CMD_TXDIS | UART_CMD_MASTERDIS | UART_CMD_RXBLOCKDIS |
+ 3f2:	6a83      	ldr	r3, [r0, #40]	; 0x28
+ 3f4:	f640 61aa 	movw	r1, #3754	; 0xeaa
+ 3f8:	60d9      	str	r1, [r3, #12]
+			       UART_CMD_TXTRIDIS | UART_CMD_CLEARTX | UART_CMD_CLEARRX;
+
+	  // Set to default value
+	  dev->uart->CTRL     = _UART_CTRL_RESETVALUE;
+ 3fa:	6a84      	ldr	r4, [r0, #40]	; 0x28
+ 3fc:	2300      	movs	r3, #0
+ 3fe:	6023      	str	r3, [r4, #0]
+	  dev->uart->FRAME    = _UART_FRAME_RESETVALUE;
+ 400:	6a82      	ldr	r2, [r0, #40]	; 0x28
+ 402:	f241 0105 	movw	r1, #4101	; 0x1005
+ 406:	6051      	str	r1, [r2, #4]
+	  dev->uart->TRIGCTRL = _UART_TRIGCTRL_RESETVALUE;
+ 408:	6a84      	ldr	r4, [r0, #40]	; 0x28
+ 40a:	60a3      	str	r3, [r4, #8]
+	  dev->uart->CLKDIV   = _UART_CLKDIV_RESETVALUE;
+ 40c:	6a81      	ldr	r1, [r0, #40]	; 0x28
+ 40e:	614b      	str	r3, [r1, #20]
+	  dev->uart->IEN      = _UART_IEN_RESETVALUE;
+ 410:	6a82      	ldr	r2, [r0, #40]	; 0x28
+	  dev->uart->IFC      = _UART_IFC_MASK;
+ 412:	f641 71f9 	movw	r1, #8185	; 0x1ff9
+	  // Set to default value
+	  dev->uart->CTRL     = _UART_CTRL_RESETVALUE;
+	  dev->uart->FRAME    = _UART_FRAME_RESETVALUE;
+	  dev->uart->TRIGCTRL = _UART_TRIGCTRL_RESETVALUE;
+	  dev->uart->CLKDIV   = _UART_CLKDIV_RESETVALUE;
+	  dev->uart->IEN      = _UART_IEN_RESETVALUE;
+ 416:	64d3      	str	r3, [r2, #76]	; 0x4c
+	  dev->uart->IFC      = _UART_IFC_MASK;
+ 418:	6a84      	ldr	r4, [r0, #40]	; 0x28
+ 41a:	64a1      	str	r1, [r4, #72]	; 0x48
+	  dev->uart->ROUTE    = _UART_ROUTE_RESETVALUE;
+ 41c:	6a82      	ldr	r2, [r0, #40]	; 0x28
+ 41e:	6553      	str	r3, [r2, #84]	; 0x54
+
+	  // Disable clock
+	  CORE_EnterCritical();
+ 420:	b672      	cpsid	i
+ 422:	4b0c      	ldr	r3, [pc, #48]	; (454 <Stack_Size+0x54>)
+#if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+	if (dev == &io_uart0_poll) {
+ 424:	4c0c      	ldr	r4, [pc, #48]	; (458 <Stack_Size+0x58>)
+	  dev->uart->IEN      = _UART_IEN_RESETVALUE;
+	  dev->uart->IFC      = _UART_IFC_MASK;
+	  dev->uart->ROUTE    = _UART_ROUTE_RESETVALUE;
+
+	  // Disable clock
+	  CORE_EnterCritical();
+ 426:	681a      	ldr	r2, [r3, #0]
+ 428:	1c51      	adds	r1, r2, #1
+#if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+	if (dev == &io_uart0_poll) {
+ 42a:	42a0      	cmp	r0, r4
+	  dev->uart->IEN      = _UART_IEN_RESETVALUE;
+	  dev->uart->IFC      = _UART_IFC_MASK;
+	  dev->uart->ROUTE    = _UART_ROUTE_RESETVALUE;
+
+	  // Disable clock
+	  CORE_EnterCritical();
+ 42c:	6019      	str	r1, [r3, #0]
+#if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+	if (dev == &io_uart0_poll) {
+ 42e:	d104      	bne.n	43a <Stack_Size+0x3a>
+	  CMU->HFPERCLKEN0 &= ~(CMU_HFPERCLKEN0_UART0);
+ 430:	480a      	ldr	r0, [pc, #40]	; (45c <Stack_Size+0x5c>)
+ 432:	6c44      	ldr	r4, [r0, #68]	; 0x44
+ 434:	f024 0408 	bic.w	r4, r4, #8
+ 438:	e006      	b.n	448 <Stack_Size+0x48>
+	}
+#endif
+
+#if defined HALPORT_USE_UART1 && (HALPORT_USE_UART1 != 0)
+	if (dev == &io_uart1_poll) {
+ 43a:	4c09      	ldr	r4, [pc, #36]	; (460 <Stack_Size+0x60>)
+ 43c:	42a0      	cmp	r0, r4
+ 43e:	d104      	bne.n	44a <Stack_Size+0x4a>
+	  CMU->HFPERCLKEN0 &= ~(CMU_HFPERCLKEN0_UART1);
+ 440:	4806      	ldr	r0, [pc, #24]	; (45c <Stack_Size+0x5c>)
+ 442:	6c44      	ldr	r4, [r0, #68]	; 0x44
+ 444:	f024 0410 	bic.w	r4, r4, #16
+ 448:	6444      	str	r4, [r0, #68]	; 0x44
+	}
+#endif
+	  CORE_ExitCritical();
+ 44a:	b101      	cbz	r1, 44e <Stack_Size+0x4e>
+ 44c:	601a      	str	r2, [r3, #0]
+ 44e:	b662      	cpsie	i
+
+	  return  HALRESULT_OK;
+
+} /* HAL_PORT_UART_POLL_Deinit */
+ 450:	2000      	movs	r0, #0
+ 452:	bd10      	pop	{r4, pc}
+ 454:	20000190 	.word	0x20000190
+ 458:	200000d8 	.word	0x200000d8
+ 45c:	400c8000 	.word	0x400c8000
+ 460:	200000a4 	.word	0x200000a4
+
+00000464 <HAL_PORT_UART_POLL_GetReadCount>:
+// -----------------------------------------------------------------------------
+//  HAL_PORT_UART_POLL_GetReadCount
+// -----------------------------------------------------------------------------
+size_t HAL_PORT_UART_POLL_GetReadCount(UART_IODevice dev)
+{
+		if (dev->uart->STATUS & UART_STATUS_RXDATAV) {
+ 464:	6a83      	ldr	r3, [r0, #40]	; 0x28
+ 466:	6918      	ldr	r0, [r3, #16]
+			return 1;
+		}
+
+	return 0;
+
+} /* HAL_PORT_UART_POLL_GetReadCount */
+ 468:	f3c0 10c0 	ubfx	r0, r0, #7, #1
+ 46c:	4770      	bx	lr
+
+0000046e <HAL_PORT_UART_POLL_GetWriteSpace>:
+// -----------------------------------------------------------------------------
+//  HAL_PORT_UART_POLL_GetWriteSpace
+// -----------------------------------------------------------------------------
+size_t HAL_PORT_UART_POLL_GetWriteSpace(UART_IODevice dev)
+{
+	if (dev->uart->STATUS & UART_STATUS_TXBL){
+ 46e:	6a83      	ldr	r3, [r0, #40]	; 0x28
+ 470:	6918      	ldr	r0, [r3, #16]
+	        return 1;
+	}
+
+    return 0;
+
+} /* HAL_PORT_UART_POLL_GetWriteSpace */
+ 472:	f3c0 1080 	ubfx	r0, r0, #6, #1
+ 476:	4770      	bx	lr
+
+00000478 <HAL_PORT_UART_POLL_Read>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_UART_POLL_Read
+// -----------------------------------------------------------------------------
+size_t HAL_PORT_UART_POLL_Read(UART_IODevice dev, void* data, size_t size, IOTime timeout)
+{
+ 478:	b530      	push	{r4, r5, lr}
+ 47a:	4603      	mov	r3, r0
+    size_t i = size;
+
+    if (data) {
+ 47c:	b949      	cbnz	r1, 492 <HAL_PORT_UART_POLL_Read+0x1a>
+	        }
+
+			return size;
+    } // if (data)
+
+    return 0;
+ 47e:	460a      	mov	r2, r1
+ 480:	e00c      	b.n	49c <HAL_PORT_UART_POLL_Read+0x24>
+{
+    size_t i = size;
+
+    if (data) {
+	        while (i--) {
+	            while (!(dev->uart->STATUS & UART_STATUS_RXDATAV)) {
+ 482:	6925      	ldr	r5, [r4, #16]
+ 484:	f015 0f80 	tst.w	r5, #128	; 0x80
+ 488:	d0fb      	beq.n	482 <HAL_PORT_UART_POLL_Read+0xa>
+	                ;
+	            }
+
+	            // Get data from receive register
+	            *((uint8_t*)(data)) = (uint8_t)(dev->uart->RXDATA);
+ 48a:	69e4      	ldr	r4, [r4, #28]
+ 48c:	540c      	strb	r4, [r1, r0]
+ 48e:	3001      	adds	r0, #1
+ 490:	e000      	b.n	494 <HAL_PORT_UART_POLL_Read+0x1c>
+// -----------------------------------------------------------------------------
+size_t HAL_PORT_UART_POLL_Read(UART_IODevice dev, void* data, size_t size, IOTime timeout)
+{
+    size_t i = size;
+
+    if (data) {
+ 492:	2000      	movs	r0, #0
+	        while (i--) {
+ 494:	4290      	cmp	r0, r2
+ 496:	d001      	beq.n	49c <HAL_PORT_UART_POLL_Read+0x24>
+	            while (!(dev->uart->STATUS & UART_STATUS_RXDATAV)) {
+ 498:	6a9c      	ldr	r4, [r3, #40]	; 0x28
+ 49a:	e7f2      	b.n	482 <HAL_PORT_UART_POLL_Read+0xa>
+			return size;
+    } // if (data)
+
+    return 0;
+
+} /* HAL_PORT_UART_POLL_Read */
+ 49c:	4610      	mov	r0, r2
+ 49e:	bd30      	pop	{r4, r5, pc}
+
+000004a0 <HAL_PORT_UART_POLL_Write>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_UART_POLL_Write
+// -----------------------------------------------------------------------------
+size_t HAL_PORT_UART_POLL_Write(UART_IODevice dev, const void* data, size_t size, IOTime timeout)
+{
+ 4a0:	b530      	push	{r4, r5, lr}
+ 4a2:	4603      	mov	r3, r0
+		uint8_t* ptr;
+	    size_t i = size;
+
+	    ptr = (uint8_t*)data;
+
+	    if (data) {
+ 4a4:	b161      	cbz	r1, 4c0 <HAL_PORT_UART_POLL_Write+0x20>
+ 4a6:	4610      	mov	r0, r2
+ 4a8:	e005      	b.n	4b6 <HAL_PORT_UART_POLL_Write+0x16>
+	        while (i--) {
+	            // Wait until data is ready __TC = Transmission Complete
+	            while (!(dev->uart->STATUS & UART_STATUS_TXBL)) {
+ 4aa:	6925      	ldr	r5, [r4, #16]
+ 4ac:	066d      	lsls	r5, r5, #25
+ 4ae:	d5fc      	bpl.n	4aa <HAL_PORT_UART_POLL_Write+0xa>
+	                ;
+	            }
+
+	            // Write word to output register
+	            dev->uart->TXDATA = (uint32_t)(*ptr & (uint16_t)0x01FF);
+ 4b0:	f811 5b01 	ldrb.w	r5, [r1], #1
+ 4b4:	6365      	str	r5, [r4, #52]	; 0x34
+	    size_t i = size;
+
+	    ptr = (uint8_t*)data;
+
+	    if (data) {
+	        while (i--) {
+ 4b6:	f110 30ff 	adds.w	r0, r0, #4294967295
+ 4ba:	d302      	bcc.n	4c2 <HAL_PORT_UART_POLL_Write+0x22>
+	            // Wait until data is ready __TC = Transmission Complete
+	            while (!(dev->uart->STATUS & UART_STATUS_TXBL)) {
+ 4bc:	6a9c      	ldr	r4, [r3, #40]	; 0x28
+ 4be:	e7f4      	b.n	4aa <HAL_PORT_UART_POLL_Write+0xa>
+	        }
+
+	        return  size;
+	    }
+
+    return 0;
+ 4c0:	460a      	mov	r2, r1
+
+} /* HAL_PORT_UART_POLL_Write */
+ 4c2:	4610      	mov	r0, r2
+ 4c4:	bd30      	pop	{r4, r5, pc}
+	...
+
+000004c8 <HAL_PORT_NVIC_PriorityGroupConfig>:
+*/
+
+void HAL_PORT_NVIC_PriorityGroupConfig(uint32_t nvic_priority_group)
+{
+	 // Set proper priority group
+	 SCB->AIRCR = ((uint32_t)0x05FA0000) | nvic_priority_group;
+ 4c8:	f040 61be 	orr.w	r1, r0, #99614720	; 0x5f00000
+ 4cc:	4b02      	ldr	r3, [pc, #8]	; (4d8 <HAL_PORT_NVIC_PriorityGroupConfig+0x10>)
+ 4ce:	f441 2020 	orr.w	r0, r1, #655360	; 0xa0000
+ 4d2:	60d8      	str	r0, [r3, #12]
+
+} /* HAL_PORT_NVIC_PriorityGroupConfig */
+ 4d4:	4770      	bx	lr
+ 4d6:	bf00      	nop
+ 4d8:	e000ed00 	.word	0xe000ed00
+
+000004dc <CORE_PORT_Init>:
+	//
+#ifndef HAL_CORE_NVIC_PRIORITY_GROUP
+#define HAL_CORE_NVIC_PRIORITY_GROUP HAL_NVIC_PRIORITY_GROUP_2
+#endif
+	// Set division between pre-emption priority and subpriority part
+	HAL_PORT_NVIC_PriorityGroupConfig(HAL_CORE_NVIC_PRIORITY_GROUP);
+ 4dc:	f44f 60a0 	mov.w	r0, #1280	; 0x500
+ 4e0:	f7ff bff2 	b.w	4c8 <HAL_PORT_NVIC_PriorityGroupConfig>
+
+000004e4 <HAL_GPIO_PORT_Init>:
+
+// -----------------------------------------------------------------------------
+//  HAL_GPIO_PORT_Init
+// -----------------------------------------------------------------------------
+void HAL_GPIO_PORT_Init()
+{
+ 4e4:	b510      	push	{r4, lr}
+	CORE_EnterCritical();
+ 4e6:	b672      	cpsid	i
+ 4e8:	4b09      	ldr	r3, [pc, #36]	; (510 <HAL_GPIO_PORT_Init+0x2c>)
+	// Turn on clock for GPIO
+	CMU->HFPERCLKEN0 |= CMU_HFPERCLKEN0_GPIO;
+ 4ea:	480a      	ldr	r0, [pc, #40]	; (514 <HAL_GPIO_PORT_Init+0x30>)
+// -----------------------------------------------------------------------------
+//  HAL_GPIO_PORT_Init
+// -----------------------------------------------------------------------------
+void HAL_GPIO_PORT_Init()
+{
+	CORE_EnterCritical();
+ 4ec:	681a      	ldr	r2, [r3, #0]
+ 4ee:	1c51      	adds	r1, r2, #1
+ 4f0:	6019      	str	r1, [r3, #0]
+	// Turn on clock for GPIO
+	CMU->HFPERCLKEN0 |= CMU_HFPERCLKEN0_GPIO;
+ 4f2:	6c44      	ldr	r4, [r0, #68]	; 0x44
+ 4f4:	f444 5400 	orr.w	r4, r4, #8192	; 0x2000
+ 4f8:	6444      	str	r4, [r0, #68]	; 0x44
+
+	// Turn off clock for PRS and INT
+	GPIO->INSENSE = (GPIO->INSENSE & (~(GPIO_INSENSE_INT | GPIO_INSENSE_PRS )));
+ 4fa:	4807      	ldr	r0, [pc, #28]	; (518 <HAL_GPIO_PORT_Init+0x34>)
+ 4fc:	f8d0 4124 	ldr.w	r4, [r0, #292]	; 0x124
+ 500:	f024 0403 	bic.w	r4, r4, #3
+ 504:	f8c0 4124 	str.w	r4, [r0, #292]	; 0x124
+	CORE_ExitCritical();
+ 508:	b101      	cbz	r1, 50c <HAL_GPIO_PORT_Init+0x28>
+ 50a:	601a      	str	r2, [r3, #0]
+ 50c:	b662      	cpsie	i
+}/* HAL_GPIO_PORT_Init */
+ 50e:	bd10      	pop	{r4, pc}
+ 510:	20000190 	.word	0x20000190
+ 514:	400c8000 	.word	0x400c8000
+ 518:	40006000 	.word	0x40006000
+
+0000051c <HAL_GPIO_PORT_Deinit>:
+
+// -----------------------------------------------------------------------------
+//  HAL_GPIO_PORT_Deinit
+// -----------------------------------------------------------------------------
+void HAL_GPIO_PORT_Deinit()
+{
+ 51c:	b510      	push	{r4, lr}
+	CORE_EnterCritical();
+ 51e:	b672      	cpsid	i
+ 520:	4b06      	ldr	r3, [pc, #24]	; (53c <HAL_GPIO_PORT_Deinit+0x20>)
+	// Turn off clock for GPIO
+	CMU->HFPERCLKEN0 &= ~(CMU_HFPERCLKEN0_GPIO);
+ 522:	4807      	ldr	r0, [pc, #28]	; (540 <HAL_GPIO_PORT_Deinit+0x24>)
+// -----------------------------------------------------------------------------
+//  HAL_GPIO_PORT_Deinit
+// -----------------------------------------------------------------------------
+void HAL_GPIO_PORT_Deinit()
+{
+	CORE_EnterCritical();
+ 524:	681a      	ldr	r2, [r3, #0]
+ 526:	1c51      	adds	r1, r2, #1
+ 528:	6019      	str	r1, [r3, #0]
+	// Turn off clock for GPIO
+	CMU->HFPERCLKEN0 &= ~(CMU_HFPERCLKEN0_GPIO);
+ 52a:	6c44      	ldr	r4, [r0, #68]	; 0x44
+ 52c:	f424 5400 	bic.w	r4, r4, #8192	; 0x2000
+ 530:	6444      	str	r4, [r0, #68]	; 0x44
+	CORE_ExitCritical();
+ 532:	b101      	cbz	r1, 536 <HAL_GPIO_PORT_Deinit+0x1a>
+ 534:	601a      	str	r2, [r3, #0]
+ 536:	b662      	cpsie	i
+
+} /* HAL_GPIO_PORT_Deinit */
+ 538:	bd10      	pop	{r4, pc}
+ 53a:	bf00      	nop
+ 53c:	20000190 	.word	0x20000190
+ 540:	400c8000 	.word	0x400c8000
+
+00000544 <HAL_GPIO_PORT_ConfigurePin>:
+
+// -----------------------------------------------------------------------------
+//  HAL_GPIO_PORT_ConfigurePin
+// -----------------------------------------------------------------------------
+void HAL_GPIO_PORT_ConfigurePin(uint8_t port, uint8_t pin, uint16_t mode)
+{
+ 544:	b570      	push	{r4, r5, r6, lr}
+
+	uint8_t drive_mode = (0xFF & mode)>>4;
+ 546:	b2d6      	uxtb	r6, r2
+ 548:	0936      	lsrs	r6, r6, #4
+	uint8_t pin_mode = mode & 0x0f;
+
+	// Set Pull Up or Filter
+	if (mode & 0x100 )
+ 54a:	05d5      	lsls	r5, r2, #23
+// -----------------------------------------------------------------------------
+void HAL_GPIO_PORT_ConfigurePin(uint8_t port, uint8_t pin, uint16_t mode)
+{
+
+	uint8_t drive_mode = (0xFF & mode)>>4;
+	uint8_t pin_mode = mode & 0x0f;
+ 54c:	f002 040f 	and.w	r4, r2, #15
+
+	// Set Pull Up or Filter
+	if (mode & 0x100 )
+ 550:	d509      	bpl.n	566 <HAL_GPIO_PORT_ConfigurePin+0x22>
+	{
+		GPIO->P[port].DOUTSET = 1 << pin;
+ 552:	2201      	movs	r2, #1
+ 554:	408a      	lsls	r2, r1
+ 556:	2324      	movs	r3, #36	; 0x24
+ 558:	4343      	muls	r3, r0
+ 55a:	f103 4580 	add.w	r5, r3, #1073741824	; 0x40000000
+ 55e:	f505 43c0 	add.w	r3, r5, #24576	; 0x6000
+ 562:	611a      	str	r2, [r3, #16]
+ 564:	e008      	b.n	578 <HAL_GPIO_PORT_ConfigurePin+0x34>
+	}else if (mode & 0x200)// Set Pull Down
+ 566:	0593      	lsls	r3, r2, #22
+ 568:	d506      	bpl.n	578 <HAL_GPIO_PORT_ConfigurePin+0x34>
+	{
+		GPIO->P[port].DOUTCLR = 1 << pin;
+ 56a:	2201      	movs	r2, #1
+ 56c:	408a      	lsls	r2, r1
+ 56e:	2524      	movs	r5, #36	; 0x24
+ 570:	4345      	muls	r5, r0
+ 572:	4b13      	ldr	r3, [pc, #76]	; (5c0 <HAL_GPIO_PORT_ConfigurePin+0x7c>)
+ 574:	18ed      	adds	r5, r5, r3
+ 576:	606a      	str	r2, [r5, #4]
+	}
+
+
+	// Set Drive Mode
+	GPIO->P[port].CTRL = (GPIO->P[port].CTRL & ~(_GPIO_P_CTRL_DRIVEMODE_MASK))
+ 578:	2324      	movs	r3, #36	; 0x24
+ 57a:	4358      	muls	r0, r3
+ 57c:	4a11      	ldr	r2, [pc, #68]	; (5c4 <HAL_GPIO_PORT_ConfigurePin+0x80>)
+					   | (drive_mode << _GPIO_P_CTRL_DRIVEMODE_SHIFT);
+
+
+	 // Set Pin Mode
+	 if (pin < 8)
+ 57e:	2907      	cmp	r1, #7
+		GPIO->P[port].DOUTCLR = 1 << pin;
+	}
+
+
+	// Set Drive Mode
+	GPIO->P[port].CTRL = (GPIO->P[port].CTRL & ~(_GPIO_P_CTRL_DRIVEMODE_MASK))
+ 580:	5815      	ldr	r5, [r2, r0]
+ 582:	eb00 0302 	add.w	r3, r0, r2
+ 586:	f025 0c03 	bic.w	ip, r5, #3
+					   | (drive_mode << _GPIO_P_CTRL_DRIVEMODE_SHIFT);
+ 58a:	ea46 050c 	orr.w	r5, r6, ip
+		GPIO->P[port].DOUTCLR = 1 << pin;
+	}
+
+
+	// Set Drive Mode
+	GPIO->P[port].CTRL = (GPIO->P[port].CTRL & ~(_GPIO_P_CTRL_DRIVEMODE_MASK))
+ 58e:	5015      	str	r5, [r2, r0]
+ 590:	f04f 020f 	mov.w	r2, #15
+					   | (drive_mode << _GPIO_P_CTRL_DRIVEMODE_SHIFT);
+
+
+	 // Set Pin Mode
+	 if (pin < 8)
+ 594:	d808      	bhi.n	5a8 <HAL_GPIO_PORT_ConfigurePin+0x64>
+	  {
+		GPIO->P[port].MODEL = (GPIO->P[port].MODEL & ~(0xF << (pin * 4))) |
+ 596:	0089      	lsls	r1, r1, #2
+ 598:	408a      	lsls	r2, r1
+							  (pin_mode << (pin * 4));
+ 59a:	408c      	lsls	r4, r1
+
+
+	 // Set Pin Mode
+	 if (pin < 8)
+	  {
+		GPIO->P[port].MODEL = (GPIO->P[port].MODEL & ~(0xF << (pin * 4))) |
+ 59c:	6858      	ldr	r0, [r3, #4]
+ 59e:	ea20 0102 	bic.w	r1, r0, r2
+ 5a2:	430c      	orrs	r4, r1
+ 5a4:	605c      	str	r4, [r3, #4]
+ 5a6:	bd70      	pop	{r4, r5, r6, pc}
+							  (pin_mode << (pin * 4));
+	  }
+	  else
+	  {
+		GPIO->P[port].MODEH = (GPIO->P[port].MODEH & ~(0xF << ((pin - 8) * 4))) |
+ 5a8:	3908      	subs	r1, #8
+ 5aa:	0089      	lsls	r1, r1, #2
+ 5ac:	408a      	lsls	r2, r1
+							  (pin_mode << ((pin - 8) * 4));
+ 5ae:	408c      	lsls	r4, r1
+		GPIO->P[port].MODEL = (GPIO->P[port].MODEL & ~(0xF << (pin * 4))) |
+							  (pin_mode << (pin * 4));
+	  }
+	  else
+	  {
+		GPIO->P[port].MODEH = (GPIO->P[port].MODEH & ~(0xF << ((pin - 8) * 4))) |
+ 5b0:	6898      	ldr	r0, [r3, #8]
+ 5b2:	ea20 0002 	bic.w	r0, r0, r2
+ 5b6:	ea40 0204 	orr.w	r2, r0, r4
+ 5ba:	609a      	str	r2, [r3, #8]
+ 5bc:	bd70      	pop	{r4, r5, r6, pc}
+ 5be:	bf00      	nop
+ 5c0:	40006010 	.word	0x40006010
+ 5c4:	40006000 	.word	0x40006000
+
+000005c8 <HAL_PORT_UART_POLL_DisableRead>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_UART_POLL_DisableRead
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_UART_POLL_DisableRead(UART_IODevice dev)
+{
+ 5c8:	b508      	push	{r3, lr}
+	// Disable read on UART1
+	dev->uart->CMD &= ~(uint32_t)(UART_CMD_RXEN);
+ 5ca:	6a81      	ldr	r1, [r0, #40]	; 0x28
+ 5cc:	68cb      	ldr	r3, [r1, #12]
+ 5ce:	f023 0201 	bic.w	r2, r3, #1
+
+#if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+	if (dev == &io_uart0_poll) {
+ 5d2:	4b08      	ldr	r3, [pc, #32]	; (5f4 <HAL_PORT_UART_POLL_DisableRead+0x2c>)
+//  HAL_PORT_UART_POLL_DisableRead
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_UART_POLL_DisableRead(UART_IODevice dev)
+{
+	// Disable read on UART1
+	dev->uart->CMD &= ~(uint32_t)(UART_CMD_RXEN);
+ 5d4:	60ca      	str	r2, [r1, #12]
+
+#if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+	if (dev == &io_uart0_poll) {
+ 5d6:	4298      	cmp	r0, r3
+ 5d8:	d102      	bne.n	5e0 <HAL_PORT_UART_POLL_DisableRead+0x18>
+
+		// Restore RX pin to default settings
+		HAL_GPIO_ConfigurePin(UART0_RX, DISABLE_CONFIG);
+ 5da:	2004      	movs	r0, #4
+ 5dc:	2101      	movs	r1, #1
+ 5de:	e004      	b.n	5ea <HAL_PORT_UART_POLL_DisableRead+0x22>
+	}
+#endif // #if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+
+#if defined HALPORT_USE_UART1 && (HALPORT_USE_UART1 != 0)
+	if (dev == &io_uart1_poll) {
+ 5e0:	4a05      	ldr	r2, [pc, #20]	; (5f8 <HAL_PORT_UART_POLL_DisableRead+0x30>)
+ 5e2:	4290      	cmp	r0, r2
+ 5e4:	d104      	bne.n	5f0 <HAL_PORT_UART_POLL_DisableRead+0x28>
+
+		// Restore RX pin to default settings
+		HAL_GPIO_ConfigurePin(UART1_RX, DISABLE_CONFIG);
+ 5e6:	2001      	movs	r0, #1
+ 5e8:	210a      	movs	r1, #10
+ 5ea:	2200      	movs	r2, #0
+ 5ec:	f7ff ffaa 	bl	544 <HAL_GPIO_PORT_ConfigurePin>
+	}
+#endif // #if defined HALPORT_USE_UART1 && (HALPORT_USE_UART1 != 0)
+
+    return  HALRESULT_OK;
+
+} /* HAL_PORT_UART_POLL_DisableRead */
+ 5f0:	2000      	movs	r0, #0
+ 5f2:	bd08      	pop	{r3, pc}
+ 5f4:	200000d8 	.word	0x200000d8
+ 5f8:	200000a4 	.word	0x200000a4
+
+000005fc <HAL_PORT_UART_POLL_EnableRead>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_UART_POLL_EnableRead
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_UART_POLL_EnableRead(UART_IODevice dev)
+{
+ 5fc:	b508      	push	{r3, lr}
+	// Enable read
+	dev->uart->CMD |= (uint32_t)(UART_CMD_RXEN);
+ 5fe:	6a81      	ldr	r1, [r0, #40]	; 0x28
+ 600:	68cb      	ldr	r3, [r1, #12]
+ 602:	f043 0201 	orr.w	r2, r3, #1
+
+#if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+	if (dev == &io_uart0_poll) {
+ 606:	4b09      	ldr	r3, [pc, #36]	; (62c <HAL_PORT_UART_POLL_EnableRead+0x30>)
+//  HAL_PORT_UART_POLL_EnableRead
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_UART_POLL_EnableRead(UART_IODevice dev)
+{
+	// Enable read
+	dev->uart->CMD |= (uint32_t)(UART_CMD_RXEN);
+ 608:	60ca      	str	r2, [r1, #12]
+
+#if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+	if (dev == &io_uart0_poll) {
+ 60a:	4298      	cmp	r0, r3
+ 60c:	d103      	bne.n	616 <HAL_PORT_UART_POLL_EnableRead+0x1a>
+
+		// Configure UART0 TX PIN
+		HAL_GPIO_ConfigurePin(UART0_RX, DEFAULT_CONFIG);
+ 60e:	2101      	movs	r1, #1
+ 610:	2004      	movs	r0, #4
+ 612:	460a      	mov	r2, r1
+ 614:	e005      	b.n	622 <HAL_PORT_UART_POLL_EnableRead+0x26>
+	}
+#endif // #if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+
+#if defined HALPORT_USE_UART1 && (HALPORT_USE_UART1 != 0)
+	if (dev == &io_uart1_poll) {
+ 616:	4a06      	ldr	r2, [pc, #24]	; (630 <HAL_PORT_UART_POLL_EnableRead+0x34>)
+ 618:	4290      	cmp	r0, r2
+ 61a:	d104      	bne.n	626 <HAL_PORT_UART_POLL_EnableRead+0x2a>
+
+		// Configure UART1 TX PIN
+		HAL_GPIO_ConfigurePin(UART1_RX, DEFAULT_CONFIG);
+ 61c:	2001      	movs	r0, #1
+ 61e:	210a      	movs	r1, #10
+ 620:	4602      	mov	r2, r0
+ 622:	f7ff ff8f 	bl	544 <HAL_GPIO_PORT_ConfigurePin>
+	}
+#endif // #if defined HALPORT_USE_UART1 && (HALPORT_USE_UART1 != 0)
+
+	return  HALRESULT_OK;
+
+} /* HAL_PORT_UART_POLL_EnableRead */
+ 626:	2000      	movs	r0, #0
+ 628:	bd08      	pop	{r3, pc}
+ 62a:	bf00      	nop
+ 62c:	200000d8 	.word	0x200000d8
+ 630:	200000a4 	.word	0x200000a4
+
+00000634 <HAL_PORT_UART_POLL_DisableWrite>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_UART_POLL_DisableWrite
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_UART_POLL_DisableWrite(UART_IODevice dev)
+{
+ 634:	b508      	push	{r3, lr}
+	// Disable write on UART1
+	dev->uart->CMD &= ~(uint32_t)(UART_CMD_TXEN);
+ 636:	6a81      	ldr	r1, [r0, #40]	; 0x28
+ 638:	68cb      	ldr	r3, [r1, #12]
+ 63a:	f023 0204 	bic.w	r2, r3, #4
+
+#if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+	if (dev == &io_uart0_poll) {
+ 63e:	4b09      	ldr	r3, [pc, #36]	; (664 <HAL_PORT_UART_POLL_DisableWrite+0x30>)
+//  HAL_PORT_UART_POLL_DisableWrite
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_UART_POLL_DisableWrite(UART_IODevice dev)
+{
+	// Disable write on UART1
+	dev->uart->CMD &= ~(uint32_t)(UART_CMD_TXEN);
+ 640:	60ca      	str	r2, [r1, #12]
+
+#if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+	if (dev == &io_uart0_poll) {
+ 642:	4298      	cmp	r0, r3
+ 644:	d103      	bne.n	64e <HAL_PORT_UART_POLL_DisableWrite+0x1a>
+
+		// Restore TX pin to default settings
+		HAL_GPIO_ConfigurePin(UART0_TX, DISABLE_CONFIG);
+ 646:	2100      	movs	r1, #0
+ 648:	2004      	movs	r0, #4
+ 64a:	460a      	mov	r2, r1
+ 64c:	e005      	b.n	65a <HAL_PORT_UART_POLL_DisableWrite+0x26>
+	}
+#endif // #if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+
+#if defined HALPORT_USE_UART1 && (HALPORT_USE_UART1 != 0)
+	if (dev == &io_uart1_poll) {
+ 64e:	4a06      	ldr	r2, [pc, #24]	; (668 <HAL_PORT_UART_POLL_DisableWrite+0x34>)
+ 650:	4290      	cmp	r0, r2
+ 652:	d104      	bne.n	65e <HAL_PORT_UART_POLL_DisableWrite+0x2a>
+
+		// Restore TX pin to default settings
+		HAL_GPIO_ConfigurePin(UART1_TX, DISABLE_CONFIG);
+ 654:	2001      	movs	r0, #1
+ 656:	2109      	movs	r1, #9
+ 658:	2200      	movs	r2, #0
+ 65a:	f7ff ff73 	bl	544 <HAL_GPIO_PORT_ConfigurePin>
+	}
+#endif // #if defined HALPORT_USE_UART1 && (HALPORT_USE_UART1 != 0)
+
+    return  HALRESULT_OK;
+
+} /* HAL_PORT_UART_POLL_DisableWrite */
+ 65e:	2000      	movs	r0, #0
+ 660:	bd08      	pop	{r3, pc}
+ 662:	bf00      	nop
+ 664:	200000d8 	.word	0x200000d8
+ 668:	200000a4 	.word	0x200000a4
+
+0000066c <HAL_PORT_UART_POLL_EnableWrite>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_UART_POLL_EnableWrite
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_UART_POLL_EnableWrite(UART_IODevice dev)
+{
+ 66c:	b508      	push	{r3, lr}
+	// Enable write
+	dev->uart->CMD |= (uint32_t)(UART_CMD_TXEN);
+ 66e:	6a81      	ldr	r1, [r0, #40]	; 0x28
+ 670:	68cb      	ldr	r3, [r1, #12]
+ 672:	f043 0204 	orr.w	r2, r3, #4
+
+#if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+	if (dev == &io_uart0_poll) {
+ 676:	4b09      	ldr	r3, [pc, #36]	; (69c <HAL_PORT_UART_POLL_EnableWrite+0x30>)
+//  HAL_PORT_UART_POLL_EnableWrite
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_UART_POLL_EnableWrite(UART_IODevice dev)
+{
+	// Enable write
+	dev->uart->CMD |= (uint32_t)(UART_CMD_TXEN);
+ 678:	60ca      	str	r2, [r1, #12]
+
+#if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+	if (dev == &io_uart0_poll) {
+ 67a:	4298      	cmp	r0, r3
+ 67c:	d103      	bne.n	686 <HAL_PORT_UART_POLL_EnableWrite+0x1a>
+
+		// Configure UART0 TX PIN
+		HAL_GPIO_ConfigurePin(UART0_TX, DEFAULT_CONFIG);
+ 67e:	2004      	movs	r0, #4
+ 680:	2100      	movs	r1, #0
+ 682:	4602      	mov	r2, r0
+ 684:	e005      	b.n	692 <HAL_PORT_UART_POLL_EnableWrite+0x26>
+	}
+#endif // #if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+
+#if defined HALPORT_USE_UART1 && (HALPORT_USE_UART1 != 0)
+	if (dev == &io_uart1_poll) {
+ 686:	4a06      	ldr	r2, [pc, #24]	; (6a0 <HAL_PORT_UART_POLL_EnableWrite+0x34>)
+ 688:	4290      	cmp	r0, r2
+ 68a:	d104      	bne.n	696 <HAL_PORT_UART_POLL_EnableWrite+0x2a>
+
+		// Configure UART1 TX PIN
+		HAL_GPIO_ConfigurePin(UART1_TX, DEFAULT_CONFIG);
+ 68c:	2001      	movs	r0, #1
+ 68e:	2109      	movs	r1, #9
+ 690:	2204      	movs	r2, #4
+ 692:	f7ff ff57 	bl	544 <HAL_GPIO_PORT_ConfigurePin>
+	}
+#endif // #if defined HALPORT_USE_UART1 && (HALPORT_USE_UART1 != 0)
+
+    return  HALRESULT_OK;
+
+} /* HAL_PORT_UART_POLL_EnableWrite */
+ 696:	2000      	movs	r0, #0
+ 698:	bd08      	pop	{r3, pc}
+ 69a:	bf00      	nop
+ 69c:	200000d8 	.word	0x200000d8
+ 6a0:	200000a4 	.word	0x200000a4
+
+000006a4 <HAL_PORT_USART_POLL_DisableRead>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_USART_POLL_DisableRead
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_USART_POLL_DisableRead(USART_IODevice dev)
+{
+ 6a4:	b508      	push	{r3, lr}
+	// Disable read on USART1
+	dev->usart->CMD &= ~(uint32_t)(USART_CMD_RXEN);
+ 6a6:	6a81      	ldr	r1, [r0, #40]	; 0x28
+ 6a8:	68cb      	ldr	r3, [r1, #12]
+ 6aa:	f023 0201 	bic.w	r2, r3, #1
+
+#if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+	if (dev == &io_usart0_poll) {
+ 6ae:	4b0b      	ldr	r3, [pc, #44]	; (6dc <HAL_PORT_USART_POLL_DisableRead+0x38>)
+//  HAL_PORT_USART_POLL_DisableRead
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_USART_POLL_DisableRead(USART_IODevice dev)
+{
+	// Disable read on USART1
+	dev->usart->CMD &= ~(uint32_t)(USART_CMD_RXEN);
+ 6b0:	60ca      	str	r2, [r1, #12]
+
+#if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+	if (dev == &io_usart0_poll) {
+ 6b2:	4298      	cmp	r0, r3
+ 6b4:	d101      	bne.n	6ba <HAL_PORT_USART_POLL_DisableRead+0x16>
+
+		// Restore RX pin to default settings
+		HAL_GPIO_ConfigurePin(USART0_RX, DISABLE_CONFIG);
+ 6b6:	2002      	movs	r0, #2
+ 6b8:	e003      	b.n	6c2 <HAL_PORT_USART_POLL_DisableRead+0x1e>
+	}
+#endif // #if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+
+#if defined HALPORT_USE_USART1 && (HALPORT_USE_USART1 != 0)
+	if (dev == &io_usart1_poll) {
+ 6ba:	4a09      	ldr	r2, [pc, #36]	; (6e0 <HAL_PORT_USART_POLL_DisableRead+0x3c>)
+ 6bc:	4290      	cmp	r0, r2
+ 6be:	d102      	bne.n	6c6 <HAL_PORT_USART_POLL_DisableRead+0x22>
+
+		// Restore RX pin to default settings
+		HAL_GPIO_ConfigurePin(USART1_RX, DISABLE_CONFIG);
+ 6c0:	2003      	movs	r0, #3
+ 6c2:	2101      	movs	r1, #1
+ 6c4:	e004      	b.n	6d0 <HAL_PORT_USART_POLL_DisableRead+0x2c>
+	}
+#endif // #if defined HALPORT_USE_USART1 && (HALPORT_USE_USART1 != 0)
+
+#if defined HALPORT_USE_USART2 && (HALPORT_USE_USART2 != 0)
+	if (dev == &io_usart2_poll) {
+ 6c6:	4907      	ldr	r1, [pc, #28]	; (6e4 <HAL_PORT_USART_POLL_DisableRead+0x40>)
+ 6c8:	4288      	cmp	r0, r1
+ 6ca:	d104      	bne.n	6d6 <HAL_PORT_USART_POLL_DisableRead+0x32>
+
+		// Restore RX pin to default settings
+		HAL_GPIO_ConfigurePin(USART2_RX, DISABLE_CONFIG);
+ 6cc:	2002      	movs	r0, #2
+ 6ce:	2103      	movs	r1, #3
+ 6d0:	2200      	movs	r2, #0
+ 6d2:	f7ff ff37 	bl	544 <HAL_GPIO_PORT_ConfigurePin>
+	}
+#endif // #if defined HALPORT_USE_USART2 && (HALPORT_USE_USART2 != 0)
+
+    return  HALRESULT_OK;
+
+} /* HAL_PORT_USART_POLL_DisableRead */
+ 6d6:	2000      	movs	r0, #0
+ 6d8:	bd08      	pop	{r3, pc}
+ 6da:	bf00      	nop
+ 6dc:	2000006c 	.word	0x2000006c
+ 6e0:	20000034 	.word	0x20000034
+ 6e4:	20000000 	.word	0x20000000
+
+000006e8 <HAL_PORT_USART_POLL_EnableRead>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_USART_POLL_EnableRead
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_USART_POLL_EnableRead(USART_IODevice dev)
+{
+ 6e8:	b508      	push	{r3, lr}
+	// Enable read
+	dev->usart->CMD |= (uint32_t)(USART_CMD_RXEN);
+ 6ea:	6a81      	ldr	r1, [r0, #40]	; 0x28
+ 6ec:	68cb      	ldr	r3, [r1, #12]
+ 6ee:	f043 0201 	orr.w	r2, r3, #1
+
+#if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+	if (dev == &io_usart0_poll) {
+ 6f2:	4b0b      	ldr	r3, [pc, #44]	; (720 <HAL_PORT_USART_POLL_EnableRead+0x38>)
+//  HAL_PORT_USART_POLL_EnableRead
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_USART_POLL_EnableRead(USART_IODevice dev)
+{
+	// Enable read
+	dev->usart->CMD |= (uint32_t)(USART_CMD_RXEN);
+ 6f4:	60ca      	str	r2, [r1, #12]
+
+#if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+	if (dev == &io_usart0_poll) {
+ 6f6:	4298      	cmp	r0, r3
+ 6f8:	d101      	bne.n	6fe <HAL_PORT_USART_POLL_EnableRead+0x16>
+
+		// Configure USART0 TX PIN
+		HAL_GPIO_ConfigurePin(USART0_RX, DEFAULT_CONFIG);
+ 6fa:	2002      	movs	r0, #2
+ 6fc:	e003      	b.n	706 <HAL_PORT_USART_POLL_EnableRead+0x1e>
+	}
+#endif // #if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+
+#if defined HALPORT_USE_USART1 && (HALPORT_USE_USART1 != 0)
+	if (dev == &io_usart1_poll) {
+ 6fe:	4a09      	ldr	r2, [pc, #36]	; (724 <HAL_PORT_USART_POLL_EnableRead+0x3c>)
+ 700:	4290      	cmp	r0, r2
+ 702:	d103      	bne.n	70c <HAL_PORT_USART_POLL_EnableRead+0x24>
+
+		// Configure USART1 TX PIN
+		HAL_GPIO_ConfigurePin(USART1_RX, DEFAULT_CONFIG);
+ 704:	2003      	movs	r0, #3
+ 706:	2101      	movs	r1, #1
+ 708:	460a      	mov	r2, r1
+ 70a:	e005      	b.n	718 <HAL_PORT_USART_POLL_EnableRead+0x30>
+	}
+#endif // #if defined HALPORT_USE_USART1 && (HALPORT_USE_USART1 != 0)
+
+#if defined HALPORT_USE_USART2 && (HALPORT_USE_USART2 != 0)
+	if (dev == &io_usart2_poll) {
+ 70c:	4906      	ldr	r1, [pc, #24]	; (728 <HAL_PORT_USART_POLL_EnableRead+0x40>)
+ 70e:	4288      	cmp	r0, r1
+ 710:	d104      	bne.n	71c <HAL_PORT_USART_POLL_EnableRead+0x34>
+
+		// Configure USART2 TX PIN
+		HAL_GPIO_ConfigurePin(USART2_RX, DEFAULT_CONFIG);
+ 712:	2002      	movs	r0, #2
+ 714:	2103      	movs	r1, #3
+ 716:	2201      	movs	r2, #1
+ 718:	f7ff ff14 	bl	544 <HAL_GPIO_PORT_ConfigurePin>
+	}
+#endif // #if defined HALPORT_USE_USART2 && (HALPORT_USE_USART2 != 0)
+
+	return  HALRESULT_OK;
+
+} /* HAL_PORT_USART_POLL_EnableRead */
+ 71c:	2000      	movs	r0, #0
+ 71e:	bd08      	pop	{r3, pc}
+ 720:	2000006c 	.word	0x2000006c
+ 724:	20000034 	.word	0x20000034
+ 728:	20000000 	.word	0x20000000
+
+0000072c <HAL_PORT_USART_POLL_DisableWrite>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_USART_POLL_DisableWrite
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_USART_POLL_DisableWrite(USART_IODevice dev)
+{
+ 72c:	b508      	push	{r3, lr}
+	// Disable write on USART1
+	dev->usart->CMD &= ~(uint32_t)(USART_CMD_TXEN);
+ 72e:	6a81      	ldr	r1, [r0, #40]	; 0x28
+ 730:	68cb      	ldr	r3, [r1, #12]
+ 732:	f023 0204 	bic.w	r2, r3, #4
+
+#if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+	if (dev == &io_usart0_poll) {
+ 736:	4b0b      	ldr	r3, [pc, #44]	; (764 <HAL_PORT_USART_POLL_DisableWrite+0x38>)
+//  HAL_PORT_USART_POLL_DisableWrite
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_USART_POLL_DisableWrite(USART_IODevice dev)
+{
+	// Disable write on USART1
+	dev->usart->CMD &= ~(uint32_t)(USART_CMD_TXEN);
+ 738:	60ca      	str	r2, [r1, #12]
+
+#if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+	if (dev == &io_usart0_poll) {
+ 73a:	4298      	cmp	r0, r3
+ 73c:	d101      	bne.n	742 <HAL_PORT_USART_POLL_DisableWrite+0x16>
+
+		// Restore TX pin to default settings
+		HAL_GPIO_ConfigurePin(USART0_TX, DISABLE_CONFIG);
+ 73e:	2002      	movs	r0, #2
+ 740:	e003      	b.n	74a <HAL_PORT_USART_POLL_DisableWrite+0x1e>
+	}
+#endif // #if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+
+#if defined HALPORT_USE_USART1 && (HALPORT_USE_USART1 != 0)
+	if (dev == &io_usart1_poll) {
+ 742:	4a09      	ldr	r2, [pc, #36]	; (768 <HAL_PORT_USART_POLL_DisableWrite+0x3c>)
+ 744:	4290      	cmp	r0, r2
+ 746:	d103      	bne.n	750 <HAL_PORT_USART_POLL_DisableWrite+0x24>
+
+		// Restore TX pin to default settings
+		HAL_GPIO_ConfigurePin(USART1_TX, DISABLE_CONFIG);
+ 748:	2003      	movs	r0, #3
+ 74a:	2100      	movs	r1, #0
+ 74c:	460a      	mov	r2, r1
+ 74e:	e005      	b.n	75c <HAL_PORT_USART_POLL_DisableWrite+0x30>
+	}
+#endif // #if defined HALPORT_USE_USART1 && (HALPORT_USE_USART1 != 0)
+
+#if defined HALPORT_USE_USART2 && (HALPORT_USE_USART2 != 0)
+	if (dev == &io_usart2_poll) {
+ 750:	4906      	ldr	r1, [pc, #24]	; (76c <HAL_PORT_USART_POLL_DisableWrite+0x40>)
+ 752:	4288      	cmp	r0, r1
+ 754:	d104      	bne.n	760 <HAL_PORT_USART_POLL_DisableWrite+0x34>
+
+		// Restore TX pin to default settings
+		HAL_GPIO_ConfigurePin(USART2_TX, DISABLE_CONFIG);
+ 756:	2002      	movs	r0, #2
+ 758:	4601      	mov	r1, r0
+ 75a:	2200      	movs	r2, #0
+ 75c:	f7ff fef2 	bl	544 <HAL_GPIO_PORT_ConfigurePin>
+	}
+#endif // #if defined HALPORT_USE_USART2 && (HALPORT_USE_USART2 != 0)
+
+    return  HALRESULT_OK;
+
+} /* HAL_PORT_USART_POLL_DisableWrite */
+ 760:	2000      	movs	r0, #0
+ 762:	bd08      	pop	{r3, pc}
+ 764:	2000006c 	.word	0x2000006c
+ 768:	20000034 	.word	0x20000034
+ 76c:	20000000 	.word	0x20000000
+
+00000770 <HAL_PORT_USART_POLL_EnableWrite>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_USART_POLL_EnableWrite
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_USART_POLL_EnableWrite(USART_IODevice dev)
+{
+ 770:	b508      	push	{r3, lr}
+	// Enable write
+	dev->usart->CMD |= (uint32_t)(USART_CMD_TXEN);
+ 772:	6a81      	ldr	r1, [r0, #40]	; 0x28
+ 774:	68cb      	ldr	r3, [r1, #12]
+ 776:	f043 0204 	orr.w	r2, r3, #4
+
+#if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+	if (dev == &io_usart0_poll) {
+ 77a:	4b0b      	ldr	r3, [pc, #44]	; (7a8 <HAL_PORT_USART_POLL_EnableWrite+0x38>)
+//  HAL_PORT_USART_POLL_EnableWrite
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_USART_POLL_EnableWrite(USART_IODevice dev)
+{
+	// Enable write
+	dev->usart->CMD |= (uint32_t)(USART_CMD_TXEN);
+ 77c:	60ca      	str	r2, [r1, #12]
+
+#if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+	if (dev == &io_usart0_poll) {
+ 77e:	4298      	cmp	r0, r3
+ 780:	d101      	bne.n	786 <HAL_PORT_USART_POLL_EnableWrite+0x16>
+
+		// Configure USART0 TX PIN
+		HAL_GPIO_ConfigurePin(USART0_TX, DEFAULT_CONFIG);
+ 782:	2002      	movs	r0, #2
+ 784:	e003      	b.n	78e <HAL_PORT_USART_POLL_EnableWrite+0x1e>
+	}
+#endif // #if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+
+#if defined HALPORT_USE_USART1 && (HALPORT_USE_USART1 != 0)
+	if (dev == &io_usart1_poll) {
+ 786:	4a09      	ldr	r2, [pc, #36]	; (7ac <HAL_PORT_USART_POLL_EnableWrite+0x3c>)
+ 788:	4290      	cmp	r0, r2
+ 78a:	d102      	bne.n	792 <HAL_PORT_USART_POLL_EnableWrite+0x22>
+
+		// Configure USART1 TX PIN
+		HAL_GPIO_ConfigurePin(USART1_TX, DEFAULT_CONFIG);
+ 78c:	2003      	movs	r0, #3
+ 78e:	2100      	movs	r1, #0
+ 790:	e004      	b.n	79c <HAL_PORT_USART_POLL_EnableWrite+0x2c>
+	}
+#endif // #if defined HALPORT_USE_USART1 && (HALPORT_USE_USART1 != 0)
+
+#if defined HALPORT_USE_USART2 && (HALPORT_USE_USART2 != 0)
+	if (dev == &io_usart2_poll) {
+ 792:	4907      	ldr	r1, [pc, #28]	; (7b0 <HAL_PORT_USART_POLL_EnableWrite+0x40>)
+ 794:	4288      	cmp	r0, r1
+ 796:	d104      	bne.n	7a2 <HAL_PORT_USART_POLL_EnableWrite+0x32>
+
+		// Configure USART2 TX PIN
+		HAL_GPIO_ConfigurePin(USART2_TX, DEFAULT_CONFIG);
+ 798:	2002      	movs	r0, #2
+ 79a:	4601      	mov	r1, r0
+ 79c:	2204      	movs	r2, #4
+ 79e:	f7ff fed1 	bl	544 <HAL_GPIO_PORT_ConfigurePin>
+	}
+#endif // #if defined HALPORT_USE_USART2 && (HALPORT_USE_USART2 != 0)
+
+    return  HALRESULT_OK;
+
+} /* HAL_PORT_USART_POLL_EnableWrite */
+ 7a2:	2000      	movs	r0, #0
+ 7a4:	bd08      	pop	{r3, pc}
+ 7a6:	bf00      	nop
+ 7a8:	2000006c 	.word	0x2000006c
+ 7ac:	20000034 	.word	0x20000034
+ 7b0:	20000000 	.word	0x20000000
+
+000007b4 <GPIO_EVEN_IRQHandler>:
+
+// -----------------------------------------------------------------------------
+//  GPIO_EVEN_IRQHandler
+// -----------------------------------------------------------------------------
+void GPIO_EVEN_IRQHandler(void)
+{
+ 7b4:	b508      	push	{r3, lr}
+
+	if((GPIO->IF & EXTI_PR_PR0) && (GPIO->IEN & EXTI_PR_PR0))
+ 7b6:	4b42      	ldr	r3, [pc, #264]	; (8c0 <GPIO_EVEN_IRQHandler+0x10c>)
+ 7b8:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 7bc:	07d1      	lsls	r1, r2, #31
+ 7be:	d50a      	bpl.n	7d6 <GPIO_EVEN_IRQHandler+0x22>
+ 7c0:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 7c4:	07c2      	lsls	r2, r0, #31
+ 7c6:	d506      	bpl.n	7d6 <GPIO_EVEN_IRQHandler+0x22>
+		{
+			// Clear the EXTI line pending bit
+		  GPIO->IFC = EXTI_PR_PR0;
+ 7c8:	2101      	movs	r1, #1
+ 7ca:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+			if(HAL_GPIO_PORT_events_table[0]) {
+ 7ce:	4b3d      	ldr	r3, [pc, #244]	; (8c4 <GPIO_EVEN_IRQHandler+0x110>)
+ 7d0:	681b      	ldr	r3, [r3, #0]
+ 7d2:	b103      	cbz	r3, 7d6 <GPIO_EVEN_IRQHandler+0x22>
+				HAL_GPIO_PORT_events_table[0] ();
+ 7d4:	4798      	blx	r3
+			}
+		}
+
+	if((GPIO->IF & EXTI_PR_PR2) && (GPIO->IEN & EXTI_PR_PR2))
+ 7d6:	4b3a      	ldr	r3, [pc, #232]	; (8c0 <GPIO_EVEN_IRQHandler+0x10c>)
+ 7d8:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 7dc:	0750      	lsls	r0, r2, #29
+ 7de:	d50a      	bpl.n	7f6 <GPIO_EVEN_IRQHandler+0x42>
+ 7e0:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 7e4:	0741      	lsls	r1, r0, #29
+ 7e6:	d506      	bpl.n	7f6 <GPIO_EVEN_IRQHandler+0x42>
+		{
+			// Clear the EXTI line pending bit
+		  GPIO->IFC = EXTI_PR_PR1;
+ 7e8:	2102      	movs	r1, #2
+ 7ea:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+			if(HAL_GPIO_PORT_events_table[2]) {
+ 7ee:	4b35      	ldr	r3, [pc, #212]	; (8c4 <GPIO_EVEN_IRQHandler+0x110>)
+ 7f0:	689b      	ldr	r3, [r3, #8]
+ 7f2:	b103      	cbz	r3, 7f6 <GPIO_EVEN_IRQHandler+0x42>
+				HAL_GPIO_PORT_events_table[2] ();
+ 7f4:	4798      	blx	r3
+			}
+		}
+
+	if((GPIO->IF & EXTI_PR_PR4) && (GPIO->IEN & EXTI_PR_PR4))
+ 7f6:	4b32      	ldr	r3, [pc, #200]	; (8c0 <GPIO_EVEN_IRQHandler+0x10c>)
+ 7f8:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 7fc:	06d2      	lsls	r2, r2, #27
+ 7fe:	d50a      	bpl.n	816 <GPIO_EVEN_IRQHandler+0x62>
+ 800:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 804:	06c0      	lsls	r0, r0, #27
+ 806:	d506      	bpl.n	816 <GPIO_EVEN_IRQHandler+0x62>
+			{
+				// Clear the EXTI line pending bit
+			  GPIO->IFC = EXTI_PR_PR4;
+ 808:	2110      	movs	r1, #16
+ 80a:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+				if(HAL_GPIO_PORT_events_table[4]) {
+ 80e:	4b2d      	ldr	r3, [pc, #180]	; (8c4 <GPIO_EVEN_IRQHandler+0x110>)
+ 810:	691b      	ldr	r3, [r3, #16]
+ 812:	b103      	cbz	r3, 816 <GPIO_EVEN_IRQHandler+0x62>
+					HAL_GPIO_PORT_events_table[4] ();
+ 814:	4798      	blx	r3
+				}
+			}
+	if((GPIO->IF & EXTI_PR_PR6) && (GPIO->IEN & EXTI_PR_PR6))
+ 816:	4b2a      	ldr	r3, [pc, #168]	; (8c0 <GPIO_EVEN_IRQHandler+0x10c>)
+ 818:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 81c:	0651      	lsls	r1, r2, #25
+ 81e:	d50a      	bpl.n	836 <GPIO_EVEN_IRQHandler+0x82>
+ 820:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 824:	0642      	lsls	r2, r0, #25
+ 826:	d506      	bpl.n	836 <GPIO_EVEN_IRQHandler+0x82>
+			{
+				// Clear the EXTI line pending bit
+			  GPIO->IFC = EXTI_PR_PR6;
+ 828:	2140      	movs	r1, #64	; 0x40
+ 82a:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+				if(HAL_GPIO_PORT_events_table[6]) {
+ 82e:	4b25      	ldr	r3, [pc, #148]	; (8c4 <GPIO_EVEN_IRQHandler+0x110>)
+ 830:	699b      	ldr	r3, [r3, #24]
+ 832:	b103      	cbz	r3, 836 <GPIO_EVEN_IRQHandler+0x82>
+					HAL_GPIO_PORT_events_table[6] ();
+ 834:	4798      	blx	r3
+				}
+			}
+
+		if((GPIO->IF & EXTI_PR_PR8) && (GPIO->IEN & EXTI_PR_PR8))
+ 836:	4b22      	ldr	r3, [pc, #136]	; (8c0 <GPIO_EVEN_IRQHandler+0x10c>)
+ 838:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 83c:	05d0      	lsls	r0, r2, #23
+ 83e:	d50b      	bpl.n	858 <GPIO_EVEN_IRQHandler+0xa4>
+ 840:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 844:	05c1      	lsls	r1, r0, #23
+ 846:	d507      	bpl.n	858 <GPIO_EVEN_IRQHandler+0xa4>
+			{
+				// Clear the EXTI line pending bit
+			  GPIO->IFC = EXTI_PR_PR8;
+ 848:	f44f 7180 	mov.w	r1, #256	; 0x100
+ 84c:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+				if(HAL_GPIO_PORT_events_table[8]) {
+ 850:	4b1c      	ldr	r3, [pc, #112]	; (8c4 <GPIO_EVEN_IRQHandler+0x110>)
+ 852:	6a1b      	ldr	r3, [r3, #32]
+ 854:	b103      	cbz	r3, 858 <GPIO_EVEN_IRQHandler+0xa4>
+					HAL_GPIO_PORT_events_table[8] ();
+ 856:	4798      	blx	r3
+				}
+			}
+
+		if((GPIO->IF & EXTI_PR_PR10) && (GPIO->IEN & EXTI_PR_PR10))
+ 858:	4b19      	ldr	r3, [pc, #100]	; (8c0 <GPIO_EVEN_IRQHandler+0x10c>)
+ 85a:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 85e:	0552      	lsls	r2, r2, #21
+ 860:	d50b      	bpl.n	87a <GPIO_EVEN_IRQHandler+0xc6>
+ 862:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 866:	0540      	lsls	r0, r0, #21
+ 868:	d507      	bpl.n	87a <GPIO_EVEN_IRQHandler+0xc6>
+				{
+					// Clear the EXTI line pending bit
+				  GPIO->IFC = EXTI_PR_PR10;
+ 86a:	f44f 6180 	mov.w	r1, #1024	; 0x400
+ 86e:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+					if(HAL_GPIO_PORT_events_table[10]) {
+ 872:	4b14      	ldr	r3, [pc, #80]	; (8c4 <GPIO_EVEN_IRQHandler+0x110>)
+ 874:	6a9b      	ldr	r3, [r3, #40]	; 0x28
+ 876:	b103      	cbz	r3, 87a <GPIO_EVEN_IRQHandler+0xc6>
+						HAL_GPIO_PORT_events_table[10] ();
+ 878:	4798      	blx	r3
+					}
+				}
+		if((GPIO->IF & EXTI_PR_PR12) && (GPIO->IEN & EXTI_PR_PR12))
+ 87a:	4b11      	ldr	r3, [pc, #68]	; (8c0 <GPIO_EVEN_IRQHandler+0x10c>)
+ 87c:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 880:	04d1      	lsls	r1, r2, #19
+ 882:	d50b      	bpl.n	89c <GPIO_EVEN_IRQHandler+0xe8>
+ 884:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 888:	04c2      	lsls	r2, r0, #19
+ 88a:	d507      	bpl.n	89c <GPIO_EVEN_IRQHandler+0xe8>
+				{
+					// Clear the EXTI line pending bit
+				  GPIO->IFC = EXTI_PR_PR12;
+ 88c:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+ 890:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+					if(HAL_GPIO_PORT_events_table[12]) {
+ 894:	4b0b      	ldr	r3, [pc, #44]	; (8c4 <GPIO_EVEN_IRQHandler+0x110>)
+ 896:	6b1b      	ldr	r3, [r3, #48]	; 0x30
+ 898:	b103      	cbz	r3, 89c <GPIO_EVEN_IRQHandler+0xe8>
+						HAL_GPIO_PORT_events_table[12] ();
+ 89a:	4798      	blx	r3
+					}
+				}
+
+			if((GPIO->IF & EXTI_PR_PR14) && (GPIO->IEN & EXTI_PR_PR14))
+ 89c:	4b08      	ldr	r3, [pc, #32]	; (8c0 <GPIO_EVEN_IRQHandler+0x10c>)
+ 89e:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 8a2:	0450      	lsls	r0, r2, #17
+ 8a4:	d50b      	bpl.n	8be <GPIO_EVEN_IRQHandler+0x10a>
+ 8a6:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 8aa:	0441      	lsls	r1, r0, #17
+ 8ac:	d507      	bpl.n	8be <GPIO_EVEN_IRQHandler+0x10a>
+				{
+					// Clear the EXTI line pending bit
+				  GPIO->IFC = EXTI_PR_PR14;
+ 8ae:	f44f 4180 	mov.w	r1, #16384	; 0x4000
+ 8b2:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+					if(HAL_GPIO_PORT_events_table[14]) {
+ 8b6:	4b03      	ldr	r3, [pc, #12]	; (8c4 <GPIO_EVEN_IRQHandler+0x110>)
+ 8b8:	6b9b      	ldr	r3, [r3, #56]	; 0x38
+ 8ba:	b103      	cbz	r3, 8be <GPIO_EVEN_IRQHandler+0x10a>
+						HAL_GPIO_PORT_events_table[14] ();
+ 8bc:	4798      	blx	r3
+ 8be:	bd08      	pop	{r3, pc}
+ 8c0:	40006000 	.word	0x40006000
+ 8c4:	20000150 	.word	0x20000150
+
+000008c8 <GPIO_ODD_IRQHandler>:
+
+// -----------------------------------------------------------------------------
+//  GPIO_ODD_IRQHandler
+// -----------------------------------------------------------------------------
+void GPIO_ODD_IRQHandler(void)
+{
+ 8c8:	b508      	push	{r3, lr}
+
+	if((GPIO->IF & EXTI_PR_PR1) && (GPIO->IEN & EXTI_PR_PR1))
+ 8ca:	4b42      	ldr	r3, [pc, #264]	; (9d4 <GPIO_ODD_IRQHandler+0x10c>)
+ 8cc:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 8d0:	0790      	lsls	r0, r2, #30
+ 8d2:	d50a      	bpl.n	8ea <GPIO_ODD_IRQHandler+0x22>
+ 8d4:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 8d8:	0781      	lsls	r1, r0, #30
+ 8da:	d506      	bpl.n	8ea <GPIO_ODD_IRQHandler+0x22>
+		{
+			// Clear the EXTI line pending bit
+		  GPIO->IFC = EXTI_PR_PR1;
+ 8dc:	2102      	movs	r1, #2
+ 8de:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+			if(HAL_GPIO_PORT_events_table[1]) {
+ 8e2:	4b3d      	ldr	r3, [pc, #244]	; (9d8 <GPIO_ODD_IRQHandler+0x110>)
+ 8e4:	685b      	ldr	r3, [r3, #4]
+ 8e6:	b103      	cbz	r3, 8ea <GPIO_ODD_IRQHandler+0x22>
+				HAL_GPIO_PORT_events_table[1] ();
+ 8e8:	4798      	blx	r3
+			}
+		}
+
+	if((GPIO->IF & EXTI_PR_PR3) && (GPIO->IEN & EXTI_PR_PR3))
+ 8ea:	4b3a      	ldr	r3, [pc, #232]	; (9d4 <GPIO_ODD_IRQHandler+0x10c>)
+ 8ec:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 8f0:	0712      	lsls	r2, r2, #28
+ 8f2:	d50a      	bpl.n	90a <GPIO_ODD_IRQHandler+0x42>
+ 8f4:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 8f8:	0700      	lsls	r0, r0, #28
+ 8fa:	d506      	bpl.n	90a <GPIO_ODD_IRQHandler+0x42>
+		{
+			// Clear the EXTI line pending bit
+		  GPIO->IFC = EXTI_PR_PR3;
+ 8fc:	2108      	movs	r1, #8
+ 8fe:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+			if(HAL_GPIO_PORT_events_table[3]) {
+ 902:	4b35      	ldr	r3, [pc, #212]	; (9d8 <GPIO_ODD_IRQHandler+0x110>)
+ 904:	68db      	ldr	r3, [r3, #12]
+ 906:	b103      	cbz	r3, 90a <GPIO_ODD_IRQHandler+0x42>
+				HAL_GPIO_PORT_events_table[3] ();
+ 908:	4798      	blx	r3
+			}
+		}
+
+	if((GPIO->IF & EXTI_PR_PR5) && (GPIO->IEN & EXTI_PR_PR5))
+ 90a:	4b32      	ldr	r3, [pc, #200]	; (9d4 <GPIO_ODD_IRQHandler+0x10c>)
+ 90c:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 910:	0691      	lsls	r1, r2, #26
+ 912:	d50a      	bpl.n	92a <GPIO_ODD_IRQHandler+0x62>
+ 914:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 918:	0682      	lsls	r2, r0, #26
+ 91a:	d506      	bpl.n	92a <GPIO_ODD_IRQHandler+0x62>
+			{
+				// Clear the EXTI line pending bit
+			  GPIO->IFC = EXTI_PR_PR5;
+ 91c:	2120      	movs	r1, #32
+ 91e:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+				if(HAL_GPIO_PORT_events_table[5]) {
+ 922:	4b2d      	ldr	r3, [pc, #180]	; (9d8 <GPIO_ODD_IRQHandler+0x110>)
+ 924:	695b      	ldr	r3, [r3, #20]
+ 926:	b103      	cbz	r3, 92a <GPIO_ODD_IRQHandler+0x62>
+					HAL_GPIO_PORT_events_table[5] ();
+ 928:	4798      	blx	r3
+				}
+			}
+	if((GPIO->IF & EXTI_PR_PR7) && (GPIO->IEN & EXTI_PR_PR7))
+ 92a:	4b2a      	ldr	r3, [pc, #168]	; (9d4 <GPIO_ODD_IRQHandler+0x10c>)
+ 92c:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 930:	0610      	lsls	r0, r2, #24
+ 932:	d50a      	bpl.n	94a <GPIO_ODD_IRQHandler+0x82>
+ 934:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 938:	0601      	lsls	r1, r0, #24
+ 93a:	d506      	bpl.n	94a <GPIO_ODD_IRQHandler+0x82>
+			{
+				// Clear the EXTI line pending bit
+			  GPIO->IFC = EXTI_PR_PR7;
+ 93c:	2180      	movs	r1, #128	; 0x80
+ 93e:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+				if(HAL_GPIO_PORT_events_table[7]) {
+ 942:	4b25      	ldr	r3, [pc, #148]	; (9d8 <GPIO_ODD_IRQHandler+0x110>)
+ 944:	69db      	ldr	r3, [r3, #28]
+ 946:	b103      	cbz	r3, 94a <GPIO_ODD_IRQHandler+0x82>
+					HAL_GPIO_PORT_events_table[7] ();
+ 948:	4798      	blx	r3
+				}
+			}
+
+		if((GPIO->IF & EXTI_PR_PR9) && (GPIO->IEN & EXTI_PR_PR9))
+ 94a:	4b22      	ldr	r3, [pc, #136]	; (9d4 <GPIO_ODD_IRQHandler+0x10c>)
+ 94c:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 950:	0592      	lsls	r2, r2, #22
+ 952:	d50b      	bpl.n	96c <GPIO_ODD_IRQHandler+0xa4>
+ 954:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 958:	0580      	lsls	r0, r0, #22
+ 95a:	d507      	bpl.n	96c <GPIO_ODD_IRQHandler+0xa4>
+			{
+				// Clear the EXTI line pending bit
+			  GPIO->IFC = EXTI_PR_PR9;
+ 95c:	f44f 7100 	mov.w	r1, #512	; 0x200
+ 960:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+				if(HAL_GPIO_PORT_events_table[9]) {
+ 964:	4b1c      	ldr	r3, [pc, #112]	; (9d8 <GPIO_ODD_IRQHandler+0x110>)
+ 966:	6a5b      	ldr	r3, [r3, #36]	; 0x24
+ 968:	b103      	cbz	r3, 96c <GPIO_ODD_IRQHandler+0xa4>
+					HAL_GPIO_PORT_events_table[9] ();
+ 96a:	4798      	blx	r3
+				}
+			}
+
+		if((GPIO->IF & EXTI_PR_PR11) && (GPIO->IEN & EXTI_PR_PR11))
+ 96c:	4b19      	ldr	r3, [pc, #100]	; (9d4 <GPIO_ODD_IRQHandler+0x10c>)
+ 96e:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 972:	0511      	lsls	r1, r2, #20
+ 974:	d50b      	bpl.n	98e <GPIO_ODD_IRQHandler+0xc6>
+ 976:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 97a:	0502      	lsls	r2, r0, #20
+ 97c:	d507      	bpl.n	98e <GPIO_ODD_IRQHandler+0xc6>
+				{
+					// Clear the EXTI line pending bit
+				  GPIO->IFC = EXTI_PR_PR11;
+ 97e:	f44f 6100 	mov.w	r1, #2048	; 0x800
+ 982:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+					if(HAL_GPIO_PORT_events_table[11]) {
+ 986:	4b14      	ldr	r3, [pc, #80]	; (9d8 <GPIO_ODD_IRQHandler+0x110>)
+ 988:	6adb      	ldr	r3, [r3, #44]	; 0x2c
+ 98a:	b103      	cbz	r3, 98e <GPIO_ODD_IRQHandler+0xc6>
+						HAL_GPIO_PORT_events_table[11] ();
+ 98c:	4798      	blx	r3
+					}
+				}
+		if((GPIO->IF & EXTI_PR_PR13) && (GPIO->IEN & EXTI_PR_PR13))
+ 98e:	4b11      	ldr	r3, [pc, #68]	; (9d4 <GPIO_ODD_IRQHandler+0x10c>)
+ 990:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 994:	0490      	lsls	r0, r2, #18
+ 996:	d50b      	bpl.n	9b0 <GPIO_ODD_IRQHandler+0xe8>
+ 998:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 99c:	0481      	lsls	r1, r0, #18
+ 99e:	d507      	bpl.n	9b0 <GPIO_ODD_IRQHandler+0xe8>
+				{
+					// Clear the EXTI line pending bit
+				  GPIO->IFC = EXTI_PR_PR13;
+ 9a0:	f44f 5100 	mov.w	r1, #8192	; 0x2000
+ 9a4:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+					if(HAL_GPIO_PORT_events_table[13]) {
+ 9a8:	4b0b      	ldr	r3, [pc, #44]	; (9d8 <GPIO_ODD_IRQHandler+0x110>)
+ 9aa:	6b5b      	ldr	r3, [r3, #52]	; 0x34
+ 9ac:	b103      	cbz	r3, 9b0 <GPIO_ODD_IRQHandler+0xe8>
+						HAL_GPIO_PORT_events_table[13] ();
+ 9ae:	4798      	blx	r3
+					}
+				}
+
+			if((GPIO->IF & EXTI_PR_PR15) && (GPIO->IEN & EXTI_PR_PR15))
+ 9b0:	4b08      	ldr	r3, [pc, #32]	; (9d4 <GPIO_ODD_IRQHandler+0x10c>)
+ 9b2:	f8d3 2114 	ldr.w	r2, [r3, #276]	; 0x114
+ 9b6:	0412      	lsls	r2, r2, #16
+ 9b8:	d50b      	bpl.n	9d2 <GPIO_ODD_IRQHandler+0x10a>
+ 9ba:	f8d3 0110 	ldr.w	r0, [r3, #272]	; 0x110
+ 9be:	0400      	lsls	r0, r0, #16
+ 9c0:	d507      	bpl.n	9d2 <GPIO_ODD_IRQHandler+0x10a>
+				{
+					// Clear the EXTI line pending bit
+				  GPIO->IFC = EXTI_PR_PR15;
+ 9c2:	f44f 4100 	mov.w	r1, #32768	; 0x8000
+ 9c6:	f8c3 111c 	str.w	r1, [r3, #284]	; 0x11c
+					if(HAL_GPIO_PORT_events_table[15]) {
+ 9ca:	4b03      	ldr	r3, [pc, #12]	; (9d8 <GPIO_ODD_IRQHandler+0x110>)
+ 9cc:	6bdb      	ldr	r3, [r3, #60]	; 0x3c
+ 9ce:	b103      	cbz	r3, 9d2 <GPIO_ODD_IRQHandler+0x10a>
+						HAL_GPIO_PORT_events_table[15] ();
+ 9d0:	4798      	blx	r3
+ 9d2:	bd08      	pop	{r3, pc}
+ 9d4:	40006000 	.word	0x40006000
+ 9d8:	20000150 	.word	0x20000150
+
+000009dc <HAL_Port_Usart_Calculate_Baudrate>:
+
+	  // HFPERCLK used to clock all USART/UART peripheral modules
+      refFreq = 14000000;
+
+	  // Map oversampling
+	  switch (ovs)
+ 9dc:	2940      	cmp	r1, #64	; 0x40
+ 9de:	d009      	beq.n	9f4 <HAL_Port_Usart_Calculate_Baudrate+0x18>
+ 9e0:	d803      	bhi.n	9ea <HAL_Port_Usart_Calculate_Baudrate+0xe>
+ 9e2:	b129      	cbz	r1, 9f0 <HAL_Port_Usart_Calculate_Baudrate+0x14>
+ 9e4:	2920      	cmp	r1, #32
+ 9e6:	d117      	bne.n	a18 <HAL_Port_Usart_Calculate_Baudrate+0x3c>
+ 9e8:	e008      	b.n	9fc <HAL_Port_Usart_Calculate_Baudrate+0x20>
+ 9ea:	2960      	cmp	r1, #96	; 0x60
+ 9ec:	d114      	bne.n	a18 <HAL_Port_Usart_Calculate_Baudrate+0x3c>
+ 9ee:	e003      	b.n	9f8 <HAL_Port_Usart_Calculate_Baudrate+0x1c>
+	  {
+	  case USART_CTRL_OVS_X16:
+	    oversample = 16;
+ 9f0:	2310      	movs	r3, #16
+ 9f2:	e004      	b.n	9fe <HAL_Port_Usart_Calculate_Baudrate+0x22>
+	    break;
+	  case USART_CTRL_OVS_X8:
+	    oversample = 8;
+	    break;
+	  case USART_CTRL_OVS_X6:
+	    oversample = 6;
+ 9f4:	2306      	movs	r3, #6
+	    break;
+ 9f6:	e002      	b.n	9fe <HAL_Port_Usart_Calculate_Baudrate+0x22>
+	  case USART_CTRL_OVS_X4:
+	    oversample = 4;
+ 9f8:	2304      	movs	r3, #4
+	    break;
+ 9fa:	e000      	b.n	9fe <HAL_Port_Usart_Calculate_Baudrate+0x22>
+	  {
+	  case USART_CTRL_OVS_X16:
+	    oversample = 16;
+	    break;
+	  case USART_CTRL_OVS_X8:
+	    oversample = 8;
+ 9fc:	2308      	movs	r3, #8
+	  default:
+	    return;
+	  }
+
+	  // Calculate and set CLKDIV with fractional bits
+	  clkdiv  = 4 * refFreq + (oversample * baudrate) / 2;
+ 9fe:	4358      	muls	r0, r3
+ a00:	4906      	ldr	r1, [pc, #24]	; (a1c <HAL_Port_Usart_Calculate_Baudrate+0x40>)
+ a02:	0843      	lsrs	r3, r0, #1
+ a04:	eb03 0c01 	add.w	ip, r3, r1
+	  clkdiv /= (oversample * baudrate);
+ a08:	fbbc f3f0 	udiv	r3, ip, r0
+	  clkdiv -= 4;
+ a0c:	1f19      	subs	r1, r3, #4
+	  clkdiv *= 64;
+
+	  // Make sure we don't write to reserved bits
+	  clkdiv &= _USART_CLKDIV_MASK;
+ a0e:	4b04      	ldr	r3, [pc, #16]	; (a20 <HAL_Port_Usart_Calculate_Baudrate+0x44>)
+
+	  // Calculate and set CLKDIV with fractional bits
+	  clkdiv  = 4 * refFreq + (oversample * baudrate) / 2;
+	  clkdiv /= (oversample * baudrate);
+	  clkdiv -= 4;
+	  clkdiv *= 64;
+ a10:	0188      	lsls	r0, r1, #6
+
+	  // Make sure we don't write to reserved bits
+	  clkdiv &= _USART_CLKDIV_MASK;
+ a12:	ea00 0103 	and.w	r1, r0, r3
+
+	  usart->CLKDIV = clkdiv;
+ a16:	6151      	str	r1, [r2, #20]
+ a18:	4770      	bx	lr
+ a1a:	bf00      	nop
+ a1c:	03567e00 	.word	0x03567e00
+ a20:	001fffc0 	.word	0x001fffc0
+
+00000a24 <HAL_PORT_USART_POLL_Init>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_USART_POLL_Init
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_USART_POLL_Init(USART_IODevice dev)
+{
+ a24:	b538      	push	{r3, r4, r5, lr}
+	// Reset all stuff first
+	HAL_PORT_USART_POLL_Deinit(dev);
+
+#if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+	if (dev == &io_usart0_poll) {
+ a26:	4c36      	ldr	r4, [pc, #216]	; (b00 <HAL_PORT_USART_POLL_Init+0xdc>)
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_USART_POLL_Init
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_USART_POLL_Init(USART_IODevice dev)
+{
+ a28:	4605      	mov	r5, r0
+	// Reset all stuff first
+	HAL_PORT_USART_POLL_Deinit(dev);
+ a2a:	f7ff fc6b 	bl	304 <HAL_PORT_USART_POLL_Deinit>
+
+#if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+	if (dev == &io_usart0_poll) {
+ a2e:	42a5      	cmp	r5, r4
+ a30:	d121      	bne.n	a76 <HAL_PORT_USART_POLL_Init+0x52>
+
+	  // Enable usart0 clock
+	  CORE_EnterCritical();
+ a32:	b672      	cpsid	i
+ a34:	4b33      	ldr	r3, [pc, #204]	; (b04 <HAL_PORT_USART_POLL_Init+0xe0>)
+	  CMU->HFPERCLKEN0 |= CMU_HFPERCLKEN0_USART0;
+ a36:	4834      	ldr	r0, [pc, #208]	; (b08 <HAL_PORT_USART_POLL_Init+0xe4>)
+
+#if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+	if (dev == &io_usart0_poll) {
+
+	  // Enable usart0 clock
+	  CORE_EnterCritical();
+ a38:	681a      	ldr	r2, [r3, #0]
+ a3a:	1c51      	adds	r1, r2, #1
+ a3c:	6019      	str	r1, [r3, #0]
+	  CMU->HFPERCLKEN0 |= CMU_HFPERCLKEN0_USART0;
+ a3e:	6c45      	ldr	r5, [r0, #68]	; 0x44
+ a40:	f045 0501 	orr.w	r5, r5, #1
+ a44:	6445      	str	r5, [r0, #68]	; 0x44
+	  CORE_ExitCritical();
+ a46:	b101      	cbz	r1, a4a <HAL_PORT_USART_POLL_Init+0x26>
+ a48:	601a      	str	r2, [r3, #0]
+ a4a:	b662      	cpsie	i
+
+	  // Calculate and set baudrate
+	  HAL_Port_Usart_Calculate_Baudrate(HALPORT_USART0_DEFAULT_BAUDRATE,
+ a4c:	f44f 5016 	mov.w	r0, #9600	; 0x2580
+ a50:	2100      	movs	r1, #0
+ a52:	6aa2      	ldr	r2, [r4, #40]	; 0x28
+ a54:	f7ff ffc2 	bl	9dc <HAL_Port_Usart_Calculate_Baudrate>
+			  	  	  	  	  	  	  	HALPORT_USART0_OVERSAMPLING,
+		  	  	  	  	  	  	  	  	dev->usart);
+
+	  // Configure databits, stopbits and parity
+	  dev->usart->FRAME = (uint32_t)(HALPORT_USART0_DATABITS) |
+ a58:	6aa0      	ldr	r0, [r4, #40]	; 0x28
+ a5a:	f241 0105 	movw	r1, #4101	; 0x1005
+ a5e:	6041      	str	r1, [r0, #4]
+						  (uint32_t)(HALPORT_USART0_STOPBITS) |
+						  (uint32_t)(HALPORT_USART0_PARITY);
+
+	  // Configure oversampling
+	  dev->usart->CTRL  |= (uint32_t)(HALPORT_USART0_OVERSAMPLING);
+ a60:	6aa3      	ldr	r3, [r4, #40]	; 0x28
+ a62:	681a      	ldr	r2, [r3, #0]
+ a64:	601a      	str	r2, [r3, #0]
+
+	  // Location setting
+	  dev->usart->ROUTE |= USART_ROUTE_RXPEN | USART_ROUTE_TXPEN | HALPORT_USART0_LOCATION;
+ a66:	6aa2      	ldr	r2, [r4, #40]	; 0x28
+ a68:	6d50      	ldr	r0, [r2, #84]	; 0x54
+ a6a:	f440 61a0 	orr.w	r1, r0, #1280	; 0x500
+ a6e:	f041 0303 	orr.w	r3, r1, #3
+ a72:	6553      	str	r3, [r2, #84]	; 0x54
+ a74:	e042      	b.n	afc <HAL_PORT_USART_POLL_Init+0xd8>
+	}
+#endif // #if defined HALPORT_USE_USART0 && (HALPORT_USE_USART0 != 0)
+
+#if defined HALPORT_USE_USART1 && (HALPORT_USE_USART1 != 0)
+	if (dev == &io_usart1_poll) {
+ a76:	4c25      	ldr	r4, [pc, #148]	; (b0c <HAL_PORT_USART_POLL_Init+0xe8>)
+ a78:	42a5      	cmp	r5, r4
+ a7a:	d11d      	bne.n	ab8 <HAL_PORT_USART_POLL_Init+0x94>
+
+	  // Enable usart1 clock
+	  CORE_EnterCritical();
+ a7c:	b672      	cpsid	i
+ a7e:	4b21      	ldr	r3, [pc, #132]	; (b04 <HAL_PORT_USART_POLL_Init+0xe0>)
+	  CMU->HFPERCLKEN0 |= CMU_HFPERCLKEN0_USART1;
+ a80:	4821      	ldr	r0, [pc, #132]	; (b08 <HAL_PORT_USART_POLL_Init+0xe4>)
+
+#if defined HALPORT_USE_USART1 && (HALPORT_USE_USART1 != 0)
+	if (dev == &io_usart1_poll) {
+
+	  // Enable usart1 clock
+	  CORE_EnterCritical();
+ a82:	681a      	ldr	r2, [r3, #0]
+ a84:	1c51      	adds	r1, r2, #1
+ a86:	6019      	str	r1, [r3, #0]
+	  CMU->HFPERCLKEN0 |= CMU_HFPERCLKEN0_USART1;
+ a88:	6c45      	ldr	r5, [r0, #68]	; 0x44
+ a8a:	f045 0502 	orr.w	r5, r5, #2
+ a8e:	6445      	str	r5, [r0, #68]	; 0x44
+	  CORE_ExitCritical();
+ a90:	b101      	cbz	r1, a94 <HAL_PORT_USART_POLL_Init+0x70>
+ a92:	601a      	str	r2, [r3, #0]
+ a94:	b662      	cpsie	i
+
+	  // Calculate and set baudrate
+	  HAL_Port_Usart_Calculate_Baudrate(HALPORT_USART1_DEFAULT_BAUDRATE,
+ a96:	f44f 5016 	mov.w	r0, #9600	; 0x2580
+ a9a:	2100      	movs	r1, #0
+ a9c:	6aa2      	ldr	r2, [r4, #40]	; 0x28
+ a9e:	f7ff ff9d 	bl	9dc <HAL_Port_Usart_Calculate_Baudrate>
+			  	  	  	  	  	  	  	HALPORT_USART1_OVERSAMPLING,
+		  	  	  	  	  	  	  	  	dev->usart);
+
+	  // Configure databits, stopbits and parity
+	  dev->usart->FRAME = (uint32_t)(HALPORT_USART1_DATABITS) |
+ aa2:	6aa0      	ldr	r0, [r4, #40]	; 0x28
+ aa4:	f241 0105 	movw	r1, #4101	; 0x1005
+ aa8:	6041      	str	r1, [r0, #4]
+						  (uint32_t)(HALPORT_USART1_STOPBITS) |
+						  (uint32_t)(HALPORT_USART1_PARITY);
+
+	  // Configure oversampling
+	  dev->usart->CTRL  |= (uint32_t)(HALPORT_USART1_OVERSAMPLING);
+ aaa:	6aa3      	ldr	r3, [r4, #40]	; 0x28
+ aac:	681a      	ldr	r2, [r3, #0]
+ aae:	601a      	str	r2, [r3, #0]
+
+	  // Location setting
+	  dev->usart->ROUTE = USART_ROUTE_RXPEN | USART_ROUTE_TXPEN | HALPORT_USART1_LOCATION;
+ ab0:	6aa3      	ldr	r3, [r4, #40]	; 0x28
+ ab2:	f240 1203 	movw	r2, #259	; 0x103
+ ab6:	e020      	b.n	afa <HAL_PORT_USART_POLL_Init+0xd6>
+	}
+#endif // #if defined HALPORT_USE_USART1 && (HALPORT_USE_USART1 != 0)
+
+#if defined HALPORT_USE_USART2 && (HALPORT_USE_USART2 != 0)
+	if (dev == &io_usart2_poll) {
+ ab8:	4c15      	ldr	r4, [pc, #84]	; (b10 <HAL_PORT_USART_POLL_Init+0xec>)
+ aba:	42a5      	cmp	r5, r4
+ abc:	d11e      	bne.n	afc <HAL_PORT_USART_POLL_Init+0xd8>
+
+	  // Enable usart2 clock
+      CORE_EnterCritical();
+ abe:	b672      	cpsid	i
+ ac0:	4b10      	ldr	r3, [pc, #64]	; (b04 <HAL_PORT_USART_POLL_Init+0xe0>)
+	  CMU->HFPERCLKEN0 |= CMU_HFPERCLKEN0_USART2;
+ ac2:	4811      	ldr	r0, [pc, #68]	; (b08 <HAL_PORT_USART_POLL_Init+0xe4>)
+
+#if defined HALPORT_USE_USART2 && (HALPORT_USE_USART2 != 0)
+	if (dev == &io_usart2_poll) {
+
+	  // Enable usart2 clock
+      CORE_EnterCritical();
+ ac4:	681a      	ldr	r2, [r3, #0]
+ ac6:	1c51      	adds	r1, r2, #1
+ ac8:	6019      	str	r1, [r3, #0]
+	  CMU->HFPERCLKEN0 |= CMU_HFPERCLKEN0_USART2;
+ aca:	6c45      	ldr	r5, [r0, #68]	; 0x44
+ acc:	f045 0504 	orr.w	r5, r5, #4
+ ad0:	6445      	str	r5, [r0, #68]	; 0x44
+	  CORE_ExitCritical();
+ ad2:	b101      	cbz	r1, ad6 <HAL_PORT_USART_POLL_Init+0xb2>
+ ad4:	601a      	str	r2, [r3, #0]
+ ad6:	b662      	cpsie	i
+
+	  // Calculate and set baudrate
+	  HAL_Port_Usart_Calculate_Baudrate(HALPORT_USART2_DEFAULT_BAUDRATE,
+ ad8:	f44f 5016 	mov.w	r0, #9600	; 0x2580
+ adc:	2100      	movs	r1, #0
+ ade:	6aa2      	ldr	r2, [r4, #40]	; 0x28
+ ae0:	f7ff ff7c 	bl	9dc <HAL_Port_Usart_Calculate_Baudrate>
+			  	  	  	  	  	  	  	HALPORT_USART2_OVERSAMPLING,
+		  	  	  	  	  	  	  	  	dev->usart);
+
+	  // Configure databits, stopbits and parity
+	  dev->usart->FRAME = (uint32_t)(HALPORT_USART2_DATABITS) |
+ ae4:	6aa2      	ldr	r2, [r4, #40]	; 0x28
+ ae6:	f241 0005 	movw	r0, #4101	; 0x1005
+ aea:	6050      	str	r0, [r2, #4]
+						  (uint32_t)(HALPORT_USART2_STOPBITS) |
+						  (uint32_t)(HALPORT_USART2_PARITY);
+
+	  // Configure oversampling
+	  dev->usart->CTRL  |= (uint32_t)(HALPORT_USART2_OVERSAMPLING);
+ aec:	6aa3      	ldr	r3, [r4, #40]	; 0x28
+ aee:	6819      	ldr	r1, [r3, #0]
+ af0:	6019      	str	r1, [r3, #0]
+
+	  // Location setting
+	  dev->usart->ROUTE |= USART_ROUTE_RXPEN | USART_ROUTE_TXPEN | HALPORT_USART2_LOCATION;
+ af2:	6aa3      	ldr	r3, [r4, #40]	; 0x28
+ af4:	6d5a      	ldr	r2, [r3, #84]	; 0x54
+ af6:	f042 0203 	orr.w	r2, r2, #3
+ afa:	655a      	str	r2, [r3, #84]	; 0x54
+	}
+#endif // #if defined HALPORT_USE_USART2 && (HALPORT_USE_USART2 != 0)
+
+    return  HALRESULT_OK;
+
+} /* HAL_PORT_USART_POLL_Init */
+ afc:	2000      	movs	r0, #0
+ afe:	bd38      	pop	{r3, r4, r5, pc}
+ b00:	2000006c 	.word	0x2000006c
+ b04:	20000190 	.word	0x20000190
+ b08:	400c8000 	.word	0x400c8000
+ b0c:	20000034 	.word	0x20000034
+ b10:	20000000 	.word	0x20000000
+
+00000b14 <HAL_Port_Uart_Calculate_Baudrate>:
+
+	  // HFPERCLK used to clock all USART/UART peripheral modules
+      refFreq = 14000000;
+
+	  // Map oversampling
+	  switch (ovs)
+ b14:	2940      	cmp	r1, #64	; 0x40
+ b16:	d009      	beq.n	b2c <HAL_Port_Uart_Calculate_Baudrate+0x18>
+ b18:	d803      	bhi.n	b22 <HAL_Port_Uart_Calculate_Baudrate+0xe>
+ b1a:	b129      	cbz	r1, b28 <HAL_Port_Uart_Calculate_Baudrate+0x14>
+ b1c:	2920      	cmp	r1, #32
+ b1e:	d117      	bne.n	b50 <HAL_Port_Uart_Calculate_Baudrate+0x3c>
+ b20:	e008      	b.n	b34 <HAL_Port_Uart_Calculate_Baudrate+0x20>
+ b22:	2960      	cmp	r1, #96	; 0x60
+ b24:	d114      	bne.n	b50 <HAL_Port_Uart_Calculate_Baudrate+0x3c>
+ b26:	e003      	b.n	b30 <HAL_Port_Uart_Calculate_Baudrate+0x1c>
+	  {
+	  case UART_CTRL_OVS_X16:
+	    oversample = 16;
+ b28:	2310      	movs	r3, #16
+ b2a:	e004      	b.n	b36 <HAL_Port_Uart_Calculate_Baudrate+0x22>
+	    break;
+	  case UART_CTRL_OVS_X8:
+	    oversample = 8;
+	    break;
+	  case UART_CTRL_OVS_X6:
+	    oversample = 6;
+ b2c:	2306      	movs	r3, #6
+	    break;
+ b2e:	e002      	b.n	b36 <HAL_Port_Uart_Calculate_Baudrate+0x22>
+	  case UART_CTRL_OVS_X4:
+	    oversample = 4;
+ b30:	2304      	movs	r3, #4
+	    break;
+ b32:	e000      	b.n	b36 <HAL_Port_Uart_Calculate_Baudrate+0x22>
+	  {
+	  case UART_CTRL_OVS_X16:
+	    oversample = 16;
+	    break;
+	  case UART_CTRL_OVS_X8:
+	    oversample = 8;
+ b34:	2308      	movs	r3, #8
+	  default:
+	    return;
+	  }
+
+	  // Calculate and set CLKDIV with fractional bits
+	  clkdiv  = 4 * refFreq + (oversample * baudrate) / 2;
+ b36:	4358      	muls	r0, r3
+ b38:	4906      	ldr	r1, [pc, #24]	; (b54 <HAL_Port_Uart_Calculate_Baudrate+0x40>)
+ b3a:	0843      	lsrs	r3, r0, #1
+ b3c:	eb03 0c01 	add.w	ip, r3, r1
+	  clkdiv /= (oversample * baudrate);
+ b40:	fbbc f3f0 	udiv	r3, ip, r0
+	  clkdiv -= 4;
+ b44:	1f19      	subs	r1, r3, #4
+	  clkdiv *= 64;
+
+	  // Make sure we don't write to reserved bits
+	  clkdiv &= _USART_CLKDIV_MASK;
+ b46:	4b04      	ldr	r3, [pc, #16]	; (b58 <HAL_Port_Uart_Calculate_Baudrate+0x44>)
+
+	  // Calculate and set CLKDIV with fractional bits
+	  clkdiv  = 4 * refFreq + (oversample * baudrate) / 2;
+	  clkdiv /= (oversample * baudrate);
+	  clkdiv -= 4;
+	  clkdiv *= 64;
+ b48:	0188      	lsls	r0, r1, #6
+
+	  // Make sure we don't write to reserved bits
+	  clkdiv &= _USART_CLKDIV_MASK;
+ b4a:	ea00 0103 	and.w	r1, r0, r3
+
+	  uart->CLKDIV = clkdiv;
+ b4e:	6151      	str	r1, [r2, #20]
+ b50:	4770      	bx	lr
+ b52:	bf00      	nop
+ b54:	03567e00 	.word	0x03567e00
+ b58:	001fffc0 	.word	0x001fffc0
+
+00000b5c <HAL_PORT_UART_POLL_Init>:
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_UART_POLL_Init
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_UART_POLL_Init(UART_IODevice dev)
+{
+ b5c:	b538      	push	{r3, r4, r5, lr}
+	// Reset all stuff first
+	HAL_PORT_UART_POLL_Deinit(dev);
+
+#if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+	if (dev == &io_uart0_poll) {
+ b5e:	4c25      	ldr	r4, [pc, #148]	; (bf4 <HAL_PORT_UART_POLL_Init+0x98>)
+
+// -----------------------------------------------------------------------------
+//  HAL_PORT_UART_POLL_Init
+// -----------------------------------------------------------------------------
+HALRESULT HAL_PORT_UART_POLL_Init(UART_IODevice dev)
+{
+ b60:	4605      	mov	r5, r0
+	// Reset all stuff first
+	HAL_PORT_UART_POLL_Deinit(dev);
+ b62:	f7ff fc45 	bl	3f0 <HAL_PORT_UART_POLL_Deinit>
+
+#if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+	if (dev == &io_uart0_poll) {
+ b66:	42a5      	cmp	r5, r4
+ b68:	d121      	bne.n	bae <HAL_PORT_UART_POLL_Init+0x52>
+
+	  // Enable uart0 clock
+	  CORE_EnterCritical();
+ b6a:	b672      	cpsid	i
+ b6c:	4b22      	ldr	r3, [pc, #136]	; (bf8 <HAL_PORT_UART_POLL_Init+0x9c>)
+	  CMU->HFPERCLKEN0 |= CMU_HFPERCLKEN0_UART0;
+ b6e:	4823      	ldr	r0, [pc, #140]	; (bfc <HAL_PORT_UART_POLL_Init+0xa0>)
+
+#if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+	if (dev == &io_uart0_poll) {
+
+	  // Enable uart0 clock
+	  CORE_EnterCritical();
+ b70:	681a      	ldr	r2, [r3, #0]
+ b72:	1c51      	adds	r1, r2, #1
+ b74:	6019      	str	r1, [r3, #0]
+	  CMU->HFPERCLKEN0 |= CMU_HFPERCLKEN0_UART0;
+ b76:	6c45      	ldr	r5, [r0, #68]	; 0x44
+ b78:	f045 0508 	orr.w	r5, r5, #8
+ b7c:	6445      	str	r5, [r0, #68]	; 0x44
+	  CORE_ExitCritical();
+ b7e:	b101      	cbz	r1, b82 <HAL_PORT_UART_POLL_Init+0x26>
+ b80:	601a      	str	r2, [r3, #0]
+ b82:	b662      	cpsie	i
+
+	  // Calculate and set baudrate
+	  HAL_Port_Uart_Calculate_Baudrate(HALPORT_UART0_DEFAULT_BAUDRATE,
+ b84:	f44f 5016 	mov.w	r0, #9600	; 0x2580
+ b88:	2100      	movs	r1, #0
+ b8a:	6aa2      	ldr	r2, [r4, #40]	; 0x28
+ b8c:	f7ff ffc2 	bl	b14 <HAL_Port_Uart_Calculate_Baudrate>
+			  	  	  	  	  	  	  	HALPORT_UART0_OVERSAMPLING,
+		  	  	  	  	  	  	  	  	dev->uart);
+
+	  // Configure databits, stopbits and parity
+	  dev->uart->FRAME = (uint32_t)(HALPORT_UART0_DATABITS) |
+ b90:	6aa0      	ldr	r0, [r4, #40]	; 0x28
+ b92:	f241 0105 	movw	r1, #4101	; 0x1005
+ b96:	6041      	str	r1, [r0, #4]
+						  (uint32_t)(HALPORT_UART0_STOPBITS) |
+						  (uint32_t)(HALPORT_UART0_PARITY);
+
+	  // Configure oversampling
+	  dev->uart->CTRL  |= (uint32_t)(HALPORT_UART0_OVERSAMPLING);
+ b98:	6aa3      	ldr	r3, [r4, #40]	; 0x28
+ b9a:	681a      	ldr	r2, [r3, #0]
+ b9c:	601a      	str	r2, [r3, #0]
+
+	  // Location setting
+	  dev->uart->ROUTE |= UART_ROUTE_RXPEN | UART_ROUTE_TXPEN | HALPORT_UART0_LOCATION;
+ b9e:	6aa2      	ldr	r2, [r4, #40]	; 0x28
+ ba0:	6d50      	ldr	r0, [r2, #84]	; 0x54
+ ba2:	f440 7180 	orr.w	r1, r0, #256	; 0x100
+ ba6:	f041 0303 	orr.w	r3, r1, #3
+ baa:	6553      	str	r3, [r2, #84]	; 0x54
+ bac:	e020      	b.n	bf0 <HAL_PORT_UART_POLL_Init+0x94>
+	}
+#endif // #if defined HALPORT_USE_UART0 && (HALPORT_USE_UART0 != 0)
+
+#if defined HALPORT_USE_UART1 && (HALPORT_USE_UART1 != 0)
+	if (dev == &io_uart1_poll) {
+ bae:	4c14      	ldr	r4, [pc, #80]	; (c00 <Heap_Size>)
+ bb0:	42a5      	cmp	r5, r4
+ bb2:	d11d      	bne.n	bf0 <HAL_PORT_UART_POLL_Init+0x94>
+
+	  // Enable uart1 clock
+	  CORE_EnterCritical();
+ bb4:	b672      	cpsid	i
+ bb6:	4b10      	ldr	r3, [pc, #64]	; (bf8 <HAL_PORT_UART_POLL_Init+0x9c>)
+	  CMU->HFPERCLKEN0 |= CMU_HFPERCLKEN0_UART1;
+ bb8:	4810      	ldr	r0, [pc, #64]	; (bfc <HAL_PORT_UART_POLL_Init+0xa0>)
+
+#if defined HALPORT_USE_UART1 && (HALPORT_USE_UART1 != 0)
+	if (dev == &io_uart1_poll) {
+
+	  // Enable uart1 clock
+	  CORE_EnterCritical();
+ bba:	681a      	ldr	r2, [r3, #0]
+ bbc:	1c51      	adds	r1, r2, #1
+ bbe:	6019      	str	r1, [r3, #0]
+	  CMU->HFPERCLKEN0 |= CMU_HFPERCLKEN0_UART1;
+ bc0:	6c45      	ldr	r5, [r0, #68]	; 0x44
+ bc2:	f045 0510 	orr.w	r5, r5, #16
+ bc6:	6445      	str	r5, [r0, #68]	; 0x44
+	  CORE_ExitCritical();
+ bc8:	b101      	cbz	r1, bcc <HAL_PORT_UART_POLL_Init+0x70>
+ bca:	601a      	str	r2, [r3, #0]
+ bcc:	b662      	cpsie	i
+
+	  // Calculate and set baudrate
+	  HAL_Port_Uart_Calculate_Baudrate(HALPORT_UART1_DEFAULT_BAUDRATE,
+ bce:	f44f 5016 	mov.w	r0, #9600	; 0x2580
+ bd2:	2100      	movs	r1, #0
+ bd4:	6aa2      	ldr	r2, [r4, #40]	; 0x28
+ bd6:	f7ff ff9d 	bl	b14 <HAL_Port_Uart_Calculate_Baudrate>
+			  	  	  	  	  	  	  	HALPORT_UART1_OVERSAMPLING,
+		  	  	  	  	  	  	  	  	dev->uart);
+
+	  // Configure databits, stopbits and parity
+	  dev->uart->FRAME = (uint32_t)(HALPORT_UART1_DATABITS) |
+ bda:	6aa3      	ldr	r3, [r4, #40]	; 0x28
+ bdc:	f241 0205 	movw	r2, #4101	; 0x1005
+ be0:	605a      	str	r2, [r3, #4]
+						  (uint32_t)(HALPORT_UART1_STOPBITS) |
+						  (uint32_t)(HALPORT_UART1_PARITY);
+
+	  // Configure oversampling
+	  dev->uart->CTRL  |= (uint32_t)(HALPORT_UART1_OVERSAMPLING);
+ be2:	6aa0      	ldr	r0, [r4, #40]	; 0x28
+
+	  // Location setting
+	  dev->uart->ROUTE = UART_ROUTE_RXPEN | UART_ROUTE_TXPEN | HALPORT_UART1_LOCATION;
+ be4:	f240 2203 	movw	r2, #515	; 0x203
+	  dev->uart->FRAME = (uint32_t)(HALPORT_UART1_DATABITS) |
+						  (uint32_t)(HALPORT_UART1_STOPBITS) |
+						  (uint32_t)(HALPORT_UART1_PARITY);
+
+	  // Configure oversampling
+	  dev->uart->CTRL  |= (uint32_t)(HALPORT_UART1_OVERSAMPLING);
+ be8:	6801      	ldr	r1, [r0, #0]
+ bea:	6001      	str	r1, [r0, #0]
+
+	  // Location setting
+	  dev->uart->ROUTE = UART_ROUTE_RXPEN | UART_ROUTE_TXPEN | HALPORT_UART1_LOCATION;
+ bec:	6aa3      	ldr	r3, [r4, #40]	; 0x28
+ bee:	655a      	str	r2, [r3, #84]	; 0x54
+	}
+#endif // #if defined HALPORT_USE_UART1 && (HALPORT_USE_UART1 != 0)
+
+    return  HALRESULT_OK;
+
+} /* HAL_PORT_UART_POLL_Init */
+ bf0:	2000      	movs	r0, #0
+ bf2:	bd38      	pop	{r3, r4, r5, pc}
+ bf4:	200000d8 	.word	0x200000d8
+ bf8:	20000190 	.word	0x20000190
+ bfc:	400c8000 	.word	0x400c8000
+ c00:	200000a4 	.word	0x200000a4
+
+00000c04 <strlen>:
+ c04:	f020 0103 	bic.w	r1, r0, #3
+ c08:	f010 0003 	ands.w	r0, r0, #3
+ c0c:	f1c0 0000 	rsb	r0, r0, #0
+ c10:	f851 3b04 	ldr.w	r3, [r1], #4
+ c14:	f100 0c04 	add.w	ip, r0, #4
+ c18:	ea4f 0ccc 	mov.w	ip, ip, lsl #3
+ c1c:	f06f 0200 	mvn.w	r2, #0
+ c20:	bf1c      	itt	ne
+ c22:	fa22 f20c 	lsrne.w	r2, r2, ip
+ c26:	4313      	orrne	r3, r2
+ c28:	f04f 0c01 	mov.w	ip, #1
+ c2c:	ea4c 2c0c 	orr.w	ip, ip, ip, lsl #8
+ c30:	ea4c 4c0c 	orr.w	ip, ip, ip, lsl #16
+ c34:	eba3 020c 	sub.w	r2, r3, ip
+ c38:	ea22 0203 	bic.w	r2, r2, r3
+ c3c:	ea12 12cc 	ands.w	r2, r2, ip, lsl #7
+ c40:	bf04      	itt	eq
+ c42:	f851 3b04 	ldreq.w	r3, [r1], #4
+ c46:	3004      	addeq	r0, #4
+ c48:	d0f4      	beq.n	c34 <strlen+0x30>
+ c4a:	f013 0fff 	tst.w	r3, #255	; 0xff
+ c4e:	bf1f      	itttt	ne
+ c50:	3001      	addne	r0, #1
+ c52:	f413 4f7f 	tstne.w	r3, #65280	; 0xff00
+ c56:	3001      	addne	r0, #1
+ c58:	f413 0f7f 	tstne.w	r3, #16711680	; 0xff0000
+ c5c:	bf18      	it	ne
+ c5e:	3001      	addne	r0, #1
+ c60:	4770      	bx	lr
+ c62:	bf00      	nop
+ c64:	6576654c 	.word	0x6576654c
+ c68:	2030206c 	.word	0x2030206c
+ c6c:	67616964 	.word	0x67616964
+ c70:	74736f6e 	.word	0x74736f6e
+ c74:	6d206369 	.word	0x6d206369
+ c78:	61737365 	.word	0x61737365
+ c7c:	6f206567 	.word	0x6f206567
+ c80:	6863206e 	.word	0x6863206e
+ c84:	656e6e61 	.word	0x656e6e61
+ c88:	0030206c 	.word	0x0030206c
+ c8c:	6576654c 	.word	0x6576654c
+ c90:	2030206c 	.word	0x2030206c
+ c94:	67616964 	.word	0x67616964
+ c98:	74736f6e 	.word	0x74736f6e
+ c9c:	6d206369 	.word	0x6d206369
+ ca0:	61737365 	.word	0x61737365
+ ca4:	6f206567 	.word	0x6f206567
+ ca8:	6863206e 	.word	0x6863206e
+ cac:	656e6e61 	.word	0x656e6e61
+ cb0:	0031206c 	.word	0x0031206c
+ cb4:	0d0a002e 	.word	0x0d0a002e
+ cb8:	4e000a00 	.word	0x4e000a00
+ cbc:	004c4c55 	.word	0x004c4c55
+ cc0:	6d656c65 	.word	0x6d656c65
+ cc4:	7a69735f 	.word	0x7a69735f
+ cc8:	203d2065 	.word	0x203d2065
+ ccc:	6d202c00 	.word	0x6d202c00
+ cd0:	655f7861 	.word	0x655f7861
+ cd4:	5f6d656c 	.word	0x5f6d656c
+ cd8:	6e756f63 	.word	0x6e756f63
+ cdc:	203d2074 	.word	0x203d2074
+ ce0:	65202c00 	.word	0x65202c00
+ ce4:	5f6d656c 	.word	0x5f6d656c
+ ce8:	6e756f63 	.word	0x6e756f63
+ cec:	203d2074 	.word	0x203d2074
+ cf0:	6d656d00 	.word	0x6d656d00
+ cf4:	7274705f 	.word	0x7274705f
+ cf8:	30203d20 	.word	0x30203d20
+ cfc:	202c0078 	.word	0x202c0078
+ d00:	64616572 	.word	0x64616572
+ d04:	7274705f 	.word	0x7274705f
+ d08:	30203d20 	.word	0x30203d20
+ d0c:	202c0078 	.word	0x202c0078
+ d10:	74697277 	.word	0x74697277
+ d14:	74705f65 	.word	0x74705f65
+ d18:	203d2072 	.word	0x203d2072
+ d1c:	45007830 	.word	0x45007830
+ d20:	524f5252 	.word	0x524f5252
+ d24:	2000203a 	.word	0x2000203a
+ d28:	6f727245 	.word	0x6f727245
+ d2c:	3a6f4e72 	.word	0x3a6f4e72
+ d30:	43200020 	.word	0x43200020
+ d34:	6e6e6168 	.word	0x6e6e6168
+ d38:	203a6c65 	.word	0x203a6c65
+ d3c:	694c2000 	.word	0x694c2000
+ d40:	203a656e 	.word	0x203a656e
+	...

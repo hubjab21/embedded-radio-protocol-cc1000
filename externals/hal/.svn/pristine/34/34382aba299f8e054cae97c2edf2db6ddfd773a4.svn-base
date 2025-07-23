@@ -1,0 +1,1380 @@
+Archive member included because of file (symbol)
+
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
+                              obj/hal.o (memcpy)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memset.o)
+                              obj/hal.o (memset)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-strlen.o)
+                              obj/hal.o (strlen)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-strncpy.o)
+                              obj/tasks.o (strncpy)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_thumb1_case_uqi.o)
+                              obj/hal_port.o (__gnu_thumb1_case_uqi)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_thumb1_case_uhi.o)
+                              obj/hal_port.o (__gnu_thumb1_case_uhi)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivsi3.o)
+                              obj/hal.o (__aeabi_uidiv)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divsi3.o)
+                              obj/hal.o (__aeabi_idiv)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_dvmd_tls.o)
+                              c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_aeabi_uldivmod.o)
+                              obj/hal_port.o (__aeabi_uldivmod)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_muldi3.o)
+                              obj/hal_port.o (__aeabi_lmul)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(bpabi.o)
+                              c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_aeabi_uldivmod.o) (__gnu_uldivmod_helper)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(mulsf3.o)
+                              obj/hal.o (__aeabi_fmul)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(subsf3.o)
+                              obj/hal.o (__aeabi_fsub)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(fixsfsi.o)
+                              obj/hal.o (__aeabi_f2iz)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(floatsisf.o)
+                              obj/hal.o (__aeabi_i2f)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_clzsi2.o)
+                              c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(mulsf3.o) (__clzsi2)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divdi3.o)
+                              c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(bpabi.o) (__divdi3)
+c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivdi3.o)
+                              c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(bpabi.o) (__udivdi3)
+
+Allocating common symbols
+Common symbol       size              file
+
+mutex               0x4               obj/main.o
+binary_sem          0x4               obj/main.o
+HAL_PORT_InterruptState
+                    0x4               obj/hal_port.o
+counting_sem        0x4               obj/main.o
+
+Discarded input sections
+
+ .text          0x00000000       0x14 obj/startup.o
+ .data          0x00000000        0x0 obj/startup.o
+ .bss           0x00000000        0x0 obj/startup.o
+ .text          0x00000000        0x0 obj/main.o
+ .data          0x00000000        0x0 obj/main.o
+ .bss           0x00000000        0x0 obj/main.o
+ .text          0x00000000        0x0 obj/hal.o
+ .data          0x00000000        0x0 obj/hal.o
+ .bss           0x00000000        0x0 obj/hal.o
+ .text.HEAP_GetSpaceUsed
+                0x00000000        0xc obj/hal.o
+ .text.HEAP_GetSpaceLeft
+                0x00000000       0x14 obj/hal.o
+ .text.IODEV_Deinit
+                0x00000000       0x16 obj/hal.o
+ .text.IODEV_Lock
+                0x00000000        0x4 obj/hal.o
+ .text.IODEV_Unlock
+                0x00000000        0x2 obj/hal.o
+ .text.IODEV_WaitForData
+                0x00000000        0x8 obj/hal.o
+ .text.TXTDEV_WriteString
+                0x00000000       0x1a obj/hal.o
+ .text.TXTDEV_WriteINT
+                0x00000000       0x7c obj/hal.o
+ .text.TXTDEV_WriteUINT
+                0x00000000       0x6e obj/hal.o
+ .text.TXTDEV_WriteFLOAT
+                0x00000000       0x64 obj/hal.o
+ .text.TXTDEV_WriteNL
+                0x00000000       0x14 obj/hal.o
+ .text.TXTDEV_ReadString
+                0x00000000       0x6c obj/hal.o
+ .text.IOBUF_Create
+                0x00000000       0x3e obj/hal.o
+ .text.IOBUF_Destroy
+                0x00000000       0x12 obj/hal.o
+ .text.IOBUF_GetCount
+                0x00000000        0xa obj/hal.o
+ .text.IOBUF_GetSpace
+                0x00000000        0xe obj/hal.o
+ .text.IOBUF_GetSize
+                0x00000000        0xa obj/hal.o
+ .text.IOBUF_Init
+                0x00000000       0x38 obj/hal.o
+ .text.IOBUF_ReadNextFragment
+                0x00000000       0x78 obj/hal.o
+ .text.IOBUF_WriteNextFragment
+                0x00000000       0x80 obj/hal.o
+ .text.IOBUF_Read
+                0x00000000       0xbc obj/hal.o
+ .text.IOBUF_Write
+                0x00000000       0xc4 obj/hal.o
+ .text.IOBUF_ReadFast
+                0x00000000       0x36 obj/hal.o
+ .text.IOBUF_WriteFast
+                0x00000000       0x36 obj/hal.o
+ .text.IOBUF_Clear
+                0x00000000       0x34 obj/hal.o
+ .text.IOBUF_Peek
+                0x00000000       0x90 obj/hal.o
+ .text.IOBUF_Move
+                0x00000000       0xc0 obj/hal.o
+ .text.IOBUF_Remove
+                0x00000000       0x7c obj/hal.o
+ .text.DIAG_Deinit
+                0x00000000        0x8 obj/hal.o
+ .text.DIAG_GetOutputDevice
+                0x00000000       0x18 obj/hal.o
+ .text.DIAG_DeactivateChannel
+                0x00000000       0x18 obj/hal.o
+ .text.DIAG_SetClockSource
+                0x00000000       0x1c obj/hal.o
+ .text.DIAG_LogChar
+                0x00000000       0x30 obj/hal.o
+ .text.DIAG_Log
+                0x00000000       0xf8 obj/hal.o
+ .text.DIAG_LogHeader
+                0x00000000       0x70 obj/hal.o
+ .text.DIAG_LogFLOAT
+                0x00000000       0x74 obj/hal.o
+ .text.DIAG_LogData
+                0x00000000       0x84 obj/hal.o
+ .text.DIAG_LogIOBuf
+                0x00000000       0xbc obj/hal.o
+ .text.DIAG_ReportError
+                0x00000000       0xb8 obj/hal.o
+ .text.DIAG_ProcessErrors
+                0x00000000        0x4 obj/hal.o
+ .text.DIAG_SetErrorHandler
+                0x00000000        0xc obj/hal.o
+ .text          0x00000000        0x0 obj/hal_port.o
+ .data          0x00000000        0x0 obj/hal_port.o
+ .bss           0x00000000        0x0 obj/hal_port.o
+ .text.HAL_PORT_NVIC_IRQInit
+                0x00000000       0x6c obj/hal_port.o
+ .text.HAL_PORT_NVIC_IRQDeinit
+                0x00000000       0x14 obj/hal_port.o
+ .text.HAL_CLK_FlashPrefetch
+                0x00000000       0x28 obj/hal_port.o
+ .text.HAL_GPIO_PORT_Init
+                0x00000000       0x20 obj/hal_port.o
+ .text.HAL_GPIO_PORT_Deinit
+                0x00000000       0x3c obj/hal_port.o
+ .text.HAL_GPIO_PORT_ConfigurePort
+                0x00000000       0x28 obj/hal_port.o
+ .text.HAL_GPIO_PORT_EnableEvent
+                0x00000000       0xa0 obj/hal_port.o
+ .text.HAL_GPIO_PORT_SetEventHandler
+                0x00000000       0x24 obj/hal_port.o
+ .text.HAL_GPIO_PORT_IsEventEnabled
+                0x00000000       0x14 obj/hal_port.o
+ .text.HAL_Port_Spi_Calculate_Baudrate
+                0x00000000       0x64 obj/hal_port.o
+ .rodata        0x00000000       0x10 obj/hal_port.o
+ .text          0x00000000        0x0 obj/hal_port_os.o
+ .data          0x00000000        0x0 obj/hal_port_os.o
+ .bss           0x00000000        0x0 obj/hal_port_os.o
+ .text.OS_PORT_SleepUntil
+                0x00000000       0x14 obj/hal_port_os.o
+ .text          0x00000000        0x0 obj/croutine.o
+ .data          0x00000000        0x0 obj/croutine.o
+ .bss           0x00000000        0x0 obj/croutine.o
+ .text.xCoRoutineCreate
+                0x00000000       0xbc obj/croutine.o
+ .text.vCoRoutineAddToDelayedList
+                0x00000000       0x4c obj/croutine.o
+ .text.vCoRoutineSchedule
+                0x00000000      0x130 obj/croutine.o
+ .text.xCoRoutineRemoveFromEventList
+                0x00000000       0x30 obj/croutine.o
+ .bss.xDelayedCoRoutineList1
+                0x00000000       0x14 obj/croutine.o
+ .bss.xPassedTicks
+                0x00000000        0x4 obj/croutine.o
+ .bss.xPendingReadyCoRoutineList
+                0x00000000       0x14 obj/croutine.o
+ .bss.pxCurrentCoRoutine
+                0x00000000        0x4 obj/croutine.o
+ .bss.xDelayedCoRoutineList2
+                0x00000000       0x14 obj/croutine.o
+ .bss.xCoRoutineTickCount
+                0x00000000        0x4 obj/croutine.o
+ .bss.xLastTickCount
+                0x00000000        0x4 obj/croutine.o
+ .bss.pxDelayedCoRoutineList
+                0x00000000        0x4 obj/croutine.o
+ .bss.pxReadyCoRoutineLists
+                0x00000000       0x28 obj/croutine.o
+ .bss.uxTopCoRoutineReadyPriority
+                0x00000000        0x4 obj/croutine.o
+ .bss.pxOverflowDelayedCoRoutineList
+                0x00000000        0x4 obj/croutine.o
+ .debug_info    0x00000000      0x51c obj/croutine.o
+ .debug_abbrev  0x00000000      0x1dc obj/croutine.o
+ .debug_loc     0x00000000      0x23b obj/croutine.o
+ .debug_aranges
+                0x00000000       0x38 obj/croutine.o
+ .debug_ranges  0x00000000       0x58 obj/croutine.o
+ .debug_line    0x00000000      0x1db obj/croutine.o
+ .debug_str     0x00000000      0x401 obj/croutine.o
+ .comment       0x00000000       0x31 obj/croutine.o
+ .ARM.attributes
+                0x00000000       0x33 obj/croutine.o
+ .debug_frame   0x00000000       0xa4 obj/croutine.o
+ .text          0x00000000        0x0 obj/list.o
+ .data          0x00000000        0x0 obj/list.o
+ .bss           0x00000000        0x0 obj/list.o
+ .text          0x00000000        0x0 obj/queue.o
+ .data          0x00000000        0x0 obj/queue.o
+ .bss           0x00000000        0x0 obj/queue.o
+ .text.xQueueGenericSendFromISR
+                0x00000000       0x4a obj/queue.o
+ .text.xQueueReceiveFromISR
+                0x00000000       0x48 obj/queue.o
+ .text.uxQueueMessagesWaiting
+                0x00000000       0x12 obj/queue.o
+ .text.uxQueueMessagesWaitingFromISR
+                0x00000000        0x4 obj/queue.o
+ .text.vQueueDelete
+                0x00000000       0x12 obj/queue.o
+ .text.xQueueIsQueueEmptyFromISR
+                0x00000000        0x8 obj/queue.o
+ .text.xQueueIsQueueFullFromISR
+                0x00000000        0xc obj/queue.o
+ .text          0x00000000        0x0 obj/tasks.o
+ .data          0x00000000        0x0 obj/tasks.o
+ .bss           0x00000000        0x0 obj/tasks.o
+ .text.xTaskIsTaskSuspended
+                0x00000000       0x24 obj/tasks.o
+ .text.vTaskResume
+                0x00000000       0x60 obj/tasks.o
+ .text.xTaskGetTickCount
+                0x00000000       0x18 obj/tasks.o
+ .text.xTaskGetTickCountFromISR
+                0x00000000       0x10 obj/tasks.o
+ .text.uxTaskGetNumberOfTasks
+                0x00000000        0xc obj/tasks.o
+ .text.vTaskDelayUntil
+                0x00000000       0x58 obj/tasks.o
+ .text.vTaskSuspend
+                0x00000000       0x74 obj/tasks.o
+ .text          0x00000000        0x0 obj/timers.o
+ .data          0x00000000        0x0 obj/timers.o
+ .bss           0x00000000        0x0 obj/timers.o
+ .debug_info    0x00000000       0x68 obj/timers.o
+ .debug_abbrev  0x00000000       0x28 obj/timers.o
+ .debug_line    0x00000000       0x1d obj/timers.o
+ .debug_str     0x00000000       0xc1 obj/timers.o
+ .comment       0x00000000       0x31 obj/timers.o
+ .ARM.attributes
+                0x00000000       0x33 obj/timers.o
+ .text          0x00000000        0x0 obj/port.o
+ .data          0x00000000        0x0 obj/port.o
+ .bss           0x00000000        0x0 obj/port.o
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-strlen.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-strlen.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-strncpy.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-strncpy.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_thumb1_case_uqi.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_thumb1_case_uqi.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_thumb1_case_uhi.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_thumb1_case_uhi.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divsi3.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divsi3.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_dvmd_tls.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_aeabi_uldivmod.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_muldi3.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_muldi3.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(bpabi.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(bpabi.o)
+ .text          0x00000000      0x218 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(mulsf3.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(mulsf3.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(mulsf3.o)
+ .rodata        0x00000000       0x40 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(mulsf3.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(mulsf3.o)
+ .debug_frame   0x00000000       0x3c c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(mulsf3.o)
+ .text          0x00000000      0x390 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(subsf3.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(subsf3.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(subsf3.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(subsf3.o)
+ .debug_frame   0x00000000       0x30 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(subsf3.o)
+ .text          0x00000000       0x40 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(fixsfsi.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(fixsfsi.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(fixsfsi.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(fixsfsi.o)
+ .debug_frame   0x00000000       0x28 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(fixsfsi.o)
+ .text          0x00000000       0xb0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(floatsisf.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(floatsisf.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(floatsisf.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(floatsisf.o)
+ .debug_frame   0x00000000       0x2c c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(floatsisf.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_clzsi2.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_clzsi2.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divdi3.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divdi3.o)
+ .ARM.extab     0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divdi3.o)
+ .data          0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivdi3.o)
+ .bss           0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivdi3.o)
+ .ARM.extab     0x00000000        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivdi3.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x08000000         0x00010000         xr
+RAM              0x20000000         0x00002000         xrw
+MEMORY_B1        0x60000000         0x00000000         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD obj/startup.o
+LOAD obj/main.o
+LOAD obj/hal.o
+LOAD obj/hal_port.o
+LOAD obj/hal_port_os.o
+LOAD obj/croutine.o
+LOAD obj/list.o
+LOAD obj/queue.o
+LOAD obj/tasks.o
+LOAD obj/timers.o
+LOAD obj/port.o
+LOAD c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a
+LOAD c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a
+LOAD c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libm.a
+START GROUP
+END GROUP
+START GROUP
+LOAD c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a
+LOAD c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a
+END GROUP
+                0x20002000                _estack = 0x20002000
+                0x00000000                _Min_Heap_Size = 0x0
+                0x00000400                _Min_Stack_Size = 0x400
+
+.isr_vector     0x08000000       0xc4
+                0x08000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000       0xc4 obj/startup.o
+                0x08000000                g_pfnVectors
+                0x080000c4                . = ALIGN (0x4)
+
+.text           0x080000c4     0x2fdc
+                0x080000c4                . = ALIGN (0x4)
+ *(.text)
+ .text          0x080000c4      0x104 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
+                0x080000c4                memcpy
+ .text          0x080001c8       0x8c c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memset.o)
+                0x080001c8                memset
+ .text          0x08000254       0x10 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-strlen.o)
+                0x08000254                strlen
+ .text          0x08000264       0x74 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-strncpy.o)
+                0x08000264                strncpy
+ .text          0x080002d8       0x14 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_thumb1_case_uqi.o)
+                0x080002d8                __gnu_thumb1_case_uqi
+ .text          0x080002ec       0x14 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_thumb1_case_uhi.o)
+                0x080002ec                __gnu_thumb1_case_uhi
+ .text          0x08000300       0x9c c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivsi3.o)
+                0x08000300                __aeabi_uidiv
+                0x08000300                __udivsi3
+                0x08000388                __aeabi_uidivmod
+ .text          0x0800039c       0xc0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divsi3.o)
+                0x0800039c                __divsi3
+                0x0800039c                __aeabi_idiv
+                0x08000448                __aeabi_idivmod
+ .text          0x0800045c        0x4 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x0800045c                __aeabi_idiv0
+                0x0800045c                __aeabi_ldiv0
+ .text          0x08000460       0x40 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_aeabi_uldivmod.o)
+                0x08000460                __aeabi_uldivmod
+ .text          0x080004a0       0x44 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_muldi3.o)
+                0x080004a0                __muldi3
+                0x080004a0                __aeabi_lmul
+ .text          0x080004e4       0x6c c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(bpabi.o)
+                0x080004e4                __gnu_ldivmod_helper
+                0x0800051c                __gnu_uldivmod_helper
+ .text          0x08000550       0x3c c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_clzsi2.o)
+                0x08000550                __clzsi2
+ .text          0x0800058c      0x3c4 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divdi3.o)
+                0x0800058c                __divdi3
+ .text          0x08000950      0x36c c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivdi3.o)
+                0x08000950                __udivdi3
+ *(.text*)
+ .text.Reset_Handler
+                0x08000cbc       0x48 obj/startup.o
+                0x08000cbc                Reset_Handler
+ .text.Default_Handler
+                0x08000d04        0x2 obj/startup.o
+                0x08000d04                TIM1_CC_IRQHandler
+                0x08000d04                HardFault_Handler
+                0x08000d04                ADC1_COMP_IRQHandler
+                0x08000d04                PVD_IRQHandler
+                0x08000d04                NMI_Handler
+                0x08000d04                I2C1_IRQHandler
+                0x08000d04                SPI1_IRQHandler
+                0x08000d04                TIM6_DAC_IRQHandler
+                0x08000d04                I2C2_IRQHandler
+                0x08000d04                TIM17_IRQHandler
+                0x08000d04                RTC_IRQHandler
+                0x08000d04                TIM16_IRQHandler
+                0x08000d04                TIM3_IRQHandler
+                0x08000d04                RCC_IRQHandler
+                0x08000d04                DMA1_Channel1_IRQHandler
+                0x08000d04                Default_Handler
+                0x08000d04                CEC_IRQHandler
+                0x08000d04                TIM14_IRQHandler
+                0x08000d04                DMA1_Channel4_5_IRQHandler
+                0x08000d04                TIM15_IRQHandler
+                0x08000d04                SPI2_IRQHandler
+                0x08000d04                TS_IRQHandler
+                0x08000d04                WWDG_IRQHandler
+                0x08000d04                TIM2_IRQHandler
+                0x08000d04                DMA1_Channel2_3_IRQHandler
+                0x08000d04                USART2_IRQHandler
+                0x08000d04                FLASH_IRQHandler
+                0x08000d04                USART1_IRQHandler
+                0x08000d04                TIM1_BRK_UP_TRG_COM_IRQHandler
+ *fill*         0x08000d06        0x2 00
+ .text.Failure  0x08000d08       0x10 obj/main.o
+ .text.KillerTask
+                0x08000d18      0x138 obj/main.o
+                0x08000d18                KillerTask
+ .text.TimerTask
+                0x08000e50       0xdc obj/main.o
+                0x08000e50                TimerTask
+ .text.WorkerTask
+                0x08000f2c       0x5c obj/main.o
+                0x08000f2c                WorkerTask
+ .text.startup.main
+                0x08000f88      0x274 obj/main.o
+                0x08000f88                main
+ .text.HEAP_Alloc
+                0x080011fc       0x5c obj/hal.o
+                0x080011fc                HEAP_Alloc
+ .text.HEAP_Free
+                0x08001258        0x2 obj/hal.o
+                0x08001258                HEAP_Free
+ .text.IODEV_Init
+                0x0800125a       0x16 obj/hal.o
+                0x0800125a                IODEV_Init
+ .text.DIAG_Init
+                0x08001270       0x24 obj/hal.o
+                0x08001270                DIAG_Init
+ .text.DIAG_SetOutputDevice
+                0x08001294       0x1c obj/hal.o
+                0x08001294                DIAG_SetOutputDevice
+ .text.DIAG_ActivateChannel
+                0x080012b0       0x1c obj/hal.o
+                0x080012b0                DIAG_ActivateChannel
+ .text.DIAG_LogINT
+                0x080012cc       0xa0 obj/hal.o
+                0x080012cc                DIAG_LogINT
+ .text.DIAG_LogUINT
+                0x0800136c       0x84 obj/hal.o
+                0x0800136c                DIAG_LogUINT
+ .text.DIAG_LogMsg
+                0x080013f0       0x34 obj/hal.o
+                0x080013f0                DIAG_LogMsg
+ .text.DIAG_LogNL
+                0x08001424       0x2c obj/hal.o
+                0x08001424                DIAG_LogNL
+ .text.CLK_PORT_Init
+                0x08001450       0x5c obj/hal_port.o
+                0x08001450                CLK_PORT_Init
+ .text.CLK_PORT_Deinit
+                0x080014ac        0xa obj/hal_port.o
+                0x080014ac                CLK_PORT_Deinit
+ *fill*         0x080014b6        0x2 00
+ .text.CLK_PORT_GetClockSource
+                0x080014b8       0xd8 obj/hal_port.o
+                0x080014b8                CLK_PORT_GetClockSource
+ .text.CLK_PORT_GetClockFrequency
+                0x08001590       0xe0 obj/hal_port.o
+                0x08001590                CLK_PORT_GetClockFrequency
+ .text.CLK_PORT_GetClockSourceFreq
+                0x08001670       0xcc obj/hal_port.o
+                0x08001670                CLK_PORT_GetClockSourceFreq
+ .text.HAL_PORT_USART_POLL_Deinit
+                0x0800173c       0x44 obj/hal_port.o
+                0x0800173c                HAL_PORT_USART_POLL_Deinit
+ .text.HAL_PORT_USART_POLL_GetReadCount
+                0x08001780        0xa obj/hal_port.o
+                0x08001780                HAL_PORT_USART_POLL_GetReadCount
+ .text.HAL_PORT_USART_POLL_GetWriteSpace
+                0x0800178a        0xa obj/hal_port.o
+                0x0800178a                HAL_PORT_USART_POLL_GetWriteSpace
+ .text.HAL_PORT_USART_POLL_Read
+                0x08001794       0x26 obj/hal_port.o
+                0x08001794                HAL_PORT_USART_POLL_Read
+ .text.HAL_PORT_USART_POLL_Write
+                0x080017ba       0x26 obj/hal_port.o
+                0x080017ba                HAL_PORT_USART_POLL_Write
+ .text.CORE_PORT_Init
+                0x080017e0        0xc obj/hal_port.o
+                0x080017e0                CORE_PORT_Init
+ .text.HAL_CLK_GetPrescaler
+                0x080017ec       0x58 obj/hal_port.o
+                0x080017ec                HAL_CLK_GetPrescaler
+ .text.CLK_PORT_SetClockSource
+                0x08001844      0x3a0 obj/hal_port.o
+                0x08001844                CLK_PORT_SetClockSource
+ .text.HAL_GPIO_PORT_ConfigurePin
+                0x08001be4       0xc4 obj/hal_port.o
+                0x08001be4                HAL_GPIO_PORT_ConfigurePin
+ .text.HAL_PORT_USART_POLL_DisableRead
+                0x08001ca8       0x28 obj/hal_port.o
+                0x08001ca8                HAL_PORT_USART_POLL_DisableRead
+ .text.HAL_PORT_USART_POLL_EnableRead
+                0x08001cd0       0x2c obj/hal_port.o
+                0x08001cd0                HAL_PORT_USART_POLL_EnableRead
+ .text.HAL_PORT_USART_POLL_DisableWrite
+                0x08001cfc       0x28 obj/hal_port.o
+                0x08001cfc                HAL_PORT_USART_POLL_DisableWrite
+ .text.HAL_PORT_USART_POLL_EnableWrite
+                0x08001d24       0x2c obj/hal_port.o
+                0x08001d24                HAL_PORT_USART_POLL_EnableWrite
+ .text.EXTI0_1_IRQHandler
+                0x08001d50       0x44 obj/hal_port.o
+                0x08001d50                EXTI0_1_IRQHandler
+ .text.EXTI2_3_IRQHandler
+                0x08001d94       0x44 obj/hal_port.o
+                0x08001d94                EXTI2_3_IRQHandler
+ .text.EXTI4_15_IRQHandler
+                0x08001dd8      0x18c obj/hal_port.o
+                0x08001dd8                EXTI4_15_IRQHandler
+ .text.HAL_Port_Usart_Calculate_Baudrate
+                0x08001f64       0x4c obj/hal_port.o
+                0x08001f64                HAL_Port_Usart_Calculate_Baudrate
+ .text.HAL_PORT_USART_POLL_Init
+                0x08001fb0       0x5c obj/hal_port.o
+                0x08001fb0                HAL_PORT_USART_POLL_Init
+ .text.OSTASK_PORT_Create
+                0x0800200c       0x2a obj/hal_port_os.o
+                0x0800200c                OSTASK_PORT_Create
+ .text.pvPortMalloc
+                0x08002036        0x8 obj/hal_port_os.o
+                0x08002036                pvPortMalloc
+ .text.vPortFree
+                0x0800203e        0x8 obj/hal_port_os.o
+                0x0800203e                vPortFree
+ .text.vListInitialise
+                0x08002046       0x16 obj/list.o
+                0x08002046                vListInitialise
+ .text.vListInitialiseItem
+                0x0800205c        0x6 obj/list.o
+                0x0800205c                vListInitialiseItem
+ .text.vListInsertEnd
+                0x08002062       0x1c obj/list.o
+                0x08002062                vListInsertEnd
+ .text.vListInsert
+                0x0800207e       0x2e obj/list.o
+                0x0800207e                vListInsert
+ .text.uxListRemove
+                0x080020ac       0x28 obj/list.o
+                0x080020ac                uxListRemove
+ .text.prvCopyDataFromQueue
+                0x080020d4       0x26 obj/queue.o
+ .text.prvUnlockQueue
+                0x080020fa       0x6a obj/queue.o
+ .text.prvCopyDataToQueue
+                0x08002164       0x5e obj/queue.o
+ .text.xQueueGenericReset
+                0x080021c2       0x62 obj/queue.o
+                0x080021c2                xQueueGenericReset
+ .text.xQueueGenericCreate
+                0x08002224       0x40 obj/queue.o
+                0x08002224                xQueueGenericCreate
+ .text.xQueueCreateCountingSemaphore
+                0x08002264       0x14 obj/queue.o
+                0x08002264                xQueueCreateCountingSemaphore
+ .text.xQueueGenericSend
+                0x08002278       0xd6 obj/queue.o
+                0x08002278                xQueueGenericSend
+ .text.xQueueCreateMutex
+                0x0800234e       0x42 obj/queue.o
+                0x0800234e                xQueueCreateMutex
+ .text.xQueueGenericReceive
+                0x08002390      0x116 obj/queue.o
+                0x08002390                xQueueGenericReceive
+ *fill*         0x080024a6        0x2 00
+ .text.prvAddCurrentTaskToDelayedList
+                0x080024a8       0x4c obj/tasks.o
+ .text.prvIdleTask
+                0x080024f4       0x14 obj/tasks.o
+ .text.xTaskGenericCreate
+                0x08002508      0x18c obj/tasks.o
+                0x08002508                xTaskGenericCreate
+ .text.vTaskStartScheduler
+                0x08002694       0x3c obj/tasks.o
+                0x08002694                vTaskStartScheduler
+ .text.vTaskEndScheduler
+                0x080026d0       0x14 obj/tasks.o
+                0x080026d0                vTaskEndScheduler
+ .text.vTaskSuspendAll
+                0x080026e4       0x10 obj/tasks.o
+                0x080026e4                vTaskSuspendAll
+ .text.vTaskIncrementTick
+                0x080026f4       0xdc obj/tasks.o
+                0x080026f4                vTaskIncrementTick
+ .text.xTaskResumeAll
+                0x080027d0       0xc4 obj/tasks.o
+                0x080027d0                xTaskResumeAll
+ .text.vTaskDelay
+                0x08002894       0x38 obj/tasks.o
+                0x08002894                vTaskDelay
+ .text.vTaskSwitchContext
+                0x080028cc       0x60 obj/tasks.o
+                0x080028cc                vTaskSwitchContext
+ .text.vTaskPlaceOnEventList
+                0x0800292c       0x40 obj/tasks.o
+                0x0800292c                vTaskPlaceOnEventList
+ .text.xTaskRemoveFromEventList
+                0x0800296c       0x64 obj/tasks.o
+                0x0800296c                xTaskRemoveFromEventList
+ .text.vTaskSetTimeOutState
+                0x080029d0       0x18 obj/tasks.o
+                0x080029d0                vTaskSetTimeOutState
+ .text.xTaskCheckForTimeOut
+                0x080029e8       0x54 obj/tasks.o
+                0x080029e8                xTaskCheckForTimeOut
+ .text.vTaskMissedYield
+                0x08002a3c        0xc obj/tasks.o
+                0x08002a3c                vTaskMissedYield
+ .text.xTaskGetCurrentTaskHandle
+                0x08002a48        0xc obj/tasks.o
+                0x08002a48                xTaskGetCurrentTaskHandle
+ .text.vTaskPriorityInherit
+                0x08002a54       0x64 obj/tasks.o
+                0x08002a54                vTaskPriorityInherit
+ .text.vTaskPriorityDisinherit
+                0x08002ab8       0x44 obj/tasks.o
+                0x08002ab8                vTaskPriorityDisinherit
+ .text.vPortStartFirstTask
+                0x08002afc        0xe obj/port.o
+ .text.pxPortInitialiseStack
+                0x08002b0a       0x16 obj/port.o
+                0x08002b0a                pxPortInitialiseStack
+ .text.SVC_Handler
+                0x08002b20       0x28 obj/port.o
+                0x08002b20                SVC_Handler
+ .text.xPortStartScheduler
+                0x08002b48       0x48 obj/port.o
+                0x08002b48                xPortStartScheduler
+ .text.vPortEndScheduler
+                0x08002b90        0x2 obj/port.o
+                0x08002b90                vPortEndScheduler
+ *fill*         0x08002b92        0x2 00
+ .text.vPortYieldFromISR
+                0x08002b94       0x10 obj/port.o
+                0x08002b94                vPortYieldFromISR
+ .text.vPortEnterCritical
+                0x08002ba4       0x10 obj/port.o
+                0x08002ba4                vPortEnterCritical
+ .text.vPortExitCritical
+                0x08002bb4       0x18 obj/port.o
+                0x08002bb4                vPortExitCritical
+ .text.PendSV_Handler
+                0x08002bcc       0x44 obj/port.o
+                0x08002bcc                PendSV_Handler
+ .text.SysTick_Handler
+                0x08002c10       0x18 obj/port.o
+                0x08002c10                SysTick_Handler
+ *(.rodata)
+ *(.rodata*)
+ .rodata.str1.1
+                0x08002c28      0x3dc obj/main.o
+                                0x40e (size before relaxing)
+ .rodata.str1.1
+                0x08003004       0x91 obj/hal.o
+                                 0x98 (size before relaxing)
+ .rodata.CSWTCH.43
+                0x08003095        0x4 obj/hal_port.o
+ .rodata.str1.1
+                0x08003099        0x5 obj/tasks.o
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.eh_frame)
+ *(.init)
+ *(.fini)
+                0x080030a0                . = ALIGN (0x4)
+ *fill*         0x0800309e        0x2 00
+                0x080030a0                _etext = .
+
+.vfp11_veneer   0x080030a0        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x080030a0        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x080030a0        0x0
+ .iplt          0x00000000        0x0 obj/startup.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x080030a0        0x8
+                0x080030a0                __exidx_start = .
+ *(.ARM.exidx*)
+ .ARM.exidx     0x080030a0        0x8 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divdi3.o)
+ .ARM.exidx     0x080030a8        0x0 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivdi3.o)
+                                  0x8 (size before relaxing)
+                0x080030a8                __exidx_end = .
+
+.rel.dyn        0x080030a8        0x0
+ .rel.iplt      0x00000000        0x0 obj/startup.o
+
+.preinit_array  0x080030a8        0x0
+                0x080030a8                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array*)
+                0x080030a8                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x080030a8        0x0
+                0x080030a8                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array*)
+                0x080030a8                PROVIDE (__init_array_end, .)
+
+.fini_array     0x080030a8        0x0
+                0x080030a8                PROVIDE (__fini_array_start, .)
+ *(.fini_array*)
+ *(SORT(.fini_array.*))
+                0x080030a8                PROVIDE (__fini_array_end, .)
+                0x080030a8                _sidata = .
+
+.data           0x20000000       0x80 load address 0x080030a8
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _sdata = .
+ *(.data)
+ *(.data*)
+ .data.HAL_CLK_Prescaler_SYSCLK
+                0x20000000       0x12 obj/hal_port.o
+ *fill*         0x20000012        0x2 00
+ .data.io_usart1_poll
+                0x20000014       0x34 obj/hal_port.o
+                0x20000014                io_usart1_poll
+ .data.cc_stm32
+                0x20000048        0x4 obj/hal_port.o
+                0x20000048                cc_stm32
+ .data.cc_stm32_desc
+                0x2000004c       0x1c obj/hal_port.o
+                0x2000004c                cc_stm32_desc
+ .data.HAL_CLK_Prescaler_HCLK
+                0x20000068        0xa obj/hal_port.o
+ *fill*         0x20000072        0x2 00
+ .data.io_usart1
+                0x20000074        0x4 obj/hal_port.o
+                0x20000074                io_usart1
+ .data.xNextTaskUnblockTime
+                0x20000078        0x4 obj/tasks.o
+ .data.uxCriticalNesting
+                0x2000007c        0x4 obj/port.o
+                0x20000080                . = ALIGN (0x4)
+                0x20000080                _edata = .
+
+.igot.plt       0x20000080        0x0 load address 0x08003128
+ .igot.plt      0x00000000        0x0 obj/startup.o
+                0x20000080                . = ALIGN (0x4)
+
+.bss            0x20000080     0x1b70 load address 0x08003128
+                0x20000080                _sbss = .
+                0x20000080                __bss_start__ = _sbss
+ *(.bss)
+ *(.bss*)
+ .bss.test_result
+                0x20000080        0x1 obj/main.o
+                0x20000080                test_result
+ .bss.number.5210
+                0x20000081        0x1 obj/main.o
+ *fill*         0x20000082        0x2 00
+ .bss.HAL_Heap  0x20000084     0x19ec obj/hal.o
+ .bss.DIAG_error_handler
+                0x20001a70        0x4 obj/hal.o
+ .bss.DIAG_channel
+                0x20001a74       0x40 obj/hal.o
+ .bss.HAL_HeapIndex
+                0x20001ab4        0x4 obj/hal.o
+ .bss.HAL_GPIO_PORT_events_table
+                0x20001ab8       0x40 obj/hal_port.o
+ .bss.uxMissedTicks
+                0x20001af8        0x4 obj/tasks.o
+ .bss.xSuspendedTaskList
+                0x20001afc       0x14 obj/tasks.o
+ .bss.pxDelayedTaskList
+                0x20001b10        0x4 obj/tasks.o
+ .bss.xSchedulerRunning
+                0x20001b14        0x4 obj/tasks.o
+ .bss.uxSchedulerSuspended
+                0x20001b18        0x4 obj/tasks.o
+ .bss.xNumOfOverflows
+                0x20001b1c        0x4 obj/tasks.o
+ .bss.xDelayedTaskList2
+                0x20001b20       0x14 obj/tasks.o
+ .bss.pxReadyTasksLists
+                0x20001b34       0x64 obj/tasks.o
+ .bss.pxCurrentTCB
+                0x20001b98        0x4 obj/tasks.o
+                0x20001b98                pxCurrentTCB
+ .bss.xPendingReadyList
+                0x20001b9c       0x14 obj/tasks.o
+ .bss.xTickCount
+                0x20001bb0        0x4 obj/tasks.o
+ .bss.pxOverflowDelayedTaskList
+                0x20001bb4        0x4 obj/tasks.o
+ .bss.uxTopReadyPriority
+                0x20001bb8        0x4 obj/tasks.o
+ .bss.uxTaskNumber
+                0x20001bbc        0x4 obj/tasks.o
+ .bss.xDelayedTaskList1
+                0x20001bc0       0x14 obj/tasks.o
+ .bss.xMissedYield
+                0x20001bd4        0x4 obj/tasks.o
+ .bss.uxCurrentNumberOfTasks
+                0x20001bd8        0x4 obj/tasks.o
+ .bss.uxTopUsedPriority
+                0x20001bdc        0x4 obj/tasks.o
+ *(COMMON)
+ COMMON         0x20001be0        0xc obj/main.o
+                0x20001be0                mutex
+                0x20001be4                binary_sem
+                0x20001be8                counting_sem
+ COMMON         0x20001bec        0x4 obj/hal_port.o
+                0x20001bec                HAL_PORT_InterruptState
+                0x20001bf0                . = ALIGN (0x4)
+                0x20001bf0                _ebss = .
+                0x20001bf0                __bss_end__ = _ebss
+
+._user_heap_stack
+                0x20001bf0      0x400 load address 0x08004c98
+                0x20001bf0                . = ALIGN (0x4)
+                0x20001bf0                PROVIDE (end, .)
+                0x20001bf0                PROVIDE (_end, .)
+                0x20001bf0                . = (. + _Min_Heap_Size)
+                0x20001ff0                . = (. + _Min_Stack_Size)
+ *fill*         0x20001bf0      0x400 00
+                0x20001ff0                . = ALIGN (0x4)
+
+.memory_b1_text
+ *(.mb1text)
+ *(.mb1text*)
+ *(.mb1rodata)
+ *(.mb1rodata*)
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.ARM.attributes
+                0x00000000       0x2f
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x23 obj/startup.o
+ .ARM.attributes
+                0x00000023       0x33 obj/main.o
+ .ARM.attributes
+                0x00000056       0x33 obj/hal.o
+ .ARM.attributes
+                0x00000089       0x33 obj/hal_port.o
+ .ARM.attributes
+                0x000000bc       0x33 obj/hal_port_os.o
+ .ARM.attributes
+                0x000000ef       0x33 obj/list.o
+ .ARM.attributes
+                0x00000122       0x33 obj/queue.o
+ .ARM.attributes
+                0x00000155       0x33 obj/tasks.o
+ .ARM.attributes
+                0x00000188       0x33 obj/port.o
+ .ARM.attributes
+                0x000001bb       0x2d c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x000001e8       0x2d c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000215       0x2d c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x00000242       0x2d c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-strncpy.o)
+ .ARM.attributes
+                0x0000026f       0x1f c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_thumb1_case_uqi.o)
+ .ARM.attributes
+                0x0000028e       0x1f c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_thumb1_case_uhi.o)
+ .ARM.attributes
+                0x000002ad       0x1f c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x000002cc       0x1f c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x000002eb       0x1f c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x0000030a       0x1f c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x00000329       0x2d c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_muldi3.o)
+ .ARM.attributes
+                0x00000356       0x2d c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(bpabi.o)
+ .ARM.attributes
+                0x00000383       0x1f c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_clzsi2.o)
+ .ARM.attributes
+                0x000003a2       0x2d c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divdi3.o)
+ .ARM.attributes
+                0x000003cf       0x2d c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivdi3.o)
+OUTPUT(c:/WSN/Workspace/hal/hal_tests/os_tests/freertos/stm32f0/STM32f0_discovery/output.elf elf32-littlearm)
+
+.debug_line     0x00000000     0x25ce
+ .debug_line    0x00000000       0x6a obj/startup.o
+ .debug_line    0x0000006a      0x38f obj/main.o
+ .debug_line    0x000003f9      0xa9e obj/hal.o
+ .debug_line    0x00000e97      0x8e1 obj/hal_port.o
+ .debug_line    0x00001778      0x1be obj/hal_port_os.o
+ .debug_line    0x00001936      0x16e obj/list.o
+ .debug_line    0x00001aa4      0x3d7 obj/queue.o
+ .debug_line    0x00001e7b      0x576 obj/tasks.o
+ .debug_line    0x000023f1      0x1dd obj/port.o
+
+.debug_info     0x00000000     0x4d6c
+ .debug_info    0x00000000       0x7a obj/startup.o
+ .debug_info    0x0000007a      0x5b7 obj/main.o
+ .debug_info    0x00000631     0x1374 obj/hal.o
+ .debug_info    0x000019a5     0x192d obj/hal_port.o
+ .debug_info    0x000032d2      0x1ba obj/hal_port_os.o
+ .debug_info    0x0000348c      0x2a6 obj/list.o
+ .debug_info    0x00003732      0x864 obj/queue.o
+ .debug_info    0x00003f96      0xbf7 obj/tasks.o
+ .debug_info    0x00004b8d      0x1df obj/port.o
+
+.debug_abbrev   0x00000000      0xeb8
+ .debug_abbrev  0x00000000       0x12 obj/startup.o
+ .debug_abbrev  0x00000012      0x17f obj/main.o
+ .debug_abbrev  0x00000191      0x336 obj/hal.o
+ .debug_abbrev  0x000004c7      0x320 obj/hal_port.o
+ .debug_abbrev  0x000007e7       0xd8 obj/hal_port_os.o
+ .debug_abbrev  0x000008bf       0xed obj/list.o
+ .debug_abbrev  0x000009ac      0x180 obj/queue.o
+ .debug_abbrev  0x00000b2c      0x26e obj/tasks.o
+ .debug_abbrev  0x00000d9a      0x11e obj/port.o
+
+.debug_aranges  0x00000000      0x590
+ .debug_aranges
+                0x00000000       0x28 obj/startup.o
+ .debug_aranges
+                0x00000028       0x40 obj/main.o
+ .debug_aranges
+                0x00000068      0x1b0 obj/hal.o
+ .debug_aranges
+                0x00000218      0x120 obj/hal_port.o
+ .debug_aranges
+                0x00000338       0x38 obj/hal_port_os.o
+ .debug_aranges
+                0x00000370       0x40 obj/list.o
+ .debug_aranges
+                0x000003b0       0x98 obj/queue.o
+ .debug_aranges
+                0x00000448       0xe0 obj/tasks.o
+ .debug_aranges
+                0x00000528       0x68 obj/port.o
+
+.debug_ranges   0x00000000      0x5e0
+ .debug_ranges  0x00000000       0x20 obj/startup.o
+ .debug_ranges  0x00000020       0x30 obj/main.o
+ .debug_ranges  0x00000050      0x1e0 obj/hal.o
+ .debug_ranges  0x00000230      0x140 obj/hal_port.o
+ .debug_ranges  0x00000370       0x28 obj/hal_port_os.o
+ .debug_ranges  0x00000398       0x30 obj/list.o
+ .debug_ranges  0x000003c8       0x88 obj/queue.o
+ .debug_ranges  0x00000450      0x110 obj/tasks.o
+ .debug_ranges  0x00000560       0x80 obj/port.o
+
+.debug_loc      0x00000000     0x3e1c
+ .debug_loc     0x00000000       0xf7 obj/main.o
+ .debug_loc     0x000000f7     0x1811 obj/hal.o
+ .debug_loc     0x00001908     0x1299 obj/hal_port.o
+ .debug_loc     0x00002ba1      0x168 obj/hal_port_os.o
+ .debug_loc     0x00002d09       0xaf obj/list.o
+ .debug_loc     0x00002db8      0x7d7 obj/queue.o
+ .debug_loc     0x0000358f      0x7c6 obj/tasks.o
+ .debug_loc     0x00003d55       0xc7 obj/port.o
+
+.debug_str      0x00000000     0x1fc8
+ .debug_str     0x00000000      0x348 obj/main.o
+                                0x411 (size before relaxing)
+ .debug_str     0x00000348      0x510 obj/hal.o
+                                0x82b (size before relaxing)
+ .debug_str     0x00000858      0xb02 obj/hal_port.o
+                                0xea7 (size before relaxing)
+ .debug_str     0x0000135a       0xc9 obj/hal_port_os.o
+                                0x180 (size before relaxing)
+ .debug_str     0x00001423      0x14e obj/list.o
+                                0x1f6 (size before relaxing)
+ .debug_str     0x00001571      0x377 obj/queue.o
+                                0x4e6 (size before relaxing)
+ .debug_str     0x000018e8      0x5b2 obj/tasks.o
+                                0x7b1 (size before relaxing)
+ .debug_str     0x00001e9a      0x12e obj/port.o
+                                0x1f1 (size before relaxing)
+
+.comment        0x00000000       0x30
+ .comment       0x00000000       0x30 obj/main.o
+                                 0x31 (size before relaxing)
+ .comment       0x00000000       0x31 obj/hal.o
+ .comment       0x00000000       0x31 obj/hal_port.o
+ .comment       0x00000000       0x31 obj/hal_port_os.o
+ .comment       0x00000000       0x31 obj/list.o
+ .comment       0x00000000       0x31 obj/queue.o
+ .comment       0x00000000       0x31 obj/tasks.o
+ .comment       0x00000000       0x31 obj/port.o
+
+.debug_frame    0x00000000     0x12f4
+ .debug_frame   0x00000000       0xac obj/main.o
+ .debug_frame   0x000000ac      0x63c obj/hal.o
+ .debug_frame   0x000006e8      0x3a0 obj/hal_port.o
+ .debug_frame   0x00000a88       0x84 obj/hal_port_os.o
+ .debug_frame   0x00000b0c       0x74 obj/list.o
+ .debug_frame   0x00000b80      0x1e8 obj/queue.o
+ .debug_frame   0x00000d68      0x2c4 obj/tasks.o
+ .debug_frame   0x0000102c       0xdc obj/port.o
+ .debug_frame   0x00001108       0x38 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x00001140       0x2c c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memset.o)
+ .debug_frame   0x0000116c       0x20 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-strlen.o)
+ .debug_frame   0x0000118c       0x30 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-strncpy.o)
+ .debug_frame   0x000011bc       0x20 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x000011dc       0x20 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divsi3.o)
+ .debug_frame   0x000011fc       0x30 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_muldi3.o)
+ .debug_frame   0x0000122c       0x50 c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(bpabi.o)
+ .debug_frame   0x0000127c       0x3c c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divdi3.o)
+ .debug_frame   0x000012b8       0x3c c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivdi3.o)
+
+Cross Reference Table
+
+Symbol                                            File
+ADC1_COMP_IRQHandler                              obj/startup.o
+CEC_IRQHandler                                    obj/startup.o
+CLK_PORT_Deinit                                   obj/hal_port.o
+CLK_PORT_GetClockFrequency                        obj/hal_port.o
+CLK_PORT_GetClockSource                           obj/hal_port.o
+CLK_PORT_GetClockSourceFreq                       obj/hal_port.o
+CLK_PORT_Init                                     obj/hal_port.o
+CLK_PORT_SetClockSource                           obj/hal_port.o
+CORE_PORT_Init                                    obj/hal_port.o
+                                                  obj/main.o
+DIAG_ActivateChannel                              obj/hal.o
+                                                  obj/main.o
+DIAG_DeactivateChannel                            obj/hal.o
+DIAG_Deinit                                       obj/hal.o
+DIAG_GetOutputDevice                              obj/hal.o
+DIAG_Init                                         obj/hal.o
+                                                  obj/main.o
+DIAG_Log                                          obj/hal.o
+DIAG_LogChar                                      obj/hal.o
+DIAG_LogData                                      obj/hal.o
+DIAG_LogFLOAT                                     obj/hal.o
+DIAG_LogHeader                                    obj/hal.o
+DIAG_LogINT                                       obj/hal.o
+                                                  obj/main.o
+DIAG_LogIOBuf                                     obj/hal.o
+DIAG_LogMsg                                       obj/hal.o
+                                                  obj/main.o
+DIAG_LogNL                                        obj/hal.o
+                                                  obj/main.o
+DIAG_LogUINT                                      obj/hal.o
+                                                  obj/main.o
+DIAG_ProcessErrors                                obj/hal.o
+DIAG_ReportError                                  obj/hal.o
+DIAG_SetClockSource                               obj/hal.o
+DIAG_SetErrorHandler                              obj/hal.o
+DIAG_SetOutputDevice                              obj/hal.o
+                                                  obj/main.o
+DMA1_Channel1_IRQHandler                          obj/startup.o
+DMA1_Channel2_3_IRQHandler                        obj/startup.o
+DMA1_Channel4_5_IRQHandler                        obj/startup.o
+Default_Handler                                   obj/startup.o
+EXTI0_1_IRQHandler                                obj/hal_port.o
+                                                  obj/startup.o
+EXTI2_3_IRQHandler                                obj/hal_port.o
+                                                  obj/startup.o
+EXTI4_15_IRQHandler                               obj/hal_port.o
+                                                  obj/startup.o
+FLASH_IRQHandler                                  obj/startup.o
+HAL_CLK_FlashPrefetch                             obj/hal_port.o
+HAL_CLK_GetPrescaler                              obj/hal_port.o
+HAL_GPIO_PORT_ConfigurePin                        obj/hal_port.o
+HAL_GPIO_PORT_ConfigurePort                       obj/hal_port.o
+HAL_GPIO_PORT_Deinit                              obj/hal_port.o
+HAL_GPIO_PORT_EnableEvent                         obj/hal_port.o
+HAL_GPIO_PORT_Init                                obj/hal_port.o
+HAL_GPIO_PORT_IsEventEnabled                      obj/hal_port.o
+HAL_GPIO_PORT_SetEventHandler                     obj/hal_port.o
+HAL_PORT_InterruptState                           obj/hal_port.o
+                                                  obj/hal.o
+HAL_PORT_NVIC_IRQDeinit                           obj/hal_port.o
+HAL_PORT_NVIC_IRQInit                             obj/hal_port.o
+HAL_PORT_USART_POLL_Deinit                        obj/hal_port.o
+HAL_PORT_USART_POLL_DisableRead                   obj/hal_port.o
+HAL_PORT_USART_POLL_DisableWrite                  obj/hal_port.o
+HAL_PORT_USART_POLL_EnableRead                    obj/hal_port.o
+HAL_PORT_USART_POLL_EnableWrite                   obj/hal_port.o
+HAL_PORT_USART_POLL_GetReadCount                  obj/hal_port.o
+HAL_PORT_USART_POLL_GetWriteSpace                 obj/hal_port.o
+HAL_PORT_USART_POLL_Init                          obj/hal_port.o
+HAL_PORT_USART_POLL_Read                          obj/hal_port.o
+HAL_PORT_USART_POLL_Write                         obj/hal_port.o
+HAL_Port_Spi_Calculate_Baudrate                   obj/hal_port.o
+HAL_Port_Usart_Calculate_Baudrate                 obj/hal_port.o
+HEAP_Alloc                                        obj/hal.o
+                                                  obj/hal_port_os.o
+HEAP_Free                                         obj/hal.o
+                                                  obj/hal_port_os.o
+HEAP_GetSpaceLeft                                 obj/hal.o
+HEAP_GetSpaceUsed                                 obj/hal.o
+HardFault_Handler                                 obj/startup.o
+I2C1_IRQHandler                                   obj/startup.o
+I2C2_IRQHandler                                   obj/startup.o
+IOBUF_Clear                                       obj/hal.o
+IOBUF_Create                                      obj/hal.o
+IOBUF_Destroy                                     obj/hal.o
+IOBUF_GetCount                                    obj/hal.o
+IOBUF_GetSize                                     obj/hal.o
+IOBUF_GetSpace                                    obj/hal.o
+IOBUF_Init                                        obj/hal.o
+IOBUF_Move                                        obj/hal.o
+IOBUF_Peek                                        obj/hal.o
+IOBUF_Read                                        obj/hal.o
+IOBUF_ReadFast                                    obj/hal.o
+IOBUF_ReadNextFragment                            obj/hal.o
+IOBUF_Remove                                      obj/hal.o
+IOBUF_Write                                       obj/hal.o
+IOBUF_WriteFast                                   obj/hal.o
+IOBUF_WriteNextFragment                           obj/hal.o
+IODEV_Deinit                                      obj/hal.o
+IODEV_Init                                        obj/hal.o
+                                                  obj/main.o
+IODEV_Lock                                        obj/hal.o
+IODEV_Unlock                                      obj/hal.o
+IODEV_WaitForData                                 obj/hal.o
+KillerTask                                        obj/main.o
+NMI_Handler                                       obj/startup.o
+OSTASK_PORT_Create                                obj/hal_port_os.o
+                                                  obj/main.o
+OS_PORT_SleepUntil                                obj/hal_port_os.o
+PVD_IRQHandler                                    obj/startup.o
+PendSV_Handler                                    obj/port.o
+                                                  obj/startup.o
+RCC_IRQHandler                                    obj/startup.o
+RTC_IRQHandler                                    obj/startup.o
+Reset_Handler                                     obj/startup.o
+SPI1_IRQHandler                                   obj/startup.o
+SPI2_IRQHandler                                   obj/startup.o
+SVC_Handler                                       obj/port.o
+                                                  obj/startup.o
+SysTick_Handler                                   obj/port.o
+                                                  obj/startup.o
+TIM14_IRQHandler                                  obj/startup.o
+TIM15_IRQHandler                                  obj/startup.o
+TIM16_IRQHandler                                  obj/startup.o
+TIM17_IRQHandler                                  obj/startup.o
+TIM1_BRK_UP_TRG_COM_IRQHandler                    obj/startup.o
+TIM1_CC_IRQHandler                                obj/startup.o
+TIM2_IRQHandler                                   obj/startup.o
+TIM3_IRQHandler                                   obj/startup.o
+TIM6_DAC_IRQHandler                               obj/startup.o
+TS_IRQHandler                                     obj/startup.o
+TXTDEV_ReadString                                 obj/hal.o
+TXTDEV_WriteFLOAT                                 obj/hal.o
+TXTDEV_WriteINT                                   obj/hal.o
+TXTDEV_WriteNL                                    obj/hal.o
+TXTDEV_WriteString                                obj/hal.o
+TXTDEV_WriteUINT                                  obj/hal.o
+TimerTask                                         obj/main.o
+USART1_IRQHandler                                 obj/startup.o
+USART2_IRQHandler                                 obj/startup.o
+WWDG_IRQHandler                                   obj/startup.o
+WorkerTask                                        obj/main.o
+__aeabi_f2iz                                      c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(fixsfsi.o)
+                                                  obj/hal.o
+__aeabi_fmul                                      c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(mulsf3.o)
+                                                  obj/hal.o
+__aeabi_fsub                                      c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(subsf3.o)
+                                                  obj/hal.o
+__aeabi_i2f                                       c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(floatsisf.o)
+                                                  obj/hal.o
+__aeabi_idiv                                      c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divsi3.o)
+                                                  obj/hal.o
+__aeabi_idiv0                                     c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_dvmd_tls.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divsi3.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivsi3.o)
+__aeabi_idivmod                                   c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divsi3.o)
+                                                  obj/hal.o
+__aeabi_ldiv0                                     c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_dvmd_tls.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_aeabi_uldivmod.o)
+__aeabi_lmul                                      c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_muldi3.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(bpabi.o)
+                                                  obj/hal_port.o
+__aeabi_uidiv                                     c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivsi3.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivdi3.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divdi3.o)
+                                                  obj/hal_port.o
+                                                  obj/hal.o
+__aeabi_uidivmod                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivsi3.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivdi3.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divdi3.o)
+                                                  obj/hal.o
+__aeabi_uldivmod                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_aeabi_uldivmod.o)
+                                                  obj/hal_port.o
+__clzsi2                                          c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_clzsi2.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivdi3.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divdi3.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(floatsisf.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(subsf3.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(mulsf3.o)
+__divdi3                                          c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divdi3.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(bpabi.o)
+__divsi3                                          c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_divsi3.o)
+__gnu_ldivmod_helper                              c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(bpabi.o)
+__gnu_thumb1_case_uhi                             c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_thumb1_case_uhi.o)
+                                                  obj/hal_port.o
+__gnu_thumb1_case_uqi                             c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_thumb1_case_uqi.o)
+                                                  obj/hal_port.o
+__gnu_uldivmod_helper                             c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(bpabi.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_aeabi_uldivmod.o)
+__muldi3                                          c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_muldi3.o)
+__udivdi3                                         c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivdi3.o)
+                                                  c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(bpabi.o)
+__udivsi3                                         c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/armv6-m\libgcc.a(_udivsi3.o)
+_ebss                                             obj/startup.o
+_edata                                            obj/startup.o
+_estack                                           obj/startup.o
+_sbss                                             obj/startup.o
+_sdata                                            obj/startup.o
+_sidata                                           obj/startup.o
+binary_sem                                        obj/main.o
+cc_stm32                                          obj/hal_port.o
+cc_stm32_desc                                     obj/hal_port.o
+counting_sem                                      obj/main.o
+g_pfnVectors                                      obj/startup.o
+io_usart1                                         obj/hal_port.o
+                                                  obj/main.o
+io_usart1_poll                                    obj/hal_port.o
+main                                              obj/main.o
+                                                  obj/startup.o
+memcpy                                            c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memcpy.o)
+                                                  obj/queue.o
+                                                  obj/hal_port.o
+                                                  obj/hal.o
+memset                                            c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-memset.o)
+                                                  obj/tasks.o
+                                                  obj/hal.o
+mutex                                             obj/main.o
+pvPortMalloc                                      obj/hal_port_os.o
+                                                  obj/tasks.o
+                                                  obj/queue.o
+                                                  obj/croutine.o
+pxCurrentCoRoutine                                obj/croutine.o
+pxCurrentTCB                                      obj/tasks.o
+                                                  obj/port.o
+pxPortInitialiseStack                             obj/port.o
+                                                  obj/tasks.o
+strlen                                            c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-strlen.o)
+                                                  obj/hal.o
+strncpy                                           c:/wsn/wsn_eclipse/toolchains/arm_none_eabi/4_6_1/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/armv6-m\libc.a(lib_a-strncpy.o)
+                                                  obj/tasks.o
+test_result                                       obj/main.o
+uxListRemove                                      obj/list.o
+                                                  obj/tasks.o
+                                                  obj/croutine.o
+uxQueueMessagesWaiting                            obj/queue.o
+uxQueueMessagesWaitingFromISR                     obj/queue.o
+uxTaskGetNumberOfTasks                            obj/tasks.o
+vCoRoutineAddToDelayedList                        obj/croutine.o
+vCoRoutineSchedule                                obj/croutine.o
+vListInitialise                                   obj/list.o
+                                                  obj/tasks.o
+                                                  obj/queue.o
+                                                  obj/croutine.o
+vListInitialiseItem                               obj/list.o
+                                                  obj/tasks.o
+                                                  obj/croutine.o
+vListInsert                                       obj/list.o
+                                                  obj/tasks.o
+                                                  obj/croutine.o
+vListInsertEnd                                    obj/list.o
+                                                  obj/tasks.o
+                                                  obj/croutine.o
+vPortEndScheduler                                 obj/port.o
+                                                  obj/tasks.o
+vPortEnterCritical                                obj/port.o
+                                                  obj/tasks.o
+                                                  obj/queue.o
+vPortExitCritical                                 obj/port.o
+                                                  obj/tasks.o
+                                                  obj/queue.o
+vPortFree                                         obj/hal_port_os.o
+                                                  obj/tasks.o
+                                                  obj/queue.o
+vPortYieldFromISR                                 obj/port.o
+                                                  obj/tasks.o
+                                                  obj/queue.o
+                                                  obj/main.o
+vQueueDelete                                      obj/queue.o
+vTaskDelay                                        obj/tasks.o
+                                                  obj/main.o
+vTaskDelayUntil                                   obj/tasks.o
+                                                  obj/hal_port_os.o
+vTaskEndScheduler                                 obj/tasks.o
+                                                  obj/main.o
+vTaskIncrementTick                                obj/tasks.o
+                                                  obj/port.o
+vTaskMissedYield                                  obj/tasks.o
+                                                  obj/queue.o
+vTaskPlaceOnEventList                             obj/tasks.o
+                                                  obj/queue.o
+vTaskPriorityDisinherit                           obj/tasks.o
+                                                  obj/queue.o
+vTaskPriorityInherit                              obj/tasks.o
+                                                  obj/queue.o
+vTaskResume                                       obj/tasks.o
+vTaskSetTimeOutState                              obj/tasks.o
+                                                  obj/queue.o
+vTaskStartScheduler                               obj/tasks.o
+                                                  obj/main.o
+vTaskSuspend                                      obj/tasks.o
+vTaskSuspendAll                                   obj/tasks.o
+                                                  obj/queue.o
+vTaskSwitchContext                                obj/tasks.o
+                                                  obj/port.o
+xCoRoutineCreate                                  obj/croutine.o
+xCoRoutineRemoveFromEventList                     obj/croutine.o
+xPortStartScheduler                               obj/port.o
+                                                  obj/tasks.o
+xQueueCreateCountingSemaphore                     obj/queue.o
+                                                  obj/main.o
+xQueueCreateMutex                                 obj/queue.o
+                                                  obj/main.o
+xQueueGenericCreate                               obj/queue.o
+                                                  obj/main.o
+xQueueGenericReceive                              obj/queue.o
+                                                  obj/main.o
+xQueueGenericReset                                obj/queue.o
+xQueueGenericSend                                 obj/queue.o
+                                                  obj/main.o
+xQueueGenericSendFromISR                          obj/queue.o
+xQueueIsQueueEmptyFromISR                         obj/queue.o
+xQueueIsQueueFullFromISR                          obj/queue.o
+xQueueReceiveFromISR                              obj/queue.o
+xTaskCheckForTimeOut                              obj/tasks.o
+                                                  obj/queue.o
+xTaskGenericCreate                                obj/tasks.o
+                                                  obj/hal_port_os.o
+xTaskGetCurrentTaskHandle                         obj/tasks.o
+                                                  obj/queue.o
+xTaskGetTickCount                                 obj/tasks.o
+                                                  obj/croutine.o
+                                                  obj/hal_port_os.o
+xTaskGetTickCountFromISR                          obj/tasks.o
+xTaskIsTaskSuspended                              obj/tasks.o
+xTaskRemoveFromEventList                          obj/tasks.o
+                                                  obj/queue.o
+xTaskResumeAll                                    obj/tasks.o
+                                                  obj/queue.o

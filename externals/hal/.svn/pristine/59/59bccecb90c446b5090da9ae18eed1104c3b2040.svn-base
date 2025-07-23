@@ -1,0 +1,5 @@
+NAME := HALFREDPP
+VERSION := 0.3.0
+
+SRC := ./halpp.cpp
+INC_DIR := ./inc

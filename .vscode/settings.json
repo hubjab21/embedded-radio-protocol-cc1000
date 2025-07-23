@@ -1,0 +1,15 @@
+{
+    "editor.formatOnSave": true,
+    "files.associations": {
+        "iom128.h": "c",
+        "hal_iodevice.h": "c",
+        "hal_port_tim.h": "c",
+        "io.h": "c",
+        "stdlib.h": "c",
+        "hal_port_core.h": "c",
+        "hal_core.h": "c",
+        "cli_cmd_proc.h": "c",
+        "bsksp_config.h": "c",
+        "string.h": "c"
+    }
+}
