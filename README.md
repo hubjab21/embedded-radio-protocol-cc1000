@@ -1,10 +1,10 @@
-# 📡 Embedded Radio Protocol (CC1000)
+# Embedded Radio Protocol (CC1000)
 
 Implementation of a custom radio communication protocol based on the **BSKS-P specification**, designed for embedded systems using low-power RF transceivers (e.g. CC1000).
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 This project implements a **packet-based radio communication protocol** developed for laboratory classes in:
 
@@ -12,27 +12,27 @@ This project implements a **packet-based radio communication protocol** develope
 
 The protocol enables reliable wireless communication between embedded nodes using:
 
-* FSK modulation
-* UART-based data framing
-* custom packet structure
-* CRC-based error detection
+- FSK modulation
+- UART-based data framing
+- custom packet structure
+- CRC-based error detection
 
 ---
 
-## 📡 Protocol Description
+## Protocol Description
 
 The protocol (BSKS-P) is designed for:
 
-* star network topology ⭐
-* time-based channel access (TDMA)
-* optional frequency hopping (FH)
-* variable-length packets
+- star network topology
+- time-based channel access (TDMA)
+- optional frequency hopping (FH)
+- variable-length packets
 
 Transmission is performed using **UART 8N1 framing** over an RF channel.
 
 ---
 
-## 📦 Packet Structure
+## Packet Structure
 
 Each transmitted packet consists of:
 
@@ -49,22 +49,22 @@ Each transmitted packet consists of:
 
 ---
 
-## 🧮 CRC Error Detection (CRC-CCITT)
+## CRC Error Detection (CRC-CCITT)
 
 To ensure data integrity, each packet includes a **16-bit CRC checksum**.
 
-### ⚙️ Algorithm
+### Algorithm
 
-* CRC type: **CRC-CCITT**
-* Initial value: `0xFFFF`
-* Computed over:
+- CRC type: **CRC-CCITT**
+- Initial value: `0xFFFF`
+- Computed over:
 
-  * source address
-  * destination address
-  * data length
-  * data payload
+  - source address
+  - destination address
+  - data length
+  - data payload
 
-### 💻 Example Implementation (C)
+### Example Implementation (C)
 
 ```c
 static uint16_t UpdateCRC(uint8_t byte, uint16_t crc)
@@ -77,7 +77,7 @@ static uint16_t UpdateCRC(uint8_t byte, uint16_t crc)
 }
 ```
 
-### 🔁 Usage
+### Usage
 
 #### Transmitter:
 
@@ -97,65 +97,56 @@ static uint16_t UpdateCRC(uint8_t byte, uint16_t crc)
 
 1. Recalculate CRC
 2. Compare with received value
-3. If mismatch → discard packet ❌
+3. If mismatch → discard packet
 
 ---
 
-## ⚙️ Hardware Layer
+## Hardware Layer
 
 The protocol is designed for RF transceivers supporting:
 
-* **FSK modulation**
-* bitrate: **9600 bps**
-* UART communication
+- **FSK modulation**
+- bitrate: **9600 bps**
+- UART communication
 
 Example platform:
 
-* CC1000 radio module
-* STM32 microcontroller
+- CC1000 radio module
+- STM32 microcontroller
 
 ---
 
-## 🧠 Features
+## - Features
 
-* custom embedded communication protocol
-* packet-based transmission
-* error detection using CRC
-* modular design
-* compatible with different RF transceivers
-
----
-
-## 🧪 Testing
-
-The implementation was tested using:
-
-* UART communication
-* RF transmission between nodes
-* verification of packet structure
-* CRC validation
+- custom embedded communication protocol
+- packet-based transmission
+- error detection using CRC
+- modular design
+- compatible with different RF transceivers
 
 ---
 
-## 🔧 Possible Improvements
+## Possible Improvements
 
-* full TDMA scheduler implementation
-* frequency hopping support
-* retransmission mechanism (ARQ)
-* packet acknowledgment system
-* better debugging tools (logging)
-
----
-
-## 📁 Project Structure
-
-* `main.c` – main application logic
-* protocol implementation files
-* configuration files
+- full TDMA scheduler implementation
+- frequency hopping support
+- retransmission mechanism (ARQ)
+- packet acknowledgment system
+- better debugging tools (logging)
 
 ---
 
-## 🎓 Academic Context
+## Project Structure
+
+- `main.c` – main application logic
+- protocol implementation files
+- configuration files
+
+---
+
+## Academic Context
+
+AGH University of Science and Technology
 
 This project was developed as part of the course:
 
@@ -165,8 +156,7 @@ The goal was to implement a low-level communication protocol for embedded wirele
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Hubert Jabłoński
-AGH University of Science and Technology
 
